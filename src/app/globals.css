@@ -31,3 +31,21 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.gradient-blue{
+  @apply bg-gradient-to-r from-blue-800 via-blue-400 to-white bg-clip-text text-transparent;
+}
+
+
+.project{
+  @apply p-4 rounded-lg border border-white flex flex-col;
+}
+
+.project:hover{
+  @apply bg-slate-900;
+}
+
+.gallery{
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 pt-5;
+}
