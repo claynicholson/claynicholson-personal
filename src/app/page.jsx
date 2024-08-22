@@ -13,7 +13,7 @@ const page = () => {
           <span> ~ </span>
           <a href="https://www.linkedin.com/in/clay-nicholson/" className="underline">Linkedin</a>
           <span> ~ </span>
-          <a href="https://www.linkedin.com/in/clay-nicholson/" className="underline">Email</a>
+          <a href="https://mailhide.io/e/fJpjsonX" className="underline">Email</a>
         </h2>
         <p className='mt-5 mx-auto max-w-lg'>Hello, My name is Clay. I am a part of a bunch of robotics teams, and I work at <a href='https://hackclub.com/' className='underline'>Hackclub.</a> Here are all the projects i'm proud of:</p>
       </div>
@@ -55,11 +55,11 @@ const page = () => {
 
         </div>
 
-        <h1 className='text-2xl font-bold mt-10 pl-10'>Projects</h1>
+        <h1 className='text-2xl font-bold mt-10 pl-10'>Projects i'm Proud of</h1>
         <div className='gallery'>
 
           <div className='project'>
-            <a href="https://www.robohawks5741.com/" className='flex items-center space-x-2'>
+            <a href="https://github.com/claynicholson/JV-Worlds-Main-New" className='flex items-center space-x-2'>
               <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
               <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                 Robohawks 2022-2023
@@ -70,13 +70,14 @@ const page = () => {
           </div>
 
           <div className='project'>
-            <a href="https://www.robohawks5741.com/" className='flex items-center space-x-2'>
+            <a href="https://github.com/robohawks5741/FtcRobotController-CenterStage" className='flex items-center space-x-2'>
                 <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Robohawks 2023-2024
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 2 years in a row and counting. On the Robohawks, I am head mechanical and Programming. </p>
+            <img/>
+            <p className='mt-2 flex-grow'>This year, not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
             <Tags Java Kotlin/>
           </div>
 
@@ -87,7 +88,7 @@ const page = () => {
                   The Bin
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>The Bin is a Hack Club YSWS, where highschoolers design electrical circuits, and get shipped the parts to build them.</p>
             <Tags Javascript CSS HTML/>
           </div>
 
@@ -95,32 +96,32 @@ const page = () => {
             <a href="https://hackclub.com/arcade/" className='flex items-center space-x-2'>
                 <img src="/hackclub.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
-                  Arcade
+                  Arcade Showcase
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>Arcade Showcase was a voting system created for the end of Arcade where Arcade projects were voted on in multiple rounds.</p>
             <Tags Javascript CSS HTML/>
           </div>
 
           <div className='project'>
-          <a href="https://hackclub.com/arcade/" className='flex items-center space-x-2'>
+          <a href="https://github.com/greenmountainrobotics/2023-Robot" className='flex items-center space-x-2'>
                 <img src="/GMR.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   GMR - Toast
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>This year was our team's rookie year. We were able to make it to the World Championships in Houston, TX.</p>
             <Tags Java CPlus/>
           </div>
 
           <div className='project'>
-          <a href="https://hackclub.com/arcade/" className='flex items-center space-x-2'>
+          <a href="https://github.com/greenmountainrobotics/2024-Robot" className='flex items-center space-x-2'>
                 <img src="/GMR.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   GMR - Toaster
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>This year we were able to make it to the DCMB in Springfield, MA.</p>
             <Tags Java CPlus/>
           </div>
 
@@ -130,28 +131,38 @@ const page = () => {
                   Lexiscan
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>This is an app that was created for the Congressional App Challenge in 2024, which I won. Lexiscan is a simple tts app for android, created for people with dyslexia.</p>
             <Tags Java/>
           </div>
 
           <div className='project'>
-            <a href="https://github.com/claynicholson/Lexiscan" className='flex items-center space-x-2'>
+            <a href="https://github.com/claynicholson/robotic-arm" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Robotic Arm
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
-            <Tags CAD/>
+            <p className='mt-2 flex-grow'>An open source robotic arm, created out of mostly laser cut parts for mass manufacturing.</p>
+            <Tags CAD CPlus/>
           </div>
 
           <div className='project'>
-            <a href="https://github.com/claynicholson/Lexiscan" className='flex items-center space-x-2'>
+            <a href="https://github.com/claynicholson/H-Chassis" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Open H
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is a project I am proud of. It is a project that I worked on for a long time and I am proud of the end result.</p>
+            <p className='mt-2 flex-grow'>This is an open source H-Chassis for FTC that is created using only GoBuilda parts.</p>
             <Tags CAD/>
+          </div>
+
+          <div className='project'>
+            <a href="https://github.com/claynicholson/FRC-PM" className='flex items-center space-x-2'>
+                <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
+                  FRC Project Management
+                </span>
+            </a>
+            <p className='mt-2 flex-grow'>An open source project management software created for FRC team #9101.</p>
+            <Tags Javascript CSS HTML/>
           </div>
         </div>
       </div>
