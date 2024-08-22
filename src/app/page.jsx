@@ -1,14 +1,60 @@
+"use client";
+
 import React from 'react'
 import Script from 'next/script'
 import Tags from '../components/tags'
 import Footer from '../components/footer'
+import { useEffect, useState } from 'react'
 
 const page = () => {
+
+
+  const [isDevToolsOpen, setIsDevToolsOpen] = useState(false);
+  const [is020, setIs020] = useState(false);
+
+  useEffect(() => {
+    const checkDevToolsOpen = () => {
+      const threshold = 160;
+      if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+        setIsDevToolsOpen(true)
+      }
+    };
+
+    window.addEventListener('resize', checkDevToolsOpen);
+
+    checkDevToolsOpen(); 
+
+    return () => {
+      window.removeEventListener('resize', checkDevToolsOpen);
+    };
+  }, []);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      const { innerWidth, innerHeight } = window;
+      if (innerWidth === 200 && innerHeight === 200) {
+        console.log("Good job finding this, I am currently in Vermont and would love to meet you. Email me at clayanicholson@gmail.com or message me at @CAN on Hack Club's slack")
+        setIs020(true);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+if (!isDevToolsOpen) {
   return (
     <>
       <div className='text-center'>
         <h1 className='text-4xl font-bold gradient-blue mt-9'>Clay Nicholson</h1>
-        <h2 class="">
+        <h2>
           <a href="https://github.com/claynicholson" className="underline">Github</a>
           <span> ~ </span>
           <a href="https://www.linkedin.com/in/clay-nicholson/" className="underline">Linkedin</a>
@@ -169,6 +215,19 @@ const page = () => {
       <Footer />
     </>
   )
+
+} else if(isDevToolsOpen && !is020) {
+  return (
+  <div className='flex items-center justify-center h-screen'>
+    <h2 className='text-center'>Good Job, now make the window size 200px x 200px</h2>
+  </div>)
+} else {
+  return (
+    <div className='flex items-center justify-center h-screen'>
+      <h2 className='text-center'>Check the console!</h2>
+    </div>)
+}
+  
 }
 
 export default page
