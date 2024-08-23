@@ -61,7 +61,7 @@ if (!isDevToolsOpen) {
           <span> ~ </span>
           <a href="https://mailhide.io/e/fJpjsonX" className="underline">Email</a>
         </h2>
-        <p className='mt-5 mx-auto max-w-lg'>Hello, My name is Clay. I am a part of a bunch of robotics teams, and I work at <a href='https://hackclub.com/' className='underline'>Hackclub.</a> Here are all the projects i'm proud of:</p>
+        <p className='mt-5 mx-auto max-w-lg'>Hello, my name is Clay. I am a part of a bunch of robotics teams, and I work at <a href='https://hackclub.com/' className='underline'>Hackclub.</a> Here are all the projects I'm proud of:</p>
       </div>
       <div>
 
@@ -75,7 +75,7 @@ if (!isDevToolsOpen) {
                 Robohawks
               </span>
             </a>
-            <p className='mt-2 flex-grow'>I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 2 years in a row and counting. On the Robohawks, I am head mechanical and Programming. </p>
+            <p className='mt-2 flex-grow'>I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 2 years in a row and counting. On the Robohawks, I am head of Mechanical and Programming. </p>
           </div>
 
           <div className='project hover:bg-green-950'>
@@ -101,7 +101,7 @@ if (!isDevToolsOpen) {
 
         </div>
 
-        <h1 className='text-2xl font-bold mt-10 pl-10'>Projects i'm Proud of</h1>
+        <h1 className='text-2xl font-bold mt-10 pl-10'>Projects I'm Proud of</h1>
         <div className='gallery'>
 
           <div className='project'>
@@ -111,7 +111,7 @@ if (!isDevToolsOpen) {
                 Robohawks 2022-2023
               </span>
             </a>
-            <p className='mt-2 flex-grow'>This year our team won the state championships in the robot competiton. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2022-2023. This year our team won the state championships in the robot competiton. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
             <Tags Java/>
           </div>
 
@@ -123,7 +123,7 @@ if (!isDevToolsOpen) {
                 </span>
             </a>
             <img/>
-            <p className='mt-2 flex-grow'>This year, not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2023-2024. Not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
             <Tags Java Kotlin/>
           </div>
 
@@ -134,7 +134,7 @@ if (!isDevToolsOpen) {
                   The Bin
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>The Bin is a Hack Club YSWS, where highschoolers design electrical circuits, and get shipped the parts to build them.</p>
+            <p className='mt-2 flex-grow'>A Hack Club program, where highschoolers design electrical circuits, and get shipped the parts to build them.</p>
             <Tags Javascript CSS HTML/>
           </div>
 
@@ -145,7 +145,7 @@ if (!isDevToolsOpen) {
                   Arcade Showcase
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>Arcade Showcase was a voting system created for the end of Arcade where Arcade projects were voted on in multiple rounds.</p>
+            <p className='mt-2 flex-grow'>A voting system created for the end of Arcade where projects were voted on in multiple rounds.</p>
             <Tags Javascript CSS HTML/>
           </div>
 
@@ -156,7 +156,7 @@ if (!isDevToolsOpen) {
                   GMR - Toast
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This year was our team's rookie year. We were able to make it to the World Championships in Houston, TX.</p>
+            <p className='mt-2 flex-grow'>The repo for our team's rookie year. We were able to make it to the World Championships in Houston, TX.</p>
             <Tags Java CPlus/>
           </div>
 
@@ -167,7 +167,7 @@ if (!isDevToolsOpen) {
                   GMR - Toaster
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This year we were able to make it to the DCMB in Springfield, MA.</p>
+            <p className='mt-2 flex-grow'>The repo for the 2023-2024 GMR season</p>
             <Tags Java CPlus/>
           </div>
 
@@ -177,7 +177,7 @@ if (!isDevToolsOpen) {
                   Lexiscan
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is an app that was created for the Congressional App Challenge in 2024, which I won. Lexiscan is a simple tts app for android, created for people with dyslexia.</p>
+            <p className='mt-2 flex-grow'>An app that was created for the Congressional App Challenge in 2024, which I won. Lexiscan is a simple tts app for android, created for people with dyslexia.</p>
             <Tags Java/>
           </div>
 
@@ -197,7 +197,7 @@ if (!isDevToolsOpen) {
                   Open H
                 </span>
             </a>
-            <p className='mt-2 flex-grow'>This is an open source H-Chassis for FTC that is created using only GoBuilda parts.</p>
+            <p className='mt-2 flex-grow'>An open source H-Chassis for FTC that is created using only GoBuilda parts.</p>
             <Tags CAD/>
           </div>
 
