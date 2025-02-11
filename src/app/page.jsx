@@ -9,6 +9,11 @@ import { useEffect, useState } from 'react'
 const page = () => {
 
 
+  useEffect(() => {
+    document.documentElement.classList.add("dark"); // Forces dark mode
+  }, []);
+
+
   const [isDevToolsOpen, setIsDevToolsOpen] = useState(false);
   const [is020, setIs020] = useState(false);
 
@@ -104,28 +109,18 @@ if (!isDevToolsOpen) {
         <h1 className='text-2xl font-bold mt-10 pl-10'>Projects I'm Proud of</h1>
         <div className='gallery'>
 
-          <div className='project'>
-            <a href="https://github.com/claynicholson/JV-Worlds-Main-New" className='flex items-center space-x-2'>
+        <div className='project'>
+            <a href="https://github.com/robohawks5741/FtcRobotController-IntoTheDeep" className='flex items-center space-x-2'>
               <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
               <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
-                Robohawks 2022-2023
+                Robohawks 2024-2025
               </span>
             </a>
-            <p className='mt-2 flex-grow'>The repo for Robohawks 2022-2023. This year our team won the state championships in the robot competiton. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2024-2025. This year our team won the state championships in the robot competiton. I also personally was a finalist for FIRST deans list. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
             <Tags Java/>
           </div>
 
-          <div className='project'>
-            <a href="https://github.com/robohawks5741/FtcRobotController-CenterStage" className='flex items-center space-x-2'>
-                <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
-                <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
-                  Robohawks 2023-2024
-                </span>
-            </a>
-            <img/>
-            <p className='mt-2 flex-grow'>The repo for Robohawks 2023-2024. Not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
-            <Tags Java Kotlin/>
-          </div>
+          
 
           <div className='project'>
             <a href="https://hackclub.com/bin/" className='flex items-center space-x-2'>
@@ -158,6 +153,29 @@ if (!isDevToolsOpen) {
             </a>
             <p className='mt-2 flex-grow'>The repo for our team's rookie year. We were able to make it to the World Championships in Houston, TX.</p>
             <Tags Java CPlus/>
+          </div>
+
+          <div className='project'>
+            <a href="https://github.com/claynicholson/JV-Worlds-Main-New" className='flex items-center space-x-2'>
+              <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
+              <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
+                Robohawks 2022-2023
+              </span>
+            </a>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2022-2023. This year our team won the state championships in the robot competiton. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
+            <Tags Java/>
+          </div>
+
+          <div className='project'>
+            <a href="https://github.com/robohawks5741/FtcRobotController-CenterStage" className='flex items-center space-x-2'>
+                <img src="/robohawks.png" className='h-10 whitespace-nowrap' alt="Robohawks Logo" />
+                <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
+                  Robohawks 2023-2024
+                </span>
+            </a>
+            <img/>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2023-2024. Not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
+            <Tags Java Kotlin/>
           </div>
 
           <div className='project'>
