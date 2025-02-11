@@ -80,7 +80,7 @@ if (!isDevToolsOpen) {
                 Robohawks
               </span>
             </a>
-            <p className='mt-2 flex-grow'>I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 2 years in a row and counting. On the Robohawks, I am head of Mechanical and Programming. </p>
+            <p className='mt-2 flex-grow'>I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 3 years and counting. On the Robohawks, I am head of Mechanical and Programming. </p>
           </div>
 
           <div className='project hover:bg-green-950'>
@@ -90,7 +90,7 @@ if (!isDevToolsOpen) {
                 Green Mountain Robotics
               </span>
             </a>
-            <p className='mt-2 flex-grow'>GMR is a FRC team in Burlington, VT. On Green Mountain Robotics I help with Mechanical, Outreach, Eletrical and Programming. I have been part of this team since 2023.</p>
+            <p className='mt-2 flex-grow'>GMR is a FRC team in Burlington, VT. On Green Mountain Robotics I'm head of programming but I also help with Mechanical, Outreach and Eletrical. I have been part of this team since 2023.</p>
           </div>
 
 
@@ -116,7 +116,7 @@ if (!isDevToolsOpen) {
                 Robohawks 2024-2025
               </span>
             </a>
-            <p className='mt-2 flex-grow'>The repo for Robohawks 2024-2025. This year our team won the state championships in the robot competiton. I also personally was a finalist for FIRST deans list. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
+            <p className='mt-2 flex-grow'>The repo for Robohawks 2024-2025. This year our team won the state championships in the robot competiton. I also personally was a finalist for FIRST deans list. <a className='underline' href='https://github.com/robohawks5741/FtcRobotController-IntoTheDeep'>Here is the code</a> we used for the world championships in Houston, TX</p>
             <Tags Java/>
           </div>
 
