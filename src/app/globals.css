@@ -39,13 +39,17 @@ body {
 
 
 .project{
-  @apply p-4 rounded-lg border border-white flex flex-col;
+  @apply p-6 border-2 border-white flex flex-col transition-all duration-200;
 }
 
 .project:hover{
-  @apply bg-slate-900;
+  @apply bg-slate-900 border-blue-500 shadow-lg shadow-blue-500/20;
 }
 
 .gallery{
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 pt-5;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-10 pt-5;
+}
+
+footer {
+  @apply mt-16 mb-8 text-center text-gray-400 text-sm;
 }
