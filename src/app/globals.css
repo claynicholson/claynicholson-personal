@@ -83,11 +83,10 @@ body > div {
 
 
 nav a {
-  position: relative;
   padding: 0.5rem 0;
 }
 
-nav a::after {
+/* nav a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -100,4 +99,4 @@ nav a::after {
 
 nav a:hover::after {
   width: 100%;
-}
+} */
