@@ -22,12 +22,15 @@ const MiscPage = () => {
         </nav>
       </div>
 
-      <div>
+      <div className='px-20 max-w-7xl mx-auto'>
         <section id='misc'>
-          <h1 className='text-2xl font-bold mt-10 pl-10'>Misc Projects</h1>
+          <h1 className='text-2xl font-bold mt-10 mb-10'>Misc Projects</h1>
           <div className='gallery'>
 
             <div className='project'>
+              <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
+                <span className='text-gray-500'>Image Placeholder</span>
+              </div>
               <a href="https://github.com/claynicholson/Lexiscan" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Lexiscan
@@ -38,6 +41,9 @@ const MiscPage = () => {
             </div>
 
             <div className='project'>
+              <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
+                <span className='text-gray-500'>Image Placeholder</span>
+              </div>
               <a href="https://github.com/claynicholson/robotic-arm" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Robotic Arm
@@ -48,6 +54,9 @@ const MiscPage = () => {
             </div>
 
             <div className='project'>
+              <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
+                <span className='text-gray-500'>Image Placeholder</span>
+              </div>
               <a href="https://github.com/claynicholson/H-Chassis" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   Open H
@@ -58,6 +67,9 @@ const MiscPage = () => {
             </div>
 
             <div className='project'>
+              <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
+                <span className='text-gray-500'>Image Placeholder</span>
+              </div>
               <a href="https://github.com/claynicholson/FRC-PM" className='flex items-center space-x-2'>
                 <span className='text-xl font-bold underline whitespace-nowrap overflow-x-auto'>
                   FRC Project Management
