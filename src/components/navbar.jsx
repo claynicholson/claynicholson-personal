@@ -29,12 +29,7 @@ const Navbar = () => {
         >
           Hack Club
         </Link>
-        <Link 
-          href="/misc" 
-          className={`hover:text-blue-400 ${isActive('/misc') ? 'underline' : ''}`}
-        >
-          Misc Projects
-        </Link>
+
         <Link 
           href="/research" 
           className={`hover:text-blue-400 ${isActive('/research') ? 'underline' : ''}`}
