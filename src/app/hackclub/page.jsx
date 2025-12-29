@@ -8,6 +8,13 @@ import Link from 'next/link'
 const HackClubPage = () => {
   return (
     <>
+      <a href="https://hackclub.com/">
+        <img 
+          className="absolute top-0 left-[10px] border-0 w-64 z-[999]" 
+          src="https://assets.hackclub.com/banners/2025.svg" 
+          alt="Hack Club"
+        />
+      </a>
       <div className='px-20 max-w-7xl mx-auto'>
         <section id='hackclub'>
           <h1 className='text-2xl font-bold mt-10 mb-3'>Hack Club</h1>

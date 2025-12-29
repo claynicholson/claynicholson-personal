@@ -70,7 +70,8 @@ const page = () => {
             <span> ~ </span>
             <a href="https://mailhide.io/e/fJpjsonX" className="underline">Email</a>
           </h2>
-          <p className='mt-5 mx-auto max-w-lg'>Hello, my name is Clay. I am a part of a bunch of robotics teams, and I work at <a href='https://hackclub.com/' className='underline'>Hackclub.</a> Here are all the projects I'm proud of:</p>
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/c8b34ce8a3f68e4c_Untitled_Artwork__1_.png" alt="Clay Nicholson" className="mx-auto mt-4 w-32 h-32 object-cover" />
+          <p className='mt-5 mx-auto max-w-lg'>Hello, my name is Clay. I am a part of a bunch of robotics teams, and I work at <a href='https://hackclub.com/' className='underline'>Hackclub.</a> I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing). Here are all the projects I'm proud of:</p>
         </div>
         <Footer />
       </>

@@ -78,7 +78,7 @@ const RoboticsPage = () => {
             <div className='space-y-6'>
               <div className='project'>
                 <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
-                  <span className='text-gray-500'>Image Placeholder</span>
+                  <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/cfc810b392dd0c9e_HaZ7TNo.jpeg" className='h-full whitespace-nowrap' alt="GMR Logo" />
                 </div>
                 <a href="https://github.com/greenmountainrobotics/2023-Robot" className='flex items-center space-x-2'>
                   <img src="/GMR.png" className='h-10 whitespace-nowrap' alt="GMR Logo" />
@@ -92,7 +92,7 @@ const RoboticsPage = () => {
 
               <div className='project'>
                 <div className='w-full h-48 bg-gray-800 mb-4 flex items-center justify-center'>
-                  <span className='text-gray-500'>Image Placeholder</span>
+                  <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/c7544c293a1d0f61_0Eb8uhs.jpeg" className='h-full whitespace-nowrap' alt="GMR Logo" />
                 </div>
                 <a href="https://github.com/greenmountainrobotics/2024-Robot" className='flex items-center space-x-2'>
                   <img src="/GMR.png" className='h-10 whitespace-nowrap' alt="GMR Logo" />
