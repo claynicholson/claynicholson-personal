@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import Tags from '../../components/tags'
 import Footer from '../../components/footer'
 import Link from 'next/link'
 
@@ -34,7 +33,6 @@ const HackClubPage = () => {
                 </span>
               </a>
               <p className='mt-2 flex-grow'>Design electrical circuits, and get shipped the parts to build them.</p>
-              <Tags Javascript CSS HTML />
             </div>
 
 
@@ -50,7 +48,6 @@ const HackClubPage = () => {
               </a>
               <a href="https://github.com/hackclub/grounded" className='text-blue-400 hover:text-blue-300 underline text-sm mt-1 inline-block'>GitHub</a>
               <p className='mt-2 flex-grow'>Design any PCB circuit board, get the funding to make it!!!</p>
-              <Tags Javascript CSS HTML />
             </div>
 
             <div className='project hover:bg-[#0D2D55]/30'>
@@ -65,7 +62,6 @@ const HackClubPage = () => {
               </a>
               <a href="https://github.com/hackclub/blueprint/" className='text-blue-400 hover:text-blue-300 underline text-sm mt-1 inline-block'>GitHub</a>
               <p className='mt-2 flex-grow'>Get up to $400 to make any hardware project + flagship hackathon @ AMD HQ</p>
-              <Tags Javascript CSS HTML />
             </div>
           </div>
         </section>

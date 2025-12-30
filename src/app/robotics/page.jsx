@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import Tags from '../../components/tags'
 import Footer from '../../components/footer'
 import Link from 'next/link'
 
@@ -33,7 +32,6 @@ const RoboticsPage = () => {
                   </span>
                 </a>
                 <p className='mt-2 flex-grow'>The repo for Robohawks 2024-2025. This year our team won the state championships in the robot competiton. I also personally was a finalist for FIRST deans list. <a className='underline' href='https://github.com/robohawks5741/FtcRobotController-IntoTheDeep'>Here is the code</a> we used for the world championships in Houston, TX</p>
-                <Tags Java />
               </div>
 
               <div className='project'>
@@ -47,7 +45,6 @@ const RoboticsPage = () => {
                   </span>
                 </a>
                 <p className='mt-2 flex-grow'>The repo for Robohawks 2022-2023. This year our team won the state championships in the robot competiton. <a className='underline' href='https://github.com/claynicholson/JV-Worlds-Main-New'>Here is the code</a> we used for the world championships in Houston, TX</p>
-                <Tags Java />
               </div>
 
               <div className='project'>
@@ -61,7 +58,6 @@ const RoboticsPage = () => {
                   </span>
                 </a>
                 <p className='mt-2 flex-grow'>The repo for Robohawks 2023-2024. Not only did we win the robot competition, but also the Inspire award for Vermont. Among other things, I created a custom vision pipeline that was used my the majority of the teams in Vermont.</p>
-                <Tags Java Kotlin />
               </div>
             </div>
           </div>
@@ -87,7 +83,6 @@ const RoboticsPage = () => {
                   </span>
                 </a>
                 <p className='mt-2 flex-grow'>The repo for our team's rookie year. We were able to make it to the World Championships in Houston, TX.</p>
-                <Tags Java CPlus />
               </div>
 
               <div className='project'>
@@ -101,7 +96,6 @@ const RoboticsPage = () => {
                   </span>
                 </a>
                 <p className='mt-2 flex-grow'>The repo for the 2023-2024 GMR season</p>
-                <Tags Java CPlus />
               </div>
             </div>
           </div>

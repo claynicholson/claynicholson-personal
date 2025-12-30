@@ -22,7 +22,7 @@ const ResearchPage = () => {
               <p className='text-gray-300 mb-3'>Pancreatic cancer is really bad. A large part of the reason is that it usually goes undetectd until it's too late. This project allows the detection of the cancer to be greatly automated reducing the amount of time and money it takes to get regular pancreas scans. </p>
               <p className='text-gray-300 mb-3'>The heart of this project is a <a href="https://en.wikipedia.org/wiki/U-Net" className='underline text-blue-400 hover:text-blue-300' target="_blank" rel="noopener noreferrer">U-Net model</a>. Using this architecture (which is really simple if you look into it) I was able to make a program which could take in 128x128 images and output 128x128 segmentation masks. Medical segmentation accuracy (and maybe other things tbh) is measured with the DICE coefficent. Which is just the amount of overlap between two blobs. My model got a DICE of 0.7451, better than most radiolosts and most programs trained on CT scans.</p>
 
-              <p className='text-yellow-300 mb-3'>People who thought this was cool for some reason:</p>
+              <p className='text-yellow-300 mb-3'>People who thought this was cool:</p>
               <ul className='list-disc list-inside text-gray-300 space-y-2 mb-3'>
                 <li>
                   <a href="https://www.societyforscience.org/press-release/regeneron-isef-2025-full-awards/" className='underline text-blue-400 hover:text-blue-300' target="_blank" rel="noopener noreferrer">My name is on here somewhere...</a>
