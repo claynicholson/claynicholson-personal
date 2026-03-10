@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ssh server
+ssh-server/host.key
+ssh-server/host.key.pub
+ssh-server/node_modules

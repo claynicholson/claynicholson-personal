@@ -1,0 +1,13 @@
+{
+  "name": "clay-ssh-server",
+  "version": "1.0.0",
+  "description": "SSH server for Clay Nicholson's personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "keygen": "ssh-keygen -t ed25519 -f host.key -N \"\""
+  },
+  "dependencies": {
+    "ssh2": "^1.16.0"
+  }
+}
