@@ -23,7 +23,7 @@ module.exports = {
         "term-rosewater": "#f5e0dc",
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        mono: ["Space Mono", "monospace"],
       },
     },
   },

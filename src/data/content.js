@@ -4,22 +4,54 @@ export const about = {
   course: "6-5 (Electrical Engineering with Computing)",
   year: "'29",
   location: "Vermont",
+  email: "clay@hackclub.com",
   bio: "Hello, my name is Clay. I am a part of a bunch of robotics teams, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing).",
   links: {
     github: "https://github.com/claynicholson",
     linkedin: "https://www.linkedin.com/in/clay-nicholson/",
-    email: "https://mailhide.io/e/fJpjsonX",
+    email: "mailto:clay@hackclub.com",
   },
+};
+
+export const education = {
+  highSchool: {
+    name: "CVU High School",
+    status: "Senior, graduating spring 2026",
+    gpa: "4.25/4.33",
+    sat: "1540",
+  },
+  dualEnrollment: {
+    school: "University of Vermont (dual enrollment)",
+    courses: [
+      "Differential Equations",
+      "Electronics",
+      "Linear Algebra",
+      "Physics E&M",
+      "Microelectronics Fabrication (grad-level, EE 5460)",
+    ],
+    grades: "All A+'s",
+  },
+  college: {
+    name: "MIT",
+    status: "Admitted Early Action, attending fall 2026",
+    course: "6-5 (Electrical Engineering with Computing)",
+  },
+  programs: [
+    {
+      name: "MIT LLRISE",
+      date: "July 2025",
+    },
+  ],
 };
 
 export const robotics = {
   robohawks: {
     name: "Robohawks",
     type: "FTC",
-    role: "Captain, Head of Mechanical & Programming",
+    role: "Coach/Mentor at UVM",
     website: "https://www.robohawks5741.com/",
     description:
-      "I am proud to be captain of my schools' robotics team, the Robohawks. I have led my team to the world championships for 3 years and counting. On the Robohawks, I am head of Mechanical and Programming.",
+      "4 years on FTC Robohawks with multiple state/national championships. Now serve as coach/mentor for FTC Robohawks at UVM. Mentored 150+ students across FTC and FRC programs.",
     seasons: [
       {
         name: "Robohawks 2024-2025",
@@ -43,11 +75,12 @@ export const robotics = {
   },
   gmr: {
     name: "Green Mountain Robotics",
+    number: "#9101",
     type: "FRC",
-    role: "Head of Programming",
+    role: "Founder, Head of Programming",
     website: "https://greenmountainrobotics.org/",
     description:
-      "GMR is a FRC team in Burlington, VT. I'm head of programming but I also help with Mechanical, Outreach and Electrical. Member since 2023.",
+      "Founded FRC Team #9101 — Green Mountain Robotics in Vermont. Head of programming, also help with Mechanical, Outreach and Electrical. 4 years FRC experience with multiple state/national championships.",
     seasons: [
       {
         name: "GMR - Toast (2023)",
@@ -67,8 +100,33 @@ export const robotics = {
 export const hackclub = {
   description:
     "I joined Hack Club in the summer of 2024. Hack Club has changed my life. Growing up in Vermont, I never really had a close technical community. Ironically, Hack Club is based just 20 minutes from my house. I decided to take my senior year to gap year there.",
-  role: "I run you-ship-we-ship programs (grant programs) to get teens making cool projects.",
+  role: "Staff member (paid) — I run major hardware/grant programs for teens.",
   projects: [
+    {
+      name: "Blueprint",
+      url: "https://blueprint.hackclub.com/",
+      github: "https://github.com/hackclub/blueprint/",
+      description:
+        "PCB/hardware grants for 25k+ teens. AMD partnership, ~$120k+ in grants distributed.",
+    },
+    {
+      name: "Stasis",
+      url: null,
+      description:
+        "100-person hardware hackathon in Austin, TX — May 2026.",
+    },
+    {
+      name: "Prototype",
+      url: null,
+      description:
+        "AMD-sponsored hackathon in San Jose, 2025.",
+    },
+    {
+      name: "Congressional App Challenge",
+      url: null,
+      description:
+        "Certification program — worked with Rep. Becca Balint's office.",
+    },
     {
       name: "The Bin",
       url: "https://hackclub.com/bin/",
@@ -81,21 +139,22 @@ export const hackclub = {
       github: "https://github.com/hackclub/grounded",
       description: "Design any PCB circuit board, get the funding to make it!",
     },
-    {
-      name: "Hack Club Blueprint",
-      url: "https://blueprint.hackclub.com/",
-      github: "https://github.com/hackclub/blueprint/",
-      description:
-        "Get up to $400 to make any hardware project + flagship hackathon @ AMD HQ.",
-    },
   ],
 };
 
 export const research = {
-  main: {
+  isef2026: {
+    title: "FPGA Network Switch — ISEF 2026 (in progress)",
+    timeline: "2025 - Present",
+    tldr: "Custom FPGA-based adaptive low-tail-latency network switch for data centers.",
+    details:
+      "Designed ATLAS (Adaptive Tail-Latency-Aware Scheduler) — the first hardware-native adaptive scheduler with zero CPU in the forwarding path. Targets p99/p999 tail latency convergence to the M/D/1 queuing theory bound.",
+  },
+  isef2025: {
     title:
       "3D U-Net Model for Pancreatic Tumor Segmentation in CT Scans",
-    timeline: "2024 - Present",
+    timeline: "2024 - 2025",
+    award: "3rd Place Grand Award at ISEF 2025 — First Grand Award winner in Vermont history",
     tldr: "Pancreatic cancer is really bad and usually goes undetected until it's too late. This project automates detection using a U-Net CNN, reducing the time and cost of regular pancreas scans.",
     details:
       "Built a U-Net model (34 layers, 1.9M parameters) trained on 282 3D CT volumes from Memorial Sloan Kettering. Achieved a DICE score of 0.7451 -- better than most radiologists.",
@@ -132,9 +191,33 @@ export const research = {
       },
     ],
   },
+  fpga: {
+    title: "FPGA / Hardware",
+    description:
+      "Deep experience with FPGA development and digital design. UVM Electronics coursework (EE 5460) + grad-level microelectronics fabrication.",
+  },
   next: {
     title: "What's Next?",
     description:
       "Currently looking into advanced IC packaging technologies and using chiplets to improve yield and performance. Also working at the UVM INTERACT lab on creepy crawly robots.",
   },
 };
+
+export const awards = [
+  {
+    name: "ISEF 2025 Grand Award",
+    detail: "3rd Place — First Grand Award winner in Vermont history",
+  },
+  {
+    name: "Georgia Tech Stamps President's Scholar",
+    detail: "Semifinalist",
+  },
+  {
+    name: "US Presidential Scholars",
+    detail: "Nominated",
+  },
+  {
+    name: "Coca-Cola Scholars",
+    detail: "Nominated",
+  },
+];

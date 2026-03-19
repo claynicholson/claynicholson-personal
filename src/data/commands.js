@@ -1,5 +1,5 @@
 import React from "react";
-import { about, robotics, hackclub, research } from "./content";
+import { about, education, robotics, hackclub, research, awards } from "./content";
 import { BANNER, WELCOME_TEXT, PORTRAIT, NEOFETCH_SMALL } from "./ascii";
 
 const Link = ({ href, children }) => (
@@ -79,10 +79,84 @@ export const commands = {
               </div>
               <div>
                 <Dim>{">"}</Dim> Email:{" "}
-                <Link href={about.links.email}>Send me an email</Link>
+                <Link href={about.links.email}>{about.email}</Link>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    ),
+  },
+
+  education: {
+    description: "Education and coursework",
+    handler: () => (
+      <div>
+        <Header>Education</Header>
+
+        <div className="mt-3">
+          <Green>{">> "}{education.college.name}</Green>
+          <Section>
+            <p>{education.college.status}</p>
+            <p>
+              <Label>Course:</Label> {education.college.course}
+            </p>
+          </Section>
+        </div>
+
+        <div className="mt-3">
+          <Green>{">> "}{education.highSchool.name}</Green>
+          <Section>
+            <p>{education.highSchool.status}</p>
+            <p>
+              <Label>GPA:</Label> {education.highSchool.gpa}{" "}
+              <Dim>|</Dim> <Label>SAT:</Label> {education.highSchool.sat}
+            </p>
+          </Section>
+        </div>
+
+        <div className="mt-3">
+          <Green>{">> "}{education.dualEnrollment.school}</Green>
+          <Section>
+            <p><Label>Grades:</Label> {education.dualEnrollment.grades}</p>
+            <div className="mt-1">
+              {education.dualEnrollment.courses.map((c, i) => (
+                <div key={i} className="ml-2">
+                  <Dim>{">"}</Dim> {c}
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+
+        {education.programs.length > 0 && (
+          <div className="mt-3">
+            <Label>Programs:</Label>
+            {education.programs.map((p, i) => (
+              <div key={i} className="ml-2">
+                <Dim>{">"}</Dim> <Accent>{p.name}</Accent> <Dim>({p.date})</Dim>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    ),
+  },
+
+  awards: {
+    description: "Awards and recognition",
+    handler: () => (
+      <div>
+        <Header>Awards & Recognition</Header>
+        <div className="mt-2">
+          {awards.map((a, i) => (
+            <div key={i} className="mt-1 ml-2">
+              <Green>{a.name}</Green>
+              <div className="ml-4">
+                <Dim>{a.detail}</Dim>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     ),
@@ -196,9 +270,11 @@ export const commands = {
               </Green>
               <div className="ml-4">
                 <p>{p.description}</p>
-                <div>
-                  <Link href={p.url}>{p.url}</Link>
-                </div>
+                {p.url && (
+                  <div>
+                    <Link href={p.url}>{p.url}</Link>
+                  </div>
+                )}
                 {p.github && (
                   <div>
                     <Dim>src:</Dim> <Link href={p.github}>{p.github.replace("https://github.com/", "")}</Link>
@@ -219,19 +295,35 @@ export const commands = {
         <Header>Research</Header>
 
         <div className="mt-3">
-          <Accent>{research.main.title}</Accent>
+          <Accent>{research.isef2026.title}</Accent>
           <div className="ml-2 mt-1">
-            <Dim>{research.main.timeline}</Dim>
+            <Dim>{research.isef2026.timeline}</Dim>
           </div>
           <Section>
             <p className="mt-1">
-              <Label>TLDR:</Label> {research.main.tldr}
+              <Label>TLDR:</Label> {research.isef2026.tldr}
             </p>
-            <p className="mt-2">{research.main.details}</p>
+            <p className="mt-2">{research.isef2026.details}</p>
+          </Section>
+        </div>
+
+        <div className="mt-4">
+          <Accent>{research.isef2025.title}</Accent>
+          <div className="ml-2 mt-1">
+            <Dim>{research.isef2025.timeline}</Dim>
+          </div>
+          <Section>
+            <p className="mt-1">
+              <Green>{research.isef2025.award}</Green>
+            </p>
+            <p className="mt-1">
+              <Label>TLDR:</Label> {research.isef2025.tldr}
+            </p>
+            <p className="mt-2">{research.isef2025.details}</p>
 
             <div className="mt-3">
               <Label>Press & Awards:</Label>
-              {research.main.press.map((p, i) => (
+              {research.isef2025.press.map((p, i) => (
                 <div key={i} className="ml-2">
                   <Dim>{">"}</Dim> <Link href={p.url}>{p.label}</Link>
                 </div>
@@ -240,12 +332,19 @@ export const commands = {
 
             <div className="mt-3">
               <Label>Good Reads:</Label>
-              {research.main.reads.map((r, i) => (
+              {research.isef2025.reads.map((r, i) => (
                 <div key={i} className="ml-2">
                   <Dim>{">"}</Dim> <Link href={r.url}>{r.label}</Link>
                 </div>
               ))}
             </div>
+          </Section>
+        </div>
+
+        <div className="mt-4">
+          <Green>{">> "}{research.fpga.title}</Green>
+          <Section>
+            <p>{research.fpga.description}</p>
           </Section>
         </div>
 
@@ -286,8 +385,10 @@ export const commands = {
           <Label>Hack Club:</Label>
           {hackclub.projects.map((p, i) => (
             <div key={i} className="ml-2">
-              <Green>{p.name}</Green> <Dim>—</Dim>{" "}
-              <Link href={p.url}>{p.url}</Link>
+              <Green>{p.name}</Green>
+              {p.url && (
+                <span> <Dim>—</Dim> <Link href={p.url}>{p.url}</Link></span>
+              )}
             </div>
           ))}
         </div>
@@ -295,7 +396,10 @@ export const commands = {
         <div className="mt-3">
           <Label>Research:</Label>
           <div className="ml-2">
-            <Green>{research.main.title}</Green>
+            <Green>{research.isef2026.title}</Green>
+          </div>
+          <div className="ml-2">
+            <Green>{research.isef2025.title}</Green>
           </div>
         </div>
       </div>
@@ -323,7 +427,7 @@ export const commands = {
           <div>
             <Label>Email</Label>{" "}
             <Dim>.........</Dim>{" "}
-            <Link href={about.links.email}>Click to reveal</Link>
+            <Link href={about.links.email}>{about.email}</Link>
           </div>
         </div>
       </div>
@@ -402,9 +506,11 @@ export const commands = {
     handler: () => (
       <div className="flex flex-wrap gap-x-6 gap-y-1">
         <Green>about.txt</Green>
+        <Label>education/</Label>
         <Label>robotics/</Label>
         <Label>hackclub/</Label>
         <Label>research/</Label>
+        <Green>awards.txt</Green>
         <Green>projects.txt</Green>
         <Green>contact.txt</Green>
         <Accent>portrait.ascii</Accent>

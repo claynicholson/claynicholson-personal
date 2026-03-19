@@ -96,7 +96,7 @@ export default function Terminal() {
     <div
       ref={scrollRef}
       onClick={handleClick}
-      className="min-h-screen w-full bg-term-base p-4 sm:p-6 md:p-8 overflow-y-auto font-mono text-sm sm:text-base cursor-text select-text"
+      className="h-screen w-full bg-term-base p-4 sm:p-6 md:p-8 overflow-y-auto font-mono text-sm sm:text-base cursor-text select-text"
     >
       {/* CRT scanline overlay */}
       <div className="pointer-events-none fixed inset-0 z-50 opacity-[0.03]"
