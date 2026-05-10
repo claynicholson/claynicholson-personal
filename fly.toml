@@ -1,0 +1,16 @@
+# SSH server deploy config. Run `fly deploy` from the project root — the
+# build context needs to include both `ssh-server/` and `shared/`, so this
+# file lives at the root rather than inside ssh-server/.
+
+app = "clay-ssh"
+primary_region = "ewr"
+
+[build]
+  dockerfile = "ssh-server/Dockerfile"
+
+[[services]]
+  internal_port = 2222
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 22

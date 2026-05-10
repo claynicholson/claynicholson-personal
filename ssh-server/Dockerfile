@@ -2,10 +2,17 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+# Install deps using just the manifest first (caches the layer).
+COPY ssh-server/package*.json ./ssh-server/
+WORKDIR /app/ssh-server
 RUN npm ci --production
 
-COPY . .
+# Copy ssh-server source + the shared content layer (require("../shared/...")).
+WORKDIR /app
+COPY ssh-server/ ./ssh-server/
+COPY shared/   ./shared/
+
+WORKDIR /app/ssh-server
 
 # Generate host key if not present
 RUN if [ ! -f host.key ]; then \

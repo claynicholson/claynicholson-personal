@@ -1,6 +1,13 @@
+// Web command registry. Most commands are generated from shared/sections —
+// to add a new section, drop a file in shared/sections/ and register it in
+// shared/sections/index.js. Edit this file only for "special" commands like
+// `clear`, `ssh`, `neofetch`, etc.
+
 import React from "react";
-import { about, education, robotics, hackclub, research, awards } from "./content";
-import { BANNER, WELCOME_TEXT, PORTRAIT, NEOFETCH_SMALL } from "./ascii";
+import { SECTIONS } from "../../shared/sections";
+import { RenderBlocks } from "@/lib/renderJsx";
+import { PORTRAIT, NEOFETCH_SMALL } from "./ascii";
+import about from "../../shared/sections/about";
 
 const Link = ({ href, children }) => (
   <a
@@ -16,30 +23,34 @@ const Link = ({ href, children }) => (
 const Header = ({ children }) => (
   <span className="text-term-mauve font-bold">{children}</span>
 );
-
 const Label = ({ children }) => (
   <span className="text-term-yellow">{children}</span>
 );
-
 const Dim = ({ children }) => (
   <span className="text-term-overlay">{children}</span>
 );
-
 const Accent = ({ children }) => (
   <span className="text-term-pink">{children}</span>
 );
-
 const Green = ({ children }) => (
   <span className="text-term-green">{children}</span>
 );
 
-const Section = ({ children }) => (
-  <div className="ml-2 mt-1 pl-3 border-l-2 border-term-surface">
-    {children}
-  </div>
+// ─── Section commands (auto-generated) ───────────────────────────────────────
+
+const sectionCommands = Object.fromEntries(
+  SECTIONS.map((s) => [
+    s.id,
+    {
+      description: s.description,
+      handler: () => <RenderBlocks blocks={s.blocks} />,
+    },
+  ])
 );
 
-export const commands = {
+// ─── Special commands ────────────────────────────────────────────────────────
+
+const specialCommands = {
   help: {
     description: "List available commands",
     handler: () => (
@@ -57,379 +68,15 @@ export const commands = {
     ),
   },
 
-  about: {
-    description: "Who is Clay Nicholson?",
-    handler: () => (
-      <div>
-        <Header>About Me</Header>
-        <div className="mt-2">
-          <p>{about.bio}</p>
-          <div className="mt-3">
-            <Label>Links:</Label>
-            <div className="ml-2 mt-1">
-              <div>
-                <Dim>{">"}</Dim> GitHub:{" "}
-                <Link href={about.links.github}>github.com/claynicholson</Link>
-              </div>
-              <div>
-                <Dim>{">"}</Dim> LinkedIn:{" "}
-                <Link href={about.links.linkedin}>
-                  linkedin.com/in/clay-nicholson
-                </Link>
-              </div>
-              <div>
-                <Dim>{">"}</Dim> Email:{" "}
-                <Link href={about.links.email}>{about.email}</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-
-  education: {
-    description: "Education and coursework",
-    handler: () => (
-      <div>
-        <Header>Education</Header>
-
-        <div className="mt-3">
-          <Green>{">> "}{education.college.name}</Green>
-          <Section>
-            <p>{education.college.status}</p>
-            <p>
-              <Label>Course:</Label> {education.college.course}
-            </p>
-          </Section>
-        </div>
-
-        <div className="mt-3">
-          <Green>{">> "}{education.highSchool.name}</Green>
-          <Section>
-            <p>{education.highSchool.status}</p>
-            <p>
-              <Label>GPA:</Label> {education.highSchool.gpa}{" "}
-              <Dim>|</Dim> <Label>SAT:</Label> {education.highSchool.sat}
-            </p>
-          </Section>
-        </div>
-
-        <div className="mt-3">
-          <Green>{">> "}{education.dualEnrollment.school}</Green>
-          <Section>
-            <p><Label>Grades:</Label> {education.dualEnrollment.grades}</p>
-            <div className="mt-1">
-              {education.dualEnrollment.courses.map((c, i) => (
-                <div key={i} className="ml-2">
-                  <Dim>{">"}</Dim> {c}
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-
-        {education.programs.length > 0 && (
-          <div className="mt-3">
-            <Label>Programs:</Label>
-            {education.programs.map((p, i) => (
-              <div key={i} className="ml-2">
-                <Dim>{">"}</Dim> <Accent>{p.name}</Accent> <Dim>({p.date})</Dim>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    ),
-  },
-
-  awards: {
-    description: "Awards and recognition",
-    handler: () => (
-      <div>
-        <Header>Awards & Recognition</Header>
-        <div className="mt-2">
-          {awards.map((a, i) => (
-            <div key={i} className="mt-1 ml-2">
-              <Green>{a.name}</Green>
-              <div className="ml-4">
-                <Dim>{a.detail}</Dim>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-  },
-
   whoami: {
     description: "Quick identity check",
     handler: () => (
       <div>
-        <Green>Clay Nicholson</Green> <Dim>—</Dim>{" "}
-        <Label>MIT {about.year}</Label> <Dim>|</Dim>{" "}
-        <span>{about.course}</span>
-      </div>
-    ),
-  },
-
-  robotics: {
-    description: "Robotics teams and projects",
-    handler: () => (
-      <div>
-        <Header>Robotics</Header>
-
-        <div className="mt-3">
-          <div>
-            <Green>
-              {">> "}
-              {robotics.robohawks.name}
-            </Green>{" "}
-            <Dim>({robotics.robohawks.type})</Dim> <Dim>—</Dim>{" "}
-            <Label>{robotics.robohawks.role}</Label>
-          </div>
-          <Section>
-            <p>{robotics.robohawks.description}</p>
-            <div className="mt-1">
-              <Link href={robotics.robohawks.website}>
-                {robotics.robohawks.website}
-              </Link>
-            </div>
-            <div className="mt-2">
-              {robotics.robohawks.seasons.map((s, i) => (
-                <div key={i} className="mt-1">
-                  <Accent>{s.name}</Accent>
-                  <div className="ml-2">
-                    <Dim>{s.description}</Dim>
-                    <div>
-                      <Link href={s.repo}>
-                        {s.repo.replace("https://github.com/", "")}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-
-        <div className="mt-4">
-          <div>
-            <Green>
-              {">> "}
-              {robotics.gmr.name}
-            </Green>{" "}
-            <Dim>({robotics.gmr.type})</Dim> <Dim>—</Dim>{" "}
-            <Label>{robotics.gmr.role}</Label>
-          </div>
-          <Section>
-            <p>{robotics.gmr.description}</p>
-            <div className="mt-1">
-              <Link href={robotics.gmr.website}>{robotics.gmr.website}</Link>
-            </div>
-            <div className="mt-2">
-              {robotics.gmr.seasons.map((s, i) => (
-                <div key={i} className="mt-1">
-                  <Accent>{s.name}</Accent>
-                  <div className="ml-2">
-                    <Dim>{s.description}</Dim>
-                    <div>
-                      <Link href={s.repo}>
-                        {s.repo.replace("https://github.com/", "")}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </div>
-    ),
-  },
-
-  hackclub: {
-    description: "Hack Club projects and involvement",
-    handler: () => (
-      <div>
-        <Header>Hack Club</Header>
-        <Section>
-          <p className="mt-1">{hackclub.description}</p>
-          <p className="mt-2">
-            <Label>{hackclub.role}</Label>
-          </p>
-        </Section>
-
-        <div className="mt-3">
-          <Label>Projects:</Label>
-          {hackclub.projects.map((p, i) => (
-            <div key={i} className="mt-2 ml-2">
-              <Green>
-                {">> "}
-                {p.name}
-              </Green>
-              <div className="ml-4">
-                <p>{p.description}</p>
-                {p.url && (
-                  <div>
-                    <Link href={p.url}>{p.url}</Link>
-                  </div>
-                )}
-                {p.github && (
-                  <div>
-                    <Dim>src:</Dim> <Link href={p.github}>{p.github.replace("https://github.com/", "")}</Link>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-  },
-
-  research: {
-    description: "Academic research projects",
-    handler: () => (
-      <div>
-        <Header>Research</Header>
-
-        <div className="mt-3">
-          <Accent>{research.isef2026.title}</Accent>
-          <div className="ml-2 mt-1">
-            <Dim>{research.isef2026.timeline}</Dim>
-          </div>
-          <Section>
-            <p className="mt-1">
-              <Label>TLDR:</Label> {research.isef2026.tldr}
-            </p>
-            <p className="mt-2">{research.isef2026.details}</p>
-          </Section>
-        </div>
-
-        <div className="mt-4">
-          <Accent>{research.isef2025.title}</Accent>
-          <div className="ml-2 mt-1">
-            <Dim>{research.isef2025.timeline}</Dim>
-          </div>
-          <Section>
-            <p className="mt-1">
-              <Green>{research.isef2025.award}</Green>
-            </p>
-            <p className="mt-1">
-              <Label>TLDR:</Label> {research.isef2025.tldr}
-            </p>
-            <p className="mt-2">{research.isef2025.details}</p>
-
-            <div className="mt-3">
-              <Label>Press & Awards:</Label>
-              {research.isef2025.press.map((p, i) => (
-                <div key={i} className="ml-2">
-                  <Dim>{">"}</Dim> <Link href={p.url}>{p.label}</Link>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-3">
-              <Label>Good Reads:</Label>
-              {research.isef2025.reads.map((r, i) => (
-                <div key={i} className="ml-2">
-                  <Dim>{">"}</Dim> <Link href={r.url}>{r.label}</Link>
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-
-        <div className="mt-4">
-          <Green>{">> "}{research.fpga.title}</Green>
-          <Section>
-            <p>{research.fpga.description}</p>
-          </Section>
-        </div>
-
-        <div className="mt-4">
-          <Green>{">> "}{research.next.title}</Green>
-          <Section>
-            <p>{research.next.description}</p>
-          </Section>
-        </div>
-      </div>
-    ),
-  },
-
-  projects: {
-    description: "All projects combined",
-    handler: () => (
-      <div>
-        <Header>All Projects</Header>
-        <Dim className="block mt-1">
-          Run &apos;robotics&apos;, &apos;hackclub&apos;, or &apos;research&apos; for details.
-        </Dim>
-
-        <div className="mt-3">
-          <Label>Robotics:</Label>
-          {[...robotics.robohawks.seasons, ...robotics.gmr.seasons].map(
-            (s, i) => (
-              <div key={i} className="ml-2">
-                <Green>{s.name}</Green> <Dim>—</Dim>{" "}
-                <Link href={s.repo}>
-                  {s.repo.replace("https://github.com/", "")}
-                </Link>
-              </div>
-            )
-          )}
-        </div>
-
-        <div className="mt-3">
-          <Label>Hack Club:</Label>
-          {hackclub.projects.map((p, i) => (
-            <div key={i} className="ml-2">
-              <Green>{p.name}</Green>
-              {p.url && (
-                <span> <Dim>—</Dim> <Link href={p.url}>{p.url}</Link></span>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-3">
-          <Label>Research:</Label>
-          <div className="ml-2">
-            <Green>{research.isef2026.title}</Green>
-          </div>
-          <div className="ml-2">
-            <Green>{research.isef2025.title}</Green>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-
-  contact: {
-    description: "Get in touch",
-    handler: () => (
-      <div>
-        <Header>Contact</Header>
-        <div className="mt-2 ml-2">
-          <div>
-            <Label>GitHub</Label>{" "}
-            <Dim>........</Dim>{" "}
-            <Link href={about.links.github}>github.com/claynicholson</Link>
-          </div>
-          <div>
-            <Label>LinkedIn</Label>{" "}
-            <Dim>......</Dim>{" "}
-            <Link href={about.links.linkedin}>
-              linkedin.com/in/clay-nicholson
-            </Link>
-          </div>
-          <div>
-            <Label>Email</Label>{" "}
-            <Dim>.........</Dim>{" "}
-            <Link href={about.links.email}>{about.email}</Link>
-          </div>
-        </div>
+        <Green>{about.meta.name}</Green> <Dim>—</Dim>{" "}
+        <Label>
+          {about.meta.school} {about.meta.year}
+        </Label>{" "}
+        <Dim>|</Dim> <span>{about.meta.course}</span>
       </div>
     ),
   },
@@ -452,40 +99,32 @@ export const commands = {
         [<Green key="h">clay</Green>, "@", <Accent key="h2">claynicholson.com</Accent>],
         ["─".repeat(20)],
         [<Label key="l">OS</Label>, ": ", "Clay Nicholson v1.0"],
-        [<Label key="l">Host</Label>, ": ", "MIT '29"],
-        [<Label key="l">Kernel</Label>, ": ", about.course],
+        [<Label key="l">Host</Label>, ": ", `MIT ${about.meta.year}`],
+        [<Label key="l">Kernel</Label>, ": ", about.meta.course],
         [<Label key="l">Uptime</Label>, ": ", "18 years"],
         [<Label key="l">Shell</Label>, ": ", "brain-bash 4.2"],
-        [<Label key="l">Location</Label>, ": ", about.location],
+        [<Label key="l">Location</Label>, ": ", about.meta.location],
         [<Label key="l">Languages</Label>, ": ", "Java, Python, C, JS"],
         [<Label key="l">Interests</Label>, ": ", "Robotics, ML, IC Design"],
         [<Label key="l">Editor</Label>, ": ", "VS Code / Vim"],
         [""],
         [
-          ...[
-            "term-pink",
-            "term-mauve",
-            "term-blue",
-            "term-teal",
-            "term-green",
-            "term-yellow",
-          ].map((c) => (
-            <span key={c} className={`bg-${c} text-${c}`}>
-              {"███"}
-            </span>
+          ...["term-pink", "term-mauve", "term-blue", "term-teal", "term-green", "term-yellow"].map((c) => (
+            <span key={c} className={`bg-${c} text-${c}`}>{"███"}</span>
           )),
         ],
       ];
-
       const asciiLines = NEOFETCH_SMALL.split("\n");
       const maxAsciiWidth = 12;
-
       return (
         <div>
           <pre className="text-sm">
             {lines.map((line, i) => (
               <div key={i} className="flex">
-                <span className="text-term-teal inline-block" style={{ width: `${maxAsciiWidth}ch` }}>
+                <span
+                  className="text-term-teal inline-block"
+                  style={{ width: `${maxAsciiWidth}ch` }}
+                >
                   {asciiLines[i] || ""}
                 </span>
                 <span className="ml-4">
@@ -505,24 +144,16 @@ export const commands = {
     description: "List available files",
     handler: () => (
       <div className="flex flex-wrap gap-x-6 gap-y-1">
-        <Green>about.txt</Green>
-        <Label>education/</Label>
-        <Label>robotics/</Label>
-        <Label>hackclub/</Label>
-        <Label>research/</Label>
-        <Green>awards.txt</Green>
-        <Green>projects.txt</Green>
-        <Green>contact.txt</Green>
+        {SECTIONS.map((s) => (
+          <Green key={s.id}>{s.id}.txt</Green>
+        ))}
         <Accent>portrait.ascii</Accent>
         <Dim>README.md</Dim>
       </div>
     ),
   },
 
-  clear: {
-    description: "Clear terminal",
-    handler: () => null,
-  },
+  clear: { description: "Clear terminal", handler: () => null },
 
   ssh: {
     description: "SSH connection info",
@@ -549,7 +180,7 @@ export const commands = {
         <Accent>
           [sudo] password for clay: ********
           <br />
-          Nice try. 😏
+          Nice try.
         </Accent>
       </div>
     ),
@@ -574,8 +205,23 @@ export const commands = {
     handler: () => (
       <div>
         <Header>Blog</Header>
-        <Dim className="block mt-1">Coming soon...</Dim>
+        <Dim>Coming soon...</Dim>
       </div>
     ),
   },
+};
+
+// `help` first, then sections in registry order, then everything else.
+export const commands = {
+  help: specialCommands.help,
+  ...sectionCommands,
+  whoami: specialCommands.whoami,
+  ls: specialCommands.ls,
+  ascii: specialCommands.ascii,
+  neofetch: specialCommands.neofetch,
+  ssh: specialCommands.ssh,
+  blog: specialCommands.blog,
+  sudo: specialCommands.sudo,
+  clear: specialCommands.clear,
+  exit: specialCommands.exit,
 };
