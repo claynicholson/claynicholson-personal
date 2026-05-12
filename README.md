@@ -3,7 +3,7 @@
 Terminal-style personal site. Same content, two surfaces:
 
 - **Web** — Next.js app, fzf-style filterable menu, click/keyboard navigable.
-- **SSH** — `ssh guest@claynicholson.com`, fzf-style menu in a real terminal.
+- **SSH** — `ssh ssh.claynicholson.com`, fzf-style menu in a real terminal.
 
 Both render from the same content tree in `shared/sections/`.
 

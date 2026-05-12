@@ -163,7 +163,7 @@ const specialCommands = {
         <div className="mt-2">
           <p>Connect to this portfolio via real SSH:</p>
           <div className="mt-2 p-3 bg-term-surface rounded border border-term-overlay/20">
-            <Green>$ ssh guest@claynicholson.com</Green>
+            <Green>$ ssh ssh.claynicholson.com</Green>
           </div>
           <p className="mt-2">
             <Dim>No password required. Read-only access.</Dim>

@@ -8,7 +8,7 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
   title: "Clay Nicholson",
-  description: "ssh guest@claynicholson.com",
+  description: "ssh ssh.claynicholson.com",
 };
 
 export default function RootLayout({ children }) {
