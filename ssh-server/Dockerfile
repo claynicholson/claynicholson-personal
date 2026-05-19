@@ -14,13 +14,12 @@ COPY shared/   ./shared/
 
 WORKDIR /app/ssh-server
 
-# Generate host key if not present
-RUN if [ ! -f host.key ]; then \
-      apk add --no-cache openssh-keygen && \
-      ssh-keygen -t ed25519 -f host.key -N "" && \
-      apk del openssh-keygen; \
-    fi
+# openssh-keygen needed at runtime if no host key is mounted
+RUN apk add --no-cache openssh-keygen
 
 EXPOSE 2222
 
-CMD ["node", "index.js"]
+COPY ssh-server/entrypoint.sh /app/ssh-server/entrypoint.sh
+RUN chmod +x /app/ssh-server/entrypoint.sh
+
+ENTRYPOINT ["/app/ssh-server/entrypoint.sh"]
