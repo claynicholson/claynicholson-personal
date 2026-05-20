@@ -46,20 +46,6 @@ const projects = [
     url: "https://grounded.hackclub.com/",
     github: "https://github.com/hackclub/grounded",
   },
-  {
-    name: "KiCad-Copper",
-    description:
-      "Fork of KiCad (open-source PCB design tool) with schematic APIs for integration with AI models and MCPs.",
-    url: "https://copper.claynicholson.com/",
-    github: "https://github.com/claynicholson/kicad-copper",
-  },
-  {
-    name: "ASICify",
-    description:
-      "Open-source tool to turn any AI model into a custom ASIC. Automates the pipeline from trained model to silicon-ready hardware design.",
-    url: "http://asicify.com/",
-    github: "https://github.com/claynicholson/asicify",
-  },
 ];
 
 const blocks = [

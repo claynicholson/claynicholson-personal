@@ -7,6 +7,23 @@ const robotics = require("./robotics");
 const hackclub = require("./hackclub");
 const research = require("./research");
 
+const personal = [
+  {
+    name: "KiCad-Copper",
+    description:
+      "Fork of KiCad (open-source PCB design tool) with schematic APIs for integration with AI models and MCPs.",
+    url: "https://copper.claynicholson.com/",
+    github: "https://github.com/claynicholson/kicad-copper",
+  },
+  {
+    name: "ASICify",
+    description:
+      "Open-source tool to turn any AI model into a custom ASIC. Automates the pipeline from trained model to silicon-ready hardware design.",
+    url: "http://asicify.com/",
+    github: "https://github.com/claynicholson/asicify",
+  },
+];
+
 const blocks = [
   H("All Projects"),
   DIM("Run 'robotics', 'hackclub', or 'research' for details."),
@@ -47,9 +64,19 @@ blocks.push(
   SPACER
 );
 
+blocks.push(SUB("Personal"));
+for (const p of personal) {
+  const inner = [P(p.description)];
+  if (p.url) inner.push(LINK(p.url));
+  if (p.github) inner.push(LINK(p.github));
+  blocks.push(ROW(p.name.padEnd(24), LINK(p.url)));
+}
+blocks.push(SPACER);
+
 module.exports = {
   id: "projects",
   label: "projects",
   description: "All projects combined",
+  personal,
   blocks,
 };
