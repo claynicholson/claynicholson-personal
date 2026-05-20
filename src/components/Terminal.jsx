@@ -192,15 +192,6 @@ export default function Terminal() {
           )}
         </div>
 
-        {/* Filterable, arrow-key navigable menu */}
-        {bannerDone && (
-          <CommandMenu
-            filter={currentInput}
-            selectedIndex={menuIndex}
-            onSelect={handleMenuSelect}
-          />
-        )}
-
         {/* Command history */}
         {history.map((entry, i) => (
           <TerminalOutput
@@ -209,6 +200,15 @@ export default function Terminal() {
             output={entry.output}
           />
         ))}
+
+        {/* Filterable, arrow-key navigable menu — below history so it stays visible */}
+        {bannerDone && (
+          <CommandMenu
+            filter={currentInput}
+            selectedIndex={menuIndex}
+            onSelect={handleMenuSelect}
+          />
+        )}
 
         {/* Input line — typing here filters the menu above. */}
         {bannerDone && (
