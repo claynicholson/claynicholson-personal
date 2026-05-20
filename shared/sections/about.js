@@ -6,7 +6,7 @@ const { H, P, SPACER, ROW, LINK } = require("../blocks");
 const links = {
   github: "https://github.com/claynicholson",
   linkedin: "https://www.linkedin.com/in/clay-nicholson/",
-  email: "mailto:clay@hackclub.com",
+  email: "mailto:clayn@mit.edu",
 };
 
 module.exports = {
@@ -19,14 +19,13 @@ module.exports = {
     school: "MIT",
     year: "'29",
     course: "6-5 (Electrical Engineering with Computing)",
-    location: "Vermont",
-    email: "clay@hackclub.com",
+    location: "Burlington(ish) Vermont",
     links,
   },
   blocks: [
     H("About Me"),
     P(
-      "Hello, my name is Clay. I am a part of a bunch of robotics teams, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing)."
+      "Hello, my name is Clay. I am a part of a bunch of disparate, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing)."
     ),
     SPACER,
     P("Links:"),

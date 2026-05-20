@@ -13,7 +13,7 @@ const projects = [
     tldr:
       "Custom FPGA-based adaptive low-tail-latency network switch for data centers.",
     details:
-      "Designed ATLAS (Adaptive Tail-Latency-Aware Scheduler) — the first hardware-native adaptive scheduler with zero CPU in the forwarding path. Targets p99/p999 tail latency convergence to the M/D/1 queuing theory bound.",
+      "Designed ATLAS (Adaptive Tail-Latency-Aware Scheduler) — a novel packet switching algorithm implemented in FPGA fabric using Verilog, with a queue arbiter that switches the packet distribution algorithm based on server utilization. 55% queuing time reduction compared to the industry baseline and 70% reduction in extra capacity needed in a typical data center.",
   },
   {
     id: "isef2025",
@@ -23,7 +23,7 @@ const projects = [
     tldr:
       "Pancreatic cancer is really bad and usually goes undetected until it's too late. This project automates detection using a U-Net CNN, reducing the time and cost of regular pancreas scans.",
     details:
-      "Built a U-Net model (34 layers, 1.9M parameters) trained on 282 3D CT volumes from Memorial Sloan Kettering. Achieved a DICE score of 0.7451 — better than most radiologists.",
+      "Built a U-Net model (34 layers, 1.9M parameters) trained on 282 3D CT volumes from Memorial Sloan Kettering. Achieved 75% segmentation accuracy compared to the 68% average for professional radiologists — able to accurately segment and diagnose pancreatic cancer months before professionals could.",
     press: [
       { label: "Regeneron ISEF 2025 Awards", url: "https://www.societyforscience.org/press-release/regeneron-isef-2025-full-awards/" },
       { label: "WCAX Coverage", url: "https://www.wcax.com/2025/04/29/cvu-student-takes-cancer-research-science-project-next-level/" },

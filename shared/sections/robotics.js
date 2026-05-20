@@ -7,9 +7,9 @@ const teams = [
   {
     name: "Robohawks",
     type: "(FTC)",
-    role: "Coach/Mentor at UVM",
+    role: "President & Coach/Mentor",
     description:
-      "4 years on FTC Robohawks with multiple state/national championships. Now serve as coach/mentor for FTC Robohawks at UVM. Mentored 150+ students across FTC and FRC programs.",
+      "President of my school's robotics club, leading the team to 4 consecutive state championship wins. Now coach/mentor for FTC Robohawks at UVM. Awards: 4x Vermont State Championships, Inspire Award, International Judges' Choice Award.",
     website: "https://www.robohawks5741.com/",
     seasons: [
       {
@@ -36,9 +36,9 @@ const teams = [
   {
     name: "Green Mountain Robotics #9101",
     type: "(FRC)",
-    role: "Founder, Head of Programming",
+    role: "Co-Founder, Sole Programmer",
     description:
-      "Founded FRC Team #9101 in Vermont. Head of programming, also help with mechanical, outreach, and electrical. 4 years FRC experience with multiple state/national championships.",
+      "Co-founded FRC Team #9101 across multiple rural Vermont high schools. Raised $50K+, sole programmer, led 20+ members. Awards: Rookie All-Star, World Championship Division Highest Rookie Seed, Engineering Inspiration Award.",
     website: "https://greenmountainrobotics.org/",
     seasons: [
       {
@@ -54,6 +54,9 @@ const teams = [
     ],
   },
 ];
+
+const mentoring =
+  "Coached FIRST LEGO League and mentored 250+ students across 15 robotics teams.";
 
 const blocks = [H("Robotics")];
 
@@ -78,11 +81,13 @@ for (const t of teams) {
   blocks.push(SPACER);
 }
 
+blocks.push(SUB("Mentoring & Coaching"));
+blocks.push(NEST([P(mentoring)]), SPACER);
+
 module.exports = {
   id: "robotics",
   label: "robotics",
   description: "Robotics teams and projects",
-  // Exposed so the `projects` section can build a flat combined list.
   teams,
   blocks,
 };

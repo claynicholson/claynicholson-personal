@@ -43,6 +43,13 @@ module.exports = {
     ]),
     SPACER,
 
+    SUB("CVU Computer Science Club"),
+    NEST([
+      P("Founded and led — taught 25+ students weekly."),
+      P("Organized Snowbound, Vermont's largest high school hackathon."),
+    ]),
+    SPACER,
+
     P("Programs:"),
     ...programs.map((p) => BULLET(`${p.name}  —  ${p.date}`)),
   ],
