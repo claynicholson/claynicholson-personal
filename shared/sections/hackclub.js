@@ -75,10 +75,9 @@ for (const proj of projects) {
   blocks.push(SUB(proj.name));
   const inner = [P(proj.description)];
   if (proj.url) inner.push(LINK(proj.url));
-  if (proj.github)
-    inner.push(LINK(proj.github, `src: ${proj.github.replace("https://github.com/", "")}`));
+  if (proj.github) inner.push(LINK(proj.github));
   if (proj.extras) {
-    for (const e of proj.extras) inner.push(LINK(e.url, e.label));
+    for (const e of proj.extras) inner.push(LINK(e.url));
   }
   blocks.push(NEST(inner));
 }
