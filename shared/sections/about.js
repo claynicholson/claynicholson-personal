@@ -20,12 +20,13 @@ module.exports = {
     year: "'29",
     course: "6-5 (Electrical Engineering with Computing)",
     location: "Burlington(ish) Vermont",
+    email: "clayn@mit.edu",
     links,
   },
   blocks: [
     H("About Me"),
     P(
-      "Hello, my name is Clay. I am a part of a bunch of disparate, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing)."
+      "Hello, my name is Clay. I am involved in a bunch of disparate things, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing)."
     ),
     SPACER,
     P("Links:"),

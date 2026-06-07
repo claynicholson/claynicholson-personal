@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Prompt from "./Prompt";
 
 export default function TerminalInput({
   value,
@@ -10,12 +11,7 @@ export default function TerminalInput({
 }) {
   return (
     <div className="flex items-center flex-wrap">
-      <span className="text-term-blue font-bold">clay</span>
-      <span className="text-term-overlay">@</span>
-      <span className="text-term-green font-bold">claynicholson.com</span>
-      <span className="text-term-overlay">:</span>
-      <span className="text-term-yellow">~</span>
-      <span className="text-term-overlay">$ </span>
+      <Prompt />
       <div className="relative flex-1 min-w-[100px]">
         <input
           ref={inputRef}
@@ -30,13 +26,14 @@ export default function TerminalInput({
           autoCapitalize="off"
           spellCheck="false"
           inputMode="text"
+          aria-label="Terminal command input"
         />
         <span
-          className="absolute top-0 left-0 pointer-events-none text-term-rosewater"
+          className="absolute top-0 left-0 pointer-events-none text-term-rosewater whitespace-pre"
           aria-hidden="true"
         >
           {value}
-          <span className="inline-block w-[0.6em] h-[1.15em] bg-term-blue animate-blink align-middle ml-[1px] -mb-[2px]" />
+          <span className="inline-block w-[0.55em] h-[1.1em] bg-term-blue animate-blink align-text-bottom ml-px" />
         </span>
       </div>
     </div>

@@ -37,9 +37,9 @@ export default function CommandMenu({ filter, selectedIndex, onSelect }) {
   return (
     <div className="mb-4 mt-1">
       <div className="text-term-overlay text-sm mb-2">
-        Use <span className="text-term-yellow">arrow keys</span> to navigate,{" "}
-        <span className="text-term-yellow">Enter</span> to select, or{" "}
-        <span className="text-term-yellow">type</span> to filter the list.
+        <span className="text-term-yellow">arrows</span> navigate,{" "}
+        <span className="text-term-yellow">enter</span> select,{" "}
+        <span className="text-term-yellow">type</span> to filter
       </div>
       <div className="space-y-0.5">
         {filtered.length === 0 ? (

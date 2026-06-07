@@ -205,7 +205,20 @@ const specialCommands = {
     handler: () => (
       <div>
         <Header>Blog</Header>
-        <Dim>Coming soon...</Dim>
+        <div className="mt-2 space-y-2">
+          <div className="flex items-center gap-3">
+            <Label>2026-06-07</Label>
+            <Link href="/blog/khlawde-code">
+              Khlawde Code: Engineering a Self-Improving AI Coding Agent
+            </Link>
+          </div>
+        </div>
+        <div className="mt-3">
+          <Dim>
+            View all posts at{" "}
+            <a href="/blog" className="text-term-teal underline hover:text-term-blue transition-colors">/blog</a>
+          </Dim>
+        </div>
       </div>
     ),
   },

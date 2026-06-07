@@ -27,7 +27,8 @@ export default function Terminal() {
     const el = bannerRef.current;
     if (!el) return;
 
-    const skipAnimation = sessionStorage.getItem("banner-shown");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const skipAnimation = prefersReduced || sessionStorage.getItem("banner-shown");
     if (skipAnimation) {
       el.textContent = BANNER;
       setBannerDone(true);
@@ -158,17 +159,10 @@ export default function Terminal() {
     <div
       ref={scrollRef}
       onClick={handleClick}
+      role="application"
+      aria-label="Interactive terminal"
       className="h-screen w-full bg-term-base p-4 sm:p-6 md:p-8 overflow-y-auto font-mono text-sm sm:text-base cursor-text select-text"
     >
-      {/* CRT scanline overlay */}
-      <div
-        className="pointer-events-none fixed inset-0 z-50 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px)",
-        }}
-      />
-
       <div className="max-w-5xl mx-auto">
         {/* ASCII Banner */}
         <div className="mb-6">

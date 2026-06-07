@@ -1,17 +1,13 @@
 "use client";
 
 import React from "react";
+import Prompt from "./Prompt";
 
 export default function TerminalOutput({ command, output }) {
   return (
     <div className="mb-4 animate-fadeIn">
       <div className="flex items-center flex-wrap">
-        <span className="text-term-blue font-bold">clay</span>
-        <span className="text-term-overlay">@</span>
-        <span className="text-term-green font-bold">claynicholson.com</span>
-        <span className="text-term-overlay">:</span>
-        <span className="text-term-yellow">~</span>
-        <span className="text-term-overlay">$ </span>
+        <Prompt />
         <span className="text-term-rosewater">{command}</span>
       </div>
       {output && (
