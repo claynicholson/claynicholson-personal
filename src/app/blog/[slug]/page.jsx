@@ -28,19 +28,14 @@ export default async function BlogPost({ params }) {
 
   return (
     <article>
-      <header className="mb-8 pb-6 border-b border-term-surface">
-        <h1 className="text-2xl sm:text-3xl font-bold text-term-text mb-3">
-          {post.title}
-        </h1>
-        <div className="flex items-center gap-4 text-sm">
-          <time className="text-term-overlay">{post.date}</time>
+      <header className="blog-article-header">
+        <h1 className="blog-article-title">{post.title}</h1>
+        <div className="blog-article-meta">
+          <span className="blog-article-date">Published {post.date}</span>
           {post.tags.length > 0 && (
-            <div className="flex gap-2">
+            <div className="blog-article-tags">
               {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-2 py-0.5 rounded bg-term-surface text-term-teal"
-                >
+                <span key={tag} className="blog-article-tag">
                   {tag}
                 </span>
               ))}
@@ -54,14 +49,9 @@ export default async function BlogPost({ params }) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
-      <footer className="mt-12 pt-6 border-t border-term-surface">
-        <Link
-          href="/blog"
-          className="text-term-teal hover:text-term-blue transition-colors"
-        >
-          &larr; back to ~/blog
-        </Link>
-      </footer>
+      <Link href="/blog" className="blog-article-back">
+        &larr; All posts
+      </Link>
     </article>
   );
 }

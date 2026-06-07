@@ -209,7 +209,7 @@ const specialCommands = {
           <div className="flex items-center gap-3">
             <Label>2026-06-07</Label>
             <Link href="/blog/khlawde-code">
-              Khlawde Code: Engineering a Self-Improving AI Coding Agent
+              I Reverse-Engineered Claude Code and Built 11 Systems That Make It 40% More Efficient
             </Link>
           </div>
         </div>

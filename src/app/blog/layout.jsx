@@ -1,23 +1,44 @@
+import "./blog.css";
+import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 export default function BlogLayout({ children }) {
   return (
-    <div className="min-h-screen bg-term-base text-term-text crt">
-      <nav className="border-b border-term-surface px-6 py-4">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <a
-            href="/blog"
-            className="text-term-mauve font-bold hover:text-term-pink transition-colors"
-          >
-            ~/blog
+    <div
+      className={`${inter.variable} ${playfair.variable} ${jetbrains.variable} blog-page`}
+    >
+      <nav className="blog-nav">
+        <div className="blog-nav-inner">
+          <a href="/blog" className="blog-nav-logo">
+            Clay Nicholson
           </a>
-          <a
-            href="/"
-            className="text-term-overlay hover:text-term-teal transition-colors text-sm"
-          >
-            cd ~
-          </a>
+          <div className="blog-nav-links">
+            <a href="/blog">Research</a>
+            <a href="/">Terminal</a>
+          </div>
         </div>
       </nav>
-      <main className="max-w-4xl mx-auto px-6 py-8">{children}</main>
+      <main className="blog-main">{children}</main>
+      <footer className="blog-footer">
+        <div className="blog-footer-inner">
+          <span>Clay Nicholson</span>
+          <a href="/">claynicholson.com</a>
+        </div>
+      </footer>
     </div>
   );
 }
