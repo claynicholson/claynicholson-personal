@@ -1,5 +1,5 @@
 ---
-title: "I Reverse-Engineered Claude Code and Built 11 Systems That Make It 40% More Efficient"
+title: "I Reverse-Engineered Claude Code, Made It 100x Better to Use, and Built 11 Systems That Make It 40% More Efficient"
 date: "2026-06-07"
 description: "Anthropic accidentally shipped sourcemaps in an npm update. I extracted 180K lines of TypeScript, removed every artificial limit, and built a self-improving coding agent."
 tags: ["reverse-engineering", "open-source", "typescript", "tools"]
@@ -7,7 +7,7 @@ tags: ["reverse-engineering", "open-source", "typescript", "tools"]
 
 ## TLDR
 
-I took the Claude Code source from the sourcemap leak, removed every artificial limit (4x output tokens, 3x search, 2.5x timeouts), ungated all 92+ feature flags and internal-only prompt enhancements, then built 11 background intelligence systems on top. The first 7 are pure TypeScript with zero model calls. They prevent loops, remember errors across sessions, eliminate dead context (30-50% of the window), and detect stale files. Net result: 20-40% fewer tokens per session. Total integration cost: 25 lines of code across 3 hook points.
+I took the Claude Code source from the sourcemap leak, removed every artificial limit (4x output tokens, 3x search, 2.5x timeouts), ungated all 92+ feature flags and internal-only prompt enhancements, then built 11 background intelligence systems on top. It has a loop detector that catches the agent repeating itself and injects a circuit-breaker. A "scar tissue" system that remembers failures across sessions so it never makes the same mistake twice. Dead store elimination that treats conversations like compiler IR and reclaims 30-50% of the context window. An overnight autonomous engine that fixes TODOs and adds tests while you sleep. A self-evolving prompt system that A/B tests its own skill prompts with ELO ratings and auto-promotes winners. Net result: 20-40% fewer tokens per session, and a tool that genuinely gets better every time you use it.
 
 ---
 

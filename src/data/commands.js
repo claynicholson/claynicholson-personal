@@ -209,7 +209,7 @@ const specialCommands = {
           <div className="flex items-center gap-3">
             <Label>2026-06-07</Label>
             <Link href="/blog/khlawde-code">
-              I Reverse-Engineered Claude Code and Built 11 Systems That Make It 40% More Efficient
+              I Reverse-Engineered Claude Code, Made It 100x Better to Use
             </Link>
           </div>
         </div>
