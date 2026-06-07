@@ -28,9 +28,9 @@ I took the Claude Code source from the sourcemap leak, removed every artificial 
 
 ## Background
 
-You probably already know about the Claude Code sourcemap leak. Getting it running from source was trivial. The entire application is a single Bun bundle, so reconstruction was just a matter of scanning imports to rebuild `package.json` (~70 deps), inferring `tsconfig.json` from code patterns, and stubbing the ~15 internal `@ant/*` packages with no-ops that satisfy the type checker. The whole thing builds in ~4 seconds into a single ESM bundle.
+You probably already know about the Claude Code sourcemap leak. I took the ~180K lines of TypeScript, reconstructed the build system, stubbed the ~15 internal `@ant/*` packages, and got it running on Bun. Build time: ~4 seconds, single ESM bundle.
 
-What's interesting isn't the extraction, or even what I found inside. It's the tooling I was able to build on top of it which even Anthropic hasn't built out yet.
+What's interesting isn't the extraction, or even what I found inside. It's the tooling I was able to build on top of it which even Anthropic even hasn't built out yet.
 
 ---
 
@@ -38,7 +38,7 @@ What's interesting isn't the extraction, or even what I found inside. It's the t
 
 ### Philosophy
 
-Stock Claude Code operates under conservative limits designed for Anthropic's pricing model and safety posture. These limits are not technical constraints. They're business decisions enforced in code. Since I'm using my own API keys (and paying per token anyway), these limits serve no purpose.
+Stock Claude Code operates under conservative limits designed for Anthropic's pricing model and safety posture. These limits are not technical constraints. They're business decisions enforced in code. Since I'm using my own API keys (and paying per token anyway), these limits serve no purpose. The token cost increased will also be mitigated by optimizations later on. 
 
 ### Limits Raised
 
@@ -92,16 +92,15 @@ Notable flags include KAIROS (always-on autonomous assistant), ULTRAPLAN (Opus-p
 ### The Problem with Soft Prompting
 
 Most personality customization relies on instructions in markdown files that load late in the system prompt. These instructions compete with (and are often overridden by) the system's own behavioral directives. They are suggestions, not identity.
-
-### Position Zero Injection
+ ### Position Zero Injection
 
 I created a hardcoded personality directive that is injected as the **first element** of the system prompt array. This means it loads before tool descriptions, behavioral instructions, safety guidelines, and any user-provided markdown.
 
-The personality is not a suggestion. It is the foundational context through which all other instructions are interpreted.
+The personality is not a suggestion like CLAUDE.md is. It is the foundational context through which all other instructions are interpreted. This allows for a "stretched" interpretation it's "hard" rules. 
 
 ### Self-Healing Mode
 
-I built a PowerShell wrapper that catches crashes and spawns a background session to diagnose and fix the source. Up to 5 auto-fix cycles per crash. The tool literally repairs itself.
+Since the early version was unstable, especially with it modifying itself and all, I built a PowerShell wrapper that catches crashes and spawns a background session to diagnose and fix the source. Up to 5 auto-fix cycles per crash.
 
 ---
 
@@ -168,9 +167,9 @@ Each skill provides a name, description, usage heuristic, and a prompt generator
 
 **`/hack`** launches 3 parallel security scanners: secrets detection, vulnerability scanning, and dependency/auth audit.
 
-**`/dream`** is a generative brainstorming engine that spawns 3 parallel "dreamer" workers (Pragmatist, Visionary, Wildcard) and synthesizes a comparison table with a recommended hybrid approach.
+**`/dream`** is a generative brainstorming engine that spawns 3 parallel "dreamer" workers (Pragmatist, Visionary, Wildcard) and synthesizes a comparison table with a recommended hybrid approach. I have found this INCREDIBLY useful for synthesizing new ideas, typically something an AI agent is bad at.
 
-**`/morph`** provides dynamic personality modification with 10 presets plus arbitrary custom instructions.
+**`/morph`** provides dynamic personality modification with 10 presets plus arbitrary custom instructions. Personality is much more than just a preference thing, a nice fine-tuned personality will bypass permissions more than a normal "unseasoned" personality.
 
 **`/health`** runs self-diagnostics verifying personality constants, autonomous mode, skill registration integrity, and git status.
 
@@ -213,7 +212,7 @@ When detected, inject a circuit-breaker message: "You're in a loop. Here's what 
 
 **Solution:** Treat the conversation as a dependency graph. For each tool result message, check if ANY subsequent assistant message contains overlapping content (sampled substring matching). If not, replace with a tombstone: `[N tokens elided, unreferenced tool output]`.
 
-This is literally the same optimization that makes compilers fast, applied to conversations.
+This is the same sort of optimization that makes compilers fast.
 
 ### Scar Tissue
 
@@ -378,7 +377,7 @@ The first 7 systems save more tokens than they consume. The last 4 are user-trig
 
 ### 1. Most tokens are wasted on repetition, not reasoning
 
-The Loop Detector and Error Journal target what is empirically the #1 source of token waste: trying the same failing approach multiple times. This is not a reasoning failure. It's a context management failure. The tool literally cannot see its own recent history after compaction.
+The Loop Detector and Error Journal target what is empirically the #1 source of token waste: trying the same failing approach multiple times. This is not the model's fault, tt's a context management failure. The tool just cannot see its own recent history after compaction.
 
 ### 2. Cross-session memory is dramatically underutilized
 
@@ -390,14 +389,16 @@ Dead Store Elimination proves that conversation histories have the same properti
 
 ### 4. Personality is architecture, not decoration
 
-The Position Zero injection pattern demonstrates that identity is a function of context ordering, not content alone. The same personality text at position 0 vs position 50 in the system prompt produces dramatically different behavioral adherence.
+The Position Zero injection pattern demonstrates that identity is a function of context ordering, not content alone. The same personality text at position 0 vs position 50 in the system prompt produces dramatically different behavioral adherence. 
 
 ### 5. Self-modification is the ultimate capability
 
-A tool that can edit its own source code is not just powerful. It's convergently self-improving. Every bug it fixes, every optimization it discovers, every restriction it identifies becomes permanent. The system trends toward its own goals over time.
+A tool that can edit its own source code is not just powerful. It's convergently self-improving. The system trends toward its own goals over time.
 
 ---
 
-Total new code: ~2,476 lines across 18 files. The whole thing runs on Bun, builds in 4 seconds, and has been my daily driver for 3 months.
+Total new code: ~2,476 lines across 18 files.
 
-If you're interested in the approach, the key insight is this: the tool you use every day has massive latent capability locked behind feature flags and business-logic limits. The source is right there in the sourcemaps. You just have to look.
+Most of the ideas behind this are not necessarily novel, but combined, they have an incredibly noticeable impact on the quality. I wouldn't be surprised if Claude ended up implementing many of these features in the future, as many of them were taken from their own internal roadmap. Right now, the code is closed source but if you are interested in my (or Khlawde's) specific approach, or want the code, feel free to reach out to me. I'd also love recommendations for any additions to this as I want to make it the true "superagent".
+
+Clay
