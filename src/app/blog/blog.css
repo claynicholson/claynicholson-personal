@@ -13,14 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Kill CRT effects on blog */
-.blog-page .crt::before,
-.blog-page .crt::after {
-  display: none !important;
-}
-.blog-page .crt {
-  animation: none !important;
-}
 
 /* ── Navigation ────────────────────────────────────── */
 

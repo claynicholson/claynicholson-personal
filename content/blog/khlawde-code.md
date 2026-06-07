@@ -5,6 +5,12 @@ description: "Anthropic accidentally shipped sourcemaps in an npm update. I extr
 tags: ["reverse-engineering", "open-source", "typescript", "tools"]
 ---
 
+## TLDR
+
+I took the Claude Code source from the sourcemap leak, removed every artificial limit (4x output tokens, 3x search, 2.5x timeouts), ungated all 92+ feature flags and internal-only prompt enhancements, then built 11 background intelligence systems on top. The first 7 are pure TypeScript with zero model calls. They prevent loops, remember errors across sessions, eliminate dead context (30-50% of the window), and detect stale files. Net result: 20-40% fewer tokens per session. Total integration cost: 25 lines of code across 3 hook points.
+
+---
+
 ## Background
 
 You probably already know about the Claude Code sourcemap leak. I took the ~180K lines of TypeScript, reconstructed the build system, stubbed the ~15 internal `@ant/*` packages, and got it running on Bun. Build time: ~4 seconds, single ESM bundle.

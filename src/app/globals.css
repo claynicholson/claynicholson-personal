@@ -76,53 +76,7 @@ body {
   animation: fadeIn 0.15s ease-out;
 }
 
-/* ── CRT Effect ─────────────────────────────────── */
-
-/* Scanlines overlay */
-.crt::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.08) 2px,
-    rgba(0, 0, 0, 0.08) 4px
-  );
-}
-
-/* Vignette + subtle screen curvature feel */
-.crt::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 65%,
-    rgba(0, 0, 0, 0.35) 100%
-  );
-}
-
-/* Subtle screen flicker — barely perceptible */
-@keyframes crt-flicker {
-  0% { opacity: 1; }
-  7% { opacity: 0.985; }
-  12% { opacity: 1; }
-  100% { opacity: 1; }
-}
-
-.crt {
-  animation: crt-flicker 8s infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .crt { animation: none; }
-  .crt::before { display: none; }
   .animate-blink { animation: none; opacity: 1; }
   .animate-fadeIn { animation: none; }
 }

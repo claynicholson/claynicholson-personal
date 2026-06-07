@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${spaceMono.className} h-full bg-term-base crt`}>
+      <body className={`${spaceMono.className} h-full bg-term-base`}>
         {children}
       </body>
     </html>
