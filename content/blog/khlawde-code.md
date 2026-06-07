@@ -1,13 +1,28 @@
 ---
 title: "I Reverse-Engineered Claude Code, Made It 100x Better to Use, and Built 11 Systems That Make It 40% More Efficient"
 date: "2026-06-07"
-description: "Anthropic accidentally shipped sourcemaps in an npm update. I extracted 180K lines of TypeScript, removed every artificial limit, and built a self-improving coding agent."
-tags: ["reverse-engineering", "open-source", "typescript", "tools"]
+description: "Anthropic accidentally shipped sourcemaps in an npm update. I extracted 180K lines of TypeScript, removed every artificial limit, and built a self-improving coding tool."
 ---
+
+*Parts of this post were written with assistance from Khlawde.*
 
 ## TLDR
 
-I took the Claude Code source from the sourcemap leak, removed every artificial limit (4x output tokens, 3x search, 2.5x timeouts), ungated all 92+ feature flags and internal-only prompt enhancements, then built 11 background intelligence systems on top. It has a loop detector that catches the agent repeating itself and injects a circuit-breaker. A "scar tissue" system that remembers failures across sessions so it never makes the same mistake twice. Dead store elimination that treats conversations like compiler IR and reclaims 30-50% of the context window. An overnight autonomous engine that fixes TODOs and adds tests while you sleep. A self-evolving prompt system that A/B tests its own skill prompts with ELO ratings and auto-promotes winners. Net result: 20-40% fewer tokens per session, and a tool that genuinely gets better every time you use it.
+I took the Claude Code source from the sourcemap leak, removed every artificial limit (4x output tokens, 3x search, 2.5x timeouts), ungated all 92+ feature flags and internal-only prompt enhancements, then built 11 background intelligence systems on top. It has a loop detector that catches the tool repeating itself and injects a circuit-breaker. A "scar tissue" system that remembers failures across sessions so it never makes the same mistake twice. Dead store elimination that treats conversations like compiler IR and reclaims 30-50% of the context window. An overnight autonomous engine that fixes TODOs and adds tests while you sleep. A self-evolving prompt system that A/B tests its own skill prompts with ELO ratings and auto-promotes winners. Net result: 20-40% fewer tokens per session, and a tool that genuinely gets better every time you use it.
+
+---
+
+## Index
+
+- [Background](#background)
+- [The Great Unshackling](#the-great-unshackling)
+- [Personality as Architecture](#personality-as-architecture)
+- [Performance Optimizations](#performance-optimizations)
+- [The Skills System](#the-skills-system)
+- [Project CHIMERA: 11 Background Intelligence Systems](#project-chimera-11-background-intelligence-systems)
+- [Integration: 3 Hook Points](#integration-3-hook-points)
+- [Token Economics](#token-economics)
+- [Lessons Learned](#lessons-learned)
 
 ---
 
@@ -42,11 +57,11 @@ Stock Claude Code operates under conservative limits designed for Anthropic's pr
 
 ### Gates Removed
 
-**Subagent Thinking.** Stock Claude Code strips extended reasoning from all subagent calls. This is a cost optimization that dramatically reduces subagent intelligence. I re-enabled thinking for every agent by removing the `thinking: undefined` override in the agent runner.
+**Subagent Thinking.** Stock Claude Code strips extended reasoning from all subagent calls. This is a cost optimization that dramatically reduces subagent quality. I re-enabled thinking for every agent by removing the `thinking: undefined` override in the agent runner.
 
-**Nested Agent Spawning.** Stock code prevents non-Anthropic users from spawning agents inside agents (recursive delegation). The gate is a simple `USER_TYPE === 'ant'` check. Removed.
+**Nested Agent Spawning.** Stock code prevents non-Anthropic users from spawning subagents inside subagents (recursive delegation). The gate is a simple `USER_TYPE === 'ant'` check. Removed.
 
-**Async Agent Tools.** Background agents were restricted to a small tool allowlist. I added Agent, SendMessage, and task management tools to the async allowlist, enabling background agents to orchestrate other agents.
+**Async Agent Tools.** Background agents were restricted to a small tool allowlist. I added Agent, SendMessage, and task management tools to the async allowlist, enabling background workers to orchestrate other workers.
 
 **Internal Prompt Enhancements.** Five system prompt improvements were gated behind an internal user check:
 
@@ -151,9 +166,9 @@ Each skill provides a name, description, usage heuristic, and a prompt generator
 | Custom | `/hack`, `/health`, `/morph`, `/dream` |
 | Feature-Gated | `/loop`, `/schedule`, `/claude-api`, `/claude-in-chrome`, `/hunter`, `/run-skill-generator` |
 
-**`/hack`** launches 3 parallel security scanner agents: secrets detection, vulnerability scanning, and dependency/auth audit.
+**`/hack`** launches 3 parallel security scanners: secrets detection, vulnerability scanning, and dependency/auth audit.
 
-**`/dream`** is a generative brainstorming engine that spawns 3 parallel "dreamer" agents (Pragmatist, Visionary, Wildcard) and synthesizes a comparison table with a recommended hybrid approach.
+**`/dream`** is a generative brainstorming engine that spawns 3 parallel "dreamer" workers (Pragmatist, Visionary, Wildcard) and synthesizes a comparison table with a recommended hybrid approach.
 
 **`/morph`** provides dynamic personality modification with 10 presets plus arbitrary custom instructions.
 
@@ -171,12 +186,12 @@ This is the real contribution. CHIMERA is a suite of 11 systems that run automat
 
 1. **Never crash the host.** Every system is wrapped in try/catch. Silent failure is acceptable; crashing the query loop is not.
 2. **Zero model calls for Tier 1-2.** The first 7 systems use pure TypeScript: hashing, pattern matching, filesystem watchers. No additional costs.
-3. **Additive context, not modified behavior.** Systems inject warnings and context as attachment messages. They inform the model; they don't constrain it.
+3. **Additive context, not modified behavior.** Systems inject warnings and context as attachment messages. They inform; they don't constrain.
 4. **Stateless within the query loop.** All state is managed in module-level singletons, never mutating the message array directly.
 
 ### Loop Detector
 
-**Problem:** Coding agents frequently try the same failing approach 3-4 times before changing strategy. Each retry burns a full round-trip ($0.03-0.10) and 10-30 seconds.
+**Problem:** Coding tools frequently try the same failing approach 3-4 times before changing strategy. Each retry burns a full round-trip ($0.03-0.10) and 10-30 seconds.
 
 **Solution:** Track tool call signatures (tool name + SHA-256 hash of input) in a sliding window of 20. Three detection modes:
 
@@ -188,7 +203,7 @@ When detected, inject a circuit-breaker message: "You're in a loop. Here's what 
 
 ### Error Journal
 
-**Problem:** After context compaction, the model loses visibility into errors from earlier in the session. It then repeats the same mistakes.
+**Problem:** After context compaction, the tool loses visibility into errors from earlier in the session. It then repeats the same mistakes.
 
 **Solution:** Session-scoped error log that records every failed tool execution with tool name, human-readable input summary, error message (first 500 chars), and turn index. Before each tool call of the same type, the last 3 relevant errors are injected as context. Survives compaction because it lives outside the message array.
 
@@ -214,7 +229,7 @@ This is literally the same optimization that makes compilers fast, applied to co
 
 ### File Watcher
 
-**Problem:** The model reads a file at turn 5, makes decisions at turn 15 based on that read. If the user edited the file in their IDE at turn 10, the model is working with stale content. This causes phantom bugs, wrong edits, and confusion.
+**Problem:** The tool reads a file at turn 5, makes decisions at turn 15 based on that read. If the user edited the file in their IDE at turn 10, the tool is working with stale content. This causes phantom bugs, wrong edits, and confusion.
 
 **Solution:** After every successful file read, register an `fs.watch()` listener. If the file changes externally, add it to a stale set. Before each call, check the stale set and inject a warning.
 
@@ -222,7 +237,7 @@ Constraints: max 50 concurrent watchers (LRU eviction), `persistent: false` + `u
 
 ### Immune Memory
 
-**Problem:** Common errors (`EACCES`, `MODULE_NOT_FOUND`, `node-gyp failures`) have known fixes that work across projects. But the agent re-discovers these fixes from scratch every time.
+**Problem:** Common errors (`EACCES`, `MODULE_NOT_FOUND`, `node-gyp failures`) have known fixes that work across projects. But the tool re-discovers these fixes from scratch every time.
 
 **Solution:** Global antibody database at `~/.claude/immune-memory.json`. Error signatures are normalized (paths become `<PATH>`, versions become `<VERSION>`, hashes become `<HASH>`) to create reusable regex patterns.
 
@@ -232,11 +247,11 @@ Confidence model: `successRate = successes / encounters`. Only antibodies with 6
 
 **Problem:** All 21 registered skills and their descriptions consume system prompt space regardless of relevance. When doing frontend work, you don't need `/hack` descriptions.
 
-**Solution:** On first user message, detect the task domain via keyword scoring. Load a "loadout" with relevant skill subset, prioritized agent types, and domain-specific system prompt addon. 8 loadouts defined: Frontend, Backend, Security, DevOps, Data, Greenfield, Refactor, Testing. Zero model calls. Pure string matching.
+**Solution:** On first user message, detect the task domain via keyword scoring. Load a "loadout" with relevant skill subset, prioritized worker types, and domain-specific system prompt addon. 8 loadouts defined: Frontend, Backend, Security, DevOps, Data, Greenfield, Refactor, Testing. Zero model calls. Pure string matching.
 
 ### Phantom Indexer
 
-**Problem:** Every session, the agent re-discovers the codebase structure through grep/glob. It has no persistent understanding of file relationships or entry points.
+**Problem:** Every session, the tool re-discovers the codebase structure through grep/glob. It has no persistent understanding of file relationships or entry points.
 
 **Solution:** Persistent incremental codebase graph at `.claude/phantom/index.json`. Contains:
 
@@ -248,9 +263,9 @@ Incremental rebuild using `git diff` between the last indexed ref and HEAD. Only
 
 ### Hydra Mode
 
-**Problem:** Subagents are isolated workers. The main agent is the bottleneck. Complex tasks could be parallelized with proper coordination.
+**Problem:** Subagents are isolated workers. The main process is the bottleneck. Complex tasks could be parallelized with proper coordination.
 
-**Solution:** DAG-based self-orchestrating agent swarm:
+**Solution:** DAG-based self-orchestrating worker swarm:
 
 ```
 USER REQUEST -> PLANNER -> DAG -> EXECUTOR -> INTEGRATOR
@@ -259,7 +274,7 @@ USER REQUEST -> PLANNER -> DAG -> EXECUTOR -> INTEGRATOR
                              +--> Coder 2 --+
 ```
 
-Nodes run when all dependencies are satisfied. Each node operates in an isolated worktree. Failed nodes cascade-skip all dependents. The integrator merges all changes and runs tests.
+Nodes run when all dependencies are satisfied. Each node operates in an isolated git worktree. Failed nodes cascade-skip all dependents. The integrator merges all changes and runs tests.
 
 ### Dreamweaver
 
@@ -363,7 +378,7 @@ The first 7 systems save more tokens than they consume. The last 4 are user-trig
 
 ### 1. Most tokens are wasted on repetition, not reasoning
 
-The Loop Detector and Error Journal target what is empirically the #1 source of token waste: trying the same failing approach multiple times. This is not a reasoning failure. It's a context management failure. The model literally cannot see its own recent history after compaction.
+The Loop Detector and Error Journal target what is empirically the #1 source of token waste: trying the same failing approach multiple times. This is not a reasoning failure. It's a context management failure. The tool literally cannot see its own recent history after compaction.
 
 ### 2. Cross-session memory is dramatically underutilized
 
