@@ -1,10 +1,10 @@
 ---
 title: "I Reverse-Engineered Claude Code, Made It 100x Better to Use, and Built 11 Systems That Make It 40% More Efficient"
 date: "2026-06-07"
-description: "Anthropic accidentally shipped sourcemaps in an npm update. I extracted 180K lines of TypeScript, removed every artificial limit, and built a self-improving coding tool."
+description: "I used the leaked Claude Code to make a coding agent which is self improving, more efficient, and a better, self-improving coder."
 ---
 
-*Parts of this post were written with assistance from Khlawde.*
+*Parts of this post were written with assistance from Khlawde itself.*
 
 ## TLDR
 
@@ -28,9 +28,9 @@ I took the Claude Code source from the sourcemap leak, removed every artificial 
 
 ## Background
 
-You probably already know about the Claude Code sourcemap leak. I took the ~180K lines of TypeScript, reconstructed the build system, stubbed the ~15 internal `@ant/*` packages, and got it running on Bun. Build time: ~4 seconds, single ESM bundle.
+You probably already know about the Claude Code sourcemap leak. Getting it running from source was trivial. The entire application is a single Bun bundle, so reconstruction was just a matter of scanning imports to rebuild `package.json` (~70 deps), inferring `tsconfig.json` from code patterns, and stubbing the ~15 internal `@ant/*` packages with no-ops that satisfy the type checker. The whole thing builds in ~4 seconds into a single ESM bundle.
 
-What's interesting isn't the extraction. It's what I found inside, and what I built on top of it.
+What's interesting isn't the extraction, or even what I found inside. It's the tooling I was able to build on top of it which even Anthropic hasn't built out yet.
 
 ---
 
