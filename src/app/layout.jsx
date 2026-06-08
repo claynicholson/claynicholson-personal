@@ -1,20 +1,27 @@
-import { Space_Mono } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 
-const spaceMono = Space_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  variable: "--font-sans",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 });
 
 export const metadata = {
   title: "Clay Nicholson",
-  description: "ssh ssh.claynicholson.com",
+  description: "MIT '29 · Electrical Engineering with Computing",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full">
-      <body className={`${spaceMono.className} h-full bg-term-base`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
+      <body>
         {children}
       </body>
     </html>

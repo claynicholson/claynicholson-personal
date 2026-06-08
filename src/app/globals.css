@@ -9,67 +9,496 @@
 }
 
 ::selection {
-  background: oklch(0.7 0.1 260 / 0.3);
-  color: oklch(0.87 0.02 275);
+  background: rgba(0, 0, 0, 0.08);
+  color: #111;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+html {
+  scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-track {
-  background: oklch(0.24 0.02 275);
-}
-
-::-webkit-scrollbar-thumb {
-  background: oklch(0.31 0.02 275);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.38 0.02 275);
-}
-
-html,
 body {
-  height: 100%;
-  background-color: oklch(0.24 0.02 275);
-  color: oklch(0.87 0.02 275);
+  background-color: #111;
+  color: #2c2c2c;
+  overflow-x: hidden;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Banner glow — phosphor bloom */
+/* ── Typography ── */
+
+h1, h2, h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  color: #111;
+}
+
+a {
+  color: #555;
+  text-decoration-color: rgba(0, 0, 0, 0.15);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: #111;
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ── Header nav ── */
+
+.site-header {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.85rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.site-header a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.site-header a:hover {
+  color: #111;
+}
+
+/* ── Content cards ── */
+
+.content-card {
+  background: #faf9f6;
+  padding: 2rem 2.25rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.5;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.content-card p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-card-name {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.content-card-tagline {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.content-card-socials {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-card-social {
+  color: #aaa;
+  transition: color 0.15s ease;
+  display: flex;
+  text-decoration: none;
+}
+
+.content-card-social:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.content-card-ssh {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.85rem;
+  color: #666;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.content-card-title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 0.35rem;
+}
+
+.content-card-sub {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.content-card-sub span {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.content-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+  margin-bottom: 0.15rem;
+}
+
+.content-card a {
+  color: #555;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.15);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.content-card a:hover {
+  color: #111;
+}
+
+@media (max-width: 640px) {
+  .content-card {
+    padding: 1.5rem 1.5rem;
+  }
+  .content-card-name {
+    font-size: 1.35rem;
+  }
+}
+
+.site-name {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #111;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.site-tagline {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #999;
+  transition: color 0.15s ease;
+}
+
+.social-icon:hover {
+  color: #333;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ssh-block {
+  display: inline-block;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.8rem;
+  color: #666;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── Sections ── */
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.section p,
+.section li {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.section a {
+  color: #555;
+  text-decoration: underline;
+}
+
+.section a:hover {
+  color: #111;
+}
+
+.subsection-title {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.subsection-meta {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.subsection-body {
+  padding-left: 0;
+  margin-top: 0.25rem;
+}
+
+.label {
+  color: #888;
+  font-size: 0.8rem;
+  min-width: 5rem;
+  display: inline-block;
+}
+
+.dim {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.award-name {
+  color: #333;
+}
+
+.award-detail {
+  color: #999;
+  margin-left: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.bullet-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+/* ── Divider ── */
+
+.section-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin: 2.5rem 0;
+}
+
+/* ═══════════════════════════════════════════
+   GALLERY — CSS Grid, uniform row heights
+   ═══════════════════════════════════════════ */
+
+.gallery-section {
+  width: 100%;
+  background: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 8vw;
+  grid-auto-flow: dense;
+  gap: 3px;
+  padding: 3px;
+}
+
+/* Image spans — varied sizes for organic tiling */
+.span-sm {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.span-tall {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.span-wide {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.span-lg {
+  grid-column: span 4;
+  grid-row: span 3;
+}
+
+.gallery-cell {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: var(--gallery-filter, none);
+  transition: filter 0.35s ease;
+}
+
+.gallery-cell:hover .gallery-media {
+  filter: none;
+}
+
+.play-indicator {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.gallery-cell:hover .play-indicator {
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 10vw;
+  }
+  .content-card {
+    grid-column: span 4 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 20vw;
+  }
+  .span-sm, .span-wide, .span-tall, .span-lg {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .content-card {
+    grid-column: span 4 !important;
+  }
+}
+
+/* ── Footer ── */
+
+.site-footer {
+  background: #111;
+  color: #888;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.site-footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.footer-sep {
+  margin: 0 0.5rem;
+  color: #555;
+}
+
+/* ── Terminal page styles (kept for /blog etc) ── */
+
 .banner-glow {
   text-shadow: 0 0 10px oklch(0.75 0.15 305 / 0.3),
     0 0 20px oklch(0.7 0.1 260 / 0.15),
     0 0 40px oklch(0.8 0.08 200 / 0.08);
 }
 
-/* Blinking cursor */
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
 
-/* Fade in for new outputs */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fadeIn {
@@ -80,4 +509,3 @@ body {
   .animate-blink { animation: none; opacity: 1; }
   .animate-fadeIn { animation: none; }
 }
-
