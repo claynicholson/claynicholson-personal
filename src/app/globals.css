@@ -76,20 +76,22 @@ a:hover {
 
 .content-card {
   background: #faf9f6;
-  padding: 2rem 2.25rem;
+  padding: 1.2rem 1.4rem;
   font-family: var(--font-sans), system-ui, sans-serif;
-  line-height: 1.5;
+  line-height: 1.55;
   overflow: hidden;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  justify-content: center; /* band-snap slack becomes balanced top/bottom padding */
 }
 
+/* Body copy is indented under its heading for an outlined, editorial hierarchy. */
 .content-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #444;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
+  padding-left: 0.95rem;
 }
 
 .content-card p:last-child {
@@ -98,23 +100,23 @@ a:hover {
 
 .content-card-name {
   font-family: var(--font-serif), Georgia, serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #111;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
 }
 
 .content-card-tagline {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: #888;
   margin-bottom: 0.5rem;
 }
 
 .content-card-socials {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.55rem;
   margin-bottom: 0.5rem;
 }
 
@@ -132,45 +134,46 @@ a:hover {
 
 .content-card-ssh {
   font-family: "SF Mono", "Fira Code", monospace;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #666;
   background: rgba(0, 0, 0, 0.04);
-  padding: 0.3rem 0.5rem;
+  padding: 0.4rem 0.65rem;
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .content-card-title {
   font-family: var(--font-serif), Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-weight: 400;
   color: #111;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
 .content-card-sub {
   font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #222;
-  margin-top: 0.5rem;
-  margin-bottom: 0.1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.25rem;
 }
 
 .content-card-sub span {
   font-weight: 400;
   color: #999;
-  font-size: 0.8rem;
-  margin-left: 0.3rem;
+  font-size: 0.85rem;
+  margin-left: 0.4rem;
 }
 
 .content-card-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  margin-top: 0.15rem;
-  margin-bottom: 0.15rem;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 0.95rem;
 }
 
 .content-card a {
@@ -187,10 +190,10 @@ a:hover {
 
 @media (max-width: 640px) {
   .content-card {
-    padding: 1.5rem 1.5rem;
+    padding: 1.1rem 1.25rem;
   }
   .content-card-name {
-    font-size: 1.35rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -362,34 +365,36 @@ a:hover {
 }
 
 .gallery-grid {
+  --g: 8px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 8vw;
+  grid-template-columns: repeat(96, 1fr);
+  /* page.jsx sets grid-auto-rows to the exact column width (square cells) once
+     hydrated; this is the pre-hydration fallback. A fine 96-col grid keeps photo
+     aspect ratios (both axes subdivided, so gutters stay proportional) while
+     letting text cards hug their content to within a few px. 8 photo lanes. */
+  grid-auto-rows: calc((100vw - 97 * var(--g)) / 96);
   grid-auto-flow: dense;
-  gap: 3px;
-  padding: 3px;
+  gap: var(--g);
+  padding: var(--g);
 }
 
-/* Image spans — varied sizes for organic tiling */
-.span-sm {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+/* Image spans. Widths are multiples of 12 (fill the 96-col grid) and heights are
+   multiples of 16 (the photo band), so the varied tile sizes interlock with no
+   stranded gaps. Mixing small / medium / large breaks the uniform-grid look.
+   With square cells the col/row ratio is the tile aspect; families assigned in
+   media.js (p = portrait 0.75, l = landscape 1.5, sq = square feature). */
+.span-p-sm { grid-column: span 12; grid-row: span 16; } /* portrait, 1/8 w */
+.span-p-md { grid-column: span 24; grid-row: span 32; } /* portrait, 1/4 w */
+.span-p-lg { grid-column: span 36; grid-row: span 48; } /* portrait, 3/8 w */
+.span-l-sm { grid-column: span 24; grid-row: span 16; } /* landscape, 1/4 w */
+.span-l-lg { grid-column: span 48; grid-row: span 32; } /* landscape, 1/2 w */
+.span-sq   { grid-column: span 48; grid-row: span 48; } /* square feature, 1/2 w */
 
-.span-tall {
-  grid-column: span 2;
-  grid-row: span 3;
-}
-
-.span-wide {
-  grid-column: span 4;
-  grid-row: span 2;
-}
-
-.span-lg {
-  grid-column: span 4;
-  grid-row: span 3;
-}
+/* Content cards: 2 lanes (sm) / 4 lanes (lg) wide so the larger text stays
+   readable; row span set by page.jsx, snapped to the 16-row photo band so
+   neighbouring photos fill flush (no stranded gaps). */
+.content-cell-sm { grid-column: span 24; grid-row: span 32; }
+.content-cell-lg { grid-column: span 48; grid-row: span 32; }
 
 .gallery-cell {
   position: relative;
@@ -403,6 +408,10 @@ a:hover {
   display: block;
   filter: var(--gallery-filter, none);
   transition: filter 0.35s ease;
+}
+
+.gallery-media-video {
+  object-fit: cover;
 }
 
 .gallery-cell:hover .gallery-media {
@@ -431,26 +440,22 @@ a:hover {
 
 @media (max-width: 1024px) {
   .gallery-grid {
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: 10vw;
-  }
-  .content-card {
-    grid-column: span 4 !important;
+    grid-template-columns: repeat(48, 1fr);
+    grid-auto-rows: calc((100vw - 49 * var(--g)) / 48);
   }
 }
 
 @media (max-width: 640px) {
   .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 20vw;
+    grid-template-columns: repeat(24, 1fr);
+    grid-auto-rows: calc((100vw - 25 * var(--g)) / 24);
   }
-  .span-sm, .span-wide, .span-tall, .span-lg {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .content-card {
-    grid-column: span 4 !important;
-  }
+  /* On phones, collapse the size variety to a tidy 2-across (portraits half
+     width, landscapes full); big feature tiles don't help on a narrow screen. */
+  .span-p-sm, .span-p-md, .span-p-lg, .span-sq { grid-column: span 12; grid-row: span 16; }
+  .span-l-sm, .span-l-lg { grid-column: span 24; grid-row: span 16; }
+  /* Cards go full width so the text stays readable on phones. */
+  .content-cell-sm, .content-cell-lg { grid-column: span 24; }
 }
 
 /* ── Footer ── */

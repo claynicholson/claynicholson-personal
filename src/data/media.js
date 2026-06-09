@@ -160,10 +160,36 @@ const allMedia = [
 
 const VIDEO_EXTENSIONS = [".mov", ".mp4", ".webm"];
 
-// Mixed sizes for organic, gapless tiling with dense packing
-const SPAN_PATTERN = ["sm", "sm", "wide", "sm", "tall", "sm", "wide", "sm", "sm", "lg", "sm", "sm", "tall", "sm", "wide", "sm", "sm", "sm"];
+// Each photo's true aspect bucket, from .tuning/aspects.mjs.
+import aspects from "./aspects.json";
 
-export const galleryMedia = allMedia.map((filename, i) => {
+// Bucket -> tile family. Cropping is acceptable, so tall/panorama shapes fold
+// into the portrait / landscape families. Every tile height is a multiple of the
+// 16-row photo band, so the varied sizes still interlock with no stranded gaps.
+const FAMILY = {
+  portrait: "p", tallport: "p", tower: "p", square: "q",
+  landscape: "l", panorama: "l",
+};
+const VIDEO_FAMILY = { "IMG_7277.MOV": "l" }; // the one 16:9 clip; rest are 9:16 portrait
+
+function hashStr(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+
+// Varied sizes make an organic mosaic instead of a uniform grid: mostly small
+// tiles, punctuated by medium ones and the occasional large feature. Deterministic
+// (filename hash) so server and client render identically.
+function spanFor(filename, isVideo) {
+  const fam = isVideo ? (VIDEO_FAMILY[filename] || "p") : (FAMILY[aspects[filename]] || "p");
+  const r = hashStr(filename) % 100;
+  if (fam === "q") return r < 55 ? "sq" : "p-md";
+  if (fam === "l") return r < 78 ? "l-sm" : "l-lg";
+  return r < 74 ? "p-sm" : r < 95 ? "p-md" : "p-lg";
+}
+
+export const galleryMedia = allMedia.map((filename) => {
   const ext = filename.substring(filename.lastIndexOf(".")).toLowerCase();
   const isVideo = VIDEO_EXTENSIONS.includes(ext);
 
@@ -171,8 +197,7 @@ export const galleryMedia = allMedia.map((filename, i) => {
     src: `/${filename}`,
     filename,
     type: isVideo ? "video" : "image",
-    // Videos always get "wide" to show more content
-    span: isVideo ? "wide" : SPAN_PATTERN[i % SPAN_PATTERN.length],
+    span: spanFor(filename, isVideo),
   };
 });
 

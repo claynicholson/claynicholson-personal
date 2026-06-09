@@ -21,6 +21,7 @@
     "remark-rehype": "^11.1.2"
   },
   "devDependencies": {
+    "playwright": "^1.60.0",
     "postcss": "^8",
     "sharp": "^0.32.6",
     "smartcrop": "^2.0.5",

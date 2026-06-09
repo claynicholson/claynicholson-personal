@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useCallback, useEffect, useState } from "react";
+import { useMemo, useRef, useCallback, useEffect } from "react";
 import { galleryMedia, getMediaUrl } from "@/data/media";
 import focalPoints from "@/data/focalPoints.json";
 import {
@@ -18,6 +18,7 @@ import {
   EducationCard,
   HackathonsCard,
   BlogCard,
+  OutroCard,
 } from "@/components/ContentCards";
 
 const GLOBAL_FILTER = "grayscale(100%)";
@@ -35,7 +36,7 @@ function VideoCell({ src, className }) {
 
   return (
     <div className={`${className} gallery-cell`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <video ref={videoRef} src={src} muted loop playsInline preload="metadata" className="gallery-media" />
+      <video ref={videoRef} src={src} muted loop playsInline preload="metadata" className="gallery-media gallery-media-video" />
       <div className="play-indicator">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg>
       </div>
@@ -60,21 +61,24 @@ function MediaItem({ item }) {
   return <ImageCell src={url} className={spanClass} objectPosition={focalPoints[item.filename] || "50% 50%"} />;
 }
 
+// size: "sm" = 3 cols (1 lane), "lg" = 6 cols (2 lanes). Row span is fit to the
+// card's text at runtime, so it never carries excess empty space.
 const CONTENT_INSERTS = [
-  { at: 0,   Component: HeroCard,       key: "hero",       cols: 4, rows: 3 },
-  { at: 6,   Component: AboutCard,      key: "about",      cols: 4, rows: 2 },
-  { at: 12,  Component: PastCard,       key: "past",       cols: 4, rows: 2 },
-  { at: 18,  Component: PresentCard,    key: "present",    cols: 4, rows: 2 },
-  { at: 24,  Component: FutureCard,     key: "future",     cols: 4, rows: 2 },
-  { at: 30,  Component: ExperienceCard, key: "experience", cols: 4, rows: 4 },
-  { at: 38,  Component: ProjectsCard,   key: "projects",   cols: 6, rows: 7 },
-  { at: 52,  Component: ResearchCard,   key: "research",   cols: 4, rows: 4 },
-  { at: 62,  Component: AwardsCard,     key: "awards",     cols: 4, rows: 5 },
-  { at: 74,  Component: RoboticsCard,   key: "robotics",   cols: 4, rows: 3 },
-  { at: 82,  Component: LeadershipCard, key: "leadership", cols: 4, rows: 2 },
-  { at: 88,  Component: EducationCard,  key: "education",  cols: 4, rows: 3 },
-  { at: 96,  Component: HackathonsCard, key: "hackathons", cols: 4, rows: 3 },
-  { at: 104, Component: BlogCard,       key: "blog",       cols: 4, rows: 2 },
+  { at: 0,   Component: HeroCard,       key: "hero",       size: "sm" },
+  { at: 6,   Component: AboutCard,      key: "about",      size: "sm" },
+  { at: 12,  Component: PastCard,       key: "past",       size: "sm" },
+  { at: 18,  Component: PresentCard,    key: "present",    size: "sm" },
+  { at: 24,  Component: FutureCard,     key: "future",     size: "sm" },
+  { at: 30,  Component: ExperienceCard, key: "experience", size: "lg" },
+  { at: 38,  Component: ProjectsCard,   key: "projects",   size: "lg" },
+  { at: 52,  Component: ResearchCard,   key: "research",   size: "lg" },
+  { at: 62,  Component: AwardsCard,     key: "awards",     size: "lg" },
+  { at: 74,  Component: RoboticsCard,   key: "robotics",   size: "sm" },
+  { at: 82,  Component: LeadershipCard, key: "leadership", size: "sm" },
+  { at: 88,  Component: EducationCard,  key: "education",  size: "sm" },
+  { at: 96,  Component: HackathonsCard, key: "hackathons", size: "sm" },
+  { at: 104, Component: BlogCard,       key: "blog",       size: "sm" },
+  { at: 150, Component: OutroCard,      key: "outro",      size: "sm" },
 ];
 
 export default function Home() {
@@ -96,12 +100,9 @@ export default function Home() {
 
     while (mediaIdx < media.length || insertIdx < CONTENT_INSERTS.length) {
       if (insertIdx < CONTENT_INSERTS.length && mediaIdx === CONTENT_INSERTS[insertIdx].at) {
-        const { Component, key, cols, rows } = CONTENT_INSERTS[insertIdx];
+        const { Component, key, size } = CONTENT_INSERTS[insertIdx];
         result.push(
-          <div
-            key={key}
-            style={{ gridColumn: `span ${cols}`, gridRow: `span ${rows}` }}
-          >
+          <div key={key} className={`content-cell content-cell-${size}`}>
             <Component />
           </div>
         );
@@ -117,49 +118,82 @@ export default function Home() {
       }
     }
 
+    // Append any remaining inserts (e.g. outro at the very end)
+    while (insertIdx < CONTENT_INSERTS.length) {
+      const { Component, key, size } = CONTENT_INSERTS[insertIdx];
+      result.push(
+        <div key={key} className={`content-cell content-cell-${size}`}>
+          <Component />
+        </div>
+      );
+      insertIdx++;
+    }
+
     return result;
   }, [media]);
 
-  // Calculate exact row count needed so grid doesn't create extra implicit rows
-  const totalItems = media.length + CONTENT_INSERTS.length;
-  // Each image is 2 rows. Cards vary. Approximate: items fill ~6 cols per row pair.
-  // With 12 cols: each "visual row" = 2 grid rows, fits 6 small items or 3 wide items
-  // Conservative estimate — let CSS handle it, we just clip
-
-  const [gridHeight, setGridHeight] = useState("auto");
   const gridRef = useRef(null);
 
   useEffect(() => {
-    function measure() {
+    let raf = 0;
+
+    function layout() {
       const grid = gridRef.current;
-      if (!grid) return;
-      const items = grid.children;
-      if (!items.length) return;
-      const gridTop = grid.getBoundingClientRect().top + window.scrollY;
+      if (!grid || !grid.children.length) return;
 
-      // Find the row height (one auto-row unit) from computed style
-      const rowHeight = parseFloat(getComputedStyle(grid).gridAutoRows) ||
-        (grid.getBoundingClientRect().width * 0.08); // 8vw fallback
+      // Measure from the natural (unclamped) layout.
+      grid.style.height = "";
+      grid.style.overflow = "";
 
-      // Find the bottom of the last item that has content
-      let maxBottom = 0;
-      for (const item of items) {
-        const rect = item.getBoundingClientRect();
-        const bottom = rect.bottom + window.scrollY - gridTop;
-        if (bottom > maxBottom) maxBottom = bottom;
+      const cs = getComputedStyle(grid);
+      const cell = parseFloat(cs.gridTemplateColumns.split(" ")[0]); // 1 column width
+      const gap = parseFloat(cs.rowGap) || 0;
+      if (!cell) return;
+
+      // 1. Square cells: row height = column width.
+      grid.style.gridAutoRows = `${cell}px`;
+
+      // 2. Fit each content card's row span to its text height (no excess space).
+      const cards = grid.querySelectorAll(".content-cell");
+      for (const c of cards) { if (c.firstElementChild) c.firstElementChild.style.height = "auto"; }
+      void grid.offsetHeight; // one reflow, then read
+      const BAND = 16; // photo-tile height in rows; snap cards to it so the
+      for (const c of cards) {         // photos beside them always fill flush
+        const card = c.firstElementChild;
+        const h = card ? card.offsetHeight : c.offsetHeight;
+        if (card) card.style.height = "";
+        const raw = Math.ceil((h + gap) / (cell + gap));
+        const span = Math.max(BAND, Math.ceil(raw / BAND) * BAND);
+        c.style.gridRow = `span ${span}`;
       }
 
-      // Snap DOWN to the nearest row boundary for a clean horizontal cut
-      const totalRows = Math.floor(maxBottom / rowHeight);
-      const snappedHeight = totalRows * rowHeight;
-
-      setGridHeight(snappedHeight > 0 ? snappedHeight : Math.ceil(maxBottom));
+      // 3. Snap the grid's bottom down to a clean row line and clip the remainder.
+      const top = grid.getBoundingClientRect().top;
+      let maxBottom = 0;
+      for (const item of grid.children) {
+        const b = item.getBoundingClientRect().bottom - top;
+        if (b > maxBottom) maxBottom = b;
+      }
+      const pitch = cell + gap;
+      const rows = Math.floor((maxBottom + gap) / pitch);
+      const snapped = rows > 0 ? rows * pitch - gap : Math.ceil(maxBottom);
+      grid.style.height = `${snapped}px`;
+      grid.style.overflow = "hidden";
     }
-    const t1 = setTimeout(measure, 500);
-    const t2 = setTimeout(measure, 2000);
-    const onResize = () => { setGridHeight("auto"); setTimeout(measure, 200); };
+
+    const t1 = setTimeout(layout, 150);
+    const t2 = setTimeout(layout, 1200);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => layout());
+    const onResize = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(layout);
+    };
     window.addEventListener("resize", onResize);
-    return () => { clearTimeout(t1); clearTimeout(t2); window.removeEventListener("resize", onResize); };
+    return () => {
+      clearTimeout(t1); clearTimeout(t2);
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   return (
@@ -169,11 +203,7 @@ export default function Home() {
         <a href="/blog">Blog</a>
       </nav>
       <div className="gallery-section" style={{ "--gallery-filter": GLOBAL_FILTER }}>
-        <div
-          className="gallery-grid"
-          ref={gridRef}
-          style={gridHeight !== "auto" ? { height: gridHeight, overflow: "hidden" } : undefined}
-        >
+        <div className="gallery-grid" ref={gridRef}>
           {gridItems}
         </div>
       </div>

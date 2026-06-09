@@ -415,6 +415,19 @@ export function BlogCard() {
   );
 }
 
+/* ── Outro ── */
+
+export function OutroCard() {
+  return (
+    <div className="content-card">
+      <p>
+        Feel free to reach out to me if you have any questions about my projects
+        or just want to chat. I&apos;d love to meet you.
+      </p>
+    </div>
+  );
+}
+
 /* ── Contact ── */
 
 export function ContactCard() {
