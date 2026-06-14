@@ -9,7 +9,7 @@
 // can't be abused to spam Coolify.
 
 import { NextResponse } from "next/server";
-import { fetchResources, isConfigured } from "@/lib/coolify";
+import { fetchProjectStatus, isConfigured } from "@/lib/coolify";
 import { forceRecord } from "@/lib/statusStore";
 
 export const runtime = "nodejs";
@@ -32,7 +32,8 @@ async function handle(req) {
   }
 
   const now = Date.now();
-  const resources = await fetchResources();
+  const groups = await fetchProjectStatus();
+  const resources = groups.flatMap((g) => g.resources);
   const recorded = forceRecord(resources, now);
   return NextResponse.json({ ok: true, recorded, count: resources.length, t: now });
 }

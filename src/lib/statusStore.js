@@ -119,3 +119,37 @@ export function summarize(history, slug, now, { windowMs, buckets }) {
   const uptimePct = known > 0 ? (upCount / known) * 100 : null;
   return { bars, uptimePct, samples: known };
 }
+
+// Same as summarize() but for a group of slugs (a project): a bucket/tick is
+// "down" if ANY member is down; "up" only if all present members are up.
+// Absent members don't force a group down.
+export function summarizeGroup(history, slugs, now, { windowMs, buckets }) {
+  const start = now - windowMs;
+  const bucketMs = windowMs / buckets;
+  const set = new Set(slugs);
+  const bars = new Array(buckets).fill(-1);
+  let known = 0;
+  let upCount = 0;
+
+  for (const tick of history.ticks) {
+    if (tick.t < start) continue;
+    let present = false;
+    let anyDown = false;
+    for (const s of tick.down) if (set.has(s)) { anyDown = true; present = true; }
+    if (!present) for (const s of tick.up) if (set.has(s)) { present = true; break; }
+    if (!present) continue;
+
+    known += 1;
+    const up = !anyDown;
+    if (up) upCount += 1;
+
+    let idx = Math.floor((tick.t - start) / bucketMs);
+    if (idx < 0) idx = 0;
+    if (idx >= buckets) idx = buckets - 1;
+    if (bars[idx] === -1) bars[idx] = up ? 1 : 0;
+    else if (!up) bars[idx] = 0;
+  }
+
+  const uptimePct = known > 0 ? (upCount / known) * 100 : null;
+  return { bars, uptimePct, samples: known };
+}

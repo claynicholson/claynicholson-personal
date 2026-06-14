@@ -27,7 +27,11 @@ function Bars({ bars }) {
   );
 }
 
-function dotClass(r) {
+function dotClass(overallOrResource) {
+  if (typeof overallOrResource === "string") {
+    return overallOrResource === "operational" ? "up" : overallOrResource;
+  }
+  const r = overallOrResource;
   if (!r.up) return "down";
   if (r.degraded) return "degraded";
   return "up";
@@ -40,8 +44,7 @@ export default function StatusBoard() {
   const load = useCallback(async () => {
     try {
       const res = await fetch("/api/status", { cache: "no-store" });
-      const json = await res.json();
-      setData(json);
+      setData(await res.json());
       setError(false);
     } catch {
       setError(true);
@@ -50,12 +53,12 @@ export default function StatusBoard() {
 
   useEffect(() => {
     load();
-    const id = setInterval(load, 30000); // live refresh
+    const id = setInterval(load, 30000);
     return () => clearInterval(id);
   }, [load]);
 
   const overall = OVERALL[data?.summary?.overall] || OVERALL.unknown;
-  const resources = data?.resources || [];
+  const projects = data?.projects || [];
   const days = data?.window?.days || 30;
 
   return (
@@ -72,32 +75,44 @@ export default function StatusBoard() {
         <p className="status-empty">Status is temporarily unavailable.</p>
       )}
 
-      {data?.configured && resources.length === 0 && (
-        <p className="status-empty">No services are being monitored yet.</p>
+      {data?.configured && projects.length === 0 && (
+        <p className="status-empty">No projects are being monitored yet.</p>
       )}
 
       <ul className="status-list">
-        {resources.map((r) => (
-          <li key={r.slug} className="status-row">
-            <div className="status-row-head">
-              <span className={`status-dot is-${dotClass(r)}`} />
-              <span className="status-name">
-                {r.url ? (
-                  <a href={r.url} target="_blank" rel="noopener noreferrer">
-                    {r.name}
-                  </a>
-                ) : (
-                  r.name
-                )}
-              </span>
-              <span className="status-type">{r.type}</span>
-              <span className="status-uptime">{fmtPct(r.uptimePct)}</span>
+        {projects.map((p) => (
+          <li key={p.slug} className="status-project">
+            <div className="status-project-head">
+              <span className={`status-dot is-${dotClass(p.overall)}`} />
+              <span className="status-project-name">{p.name}</span>
+              <span className="status-uptime">{fmtPct(p.uptimePct)}</span>
             </div>
-            <Bars bars={r.bars} />
+            <Bars bars={p.bars} />
             <div className="status-row-foot">
-              <span className="status-state">{r.state}</span>
+              <span className="status-state">{p.overall}</span>
               <span className="status-window">{days}-day uptime</span>
             </div>
+
+            {p.resources.length > 0 && (
+              <ul className="status-resources">
+                {p.resources.map((r) => (
+                  <li key={r.slug} className="status-resource">
+                    <span className={`status-dot sm is-${dotClass(r)}`} />
+                    <span className="status-resource-name">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="noopener noreferrer">
+                          {r.name}
+                        </a>
+                      ) : (
+                        r.name
+                      )}
+                    </span>
+                    <span className="status-type">{r.type}</span>
+                    <span className="status-resource-state">{r.state}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>

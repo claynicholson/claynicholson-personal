@@ -26,6 +26,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
 
 # vercel
@@ -45,3 +46,8 @@ ssh-server/node_modules
 
 # status history store (STATUS_DATA_DIR)
 /.data/
+
+# local status demo scripts
+/mock-coolify.cjs
+/seed-demo.cjs
+/shot.cjs

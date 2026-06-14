@@ -635,33 +635,25 @@ a:hover {
   gap: 1.4rem;
 }
 
-.status-row {
+.status-project {
   border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 8px;
   padding: 1rem 1.15rem;
   background: #fafafa;
 }
 
-.status-row-head {
+.status-project-head {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 0.7rem;
 }
 
-.status-name {
+.status-project-name {
   font-weight: 600;
   color: #111;
-  font-size: 0.98rem;
+  font-size: 1.02rem;
 }
-
-.status-name a {
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
-}
-
-.status-name a:hover { border-color: #111; }
 
 .status-type {
   font-size: 0.72rem;
@@ -679,6 +671,51 @@ a:hover {
   font-size: 0.85rem;
   color: #444;
 }
+
+/* Member resources under a project */
+.status-resources {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-resource {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+}
+
+.status-resource-name {
+  color: #333;
+  font-weight: 500;
+}
+
+.status-resource-name a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.status-resource-name a:hover { border-color: #111; color: #111; }
+
+.status-resource-state {
+  margin-left: auto;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.78rem;
+  color: #999;
+}
+
+.status-dot.sm {
+  width: 7px;
+  height: 7px;
+}
+
+.status-dot.sm::after { animation: none; } /* no ping on the small member dots */
 
 .status-bars {
   display: flex;
