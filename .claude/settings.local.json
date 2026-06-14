@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "WebSearch",
+      "WebFetch(domain:coolify.io)",
+      "WebFetch(domain:deepwiki.com)",
+      "Bash(yarn build *)",
+      "Bash(yarn install *)",
+      "Bash(rm -f /tmp/mock-coolify.cjs /tmp/mock.log /tmp/nextstart.log /tmp/nextmock.log)",
+      "Bash(rm -rf /tmp/statusdata)",
+      "Bash(git checkout *)",
+      "Bash(git add *)"
     ]
   }
 }
