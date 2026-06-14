@@ -27,6 +27,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 64px; /* clear the fixed navbar */
 }
 
 /* ── Typography ── */
@@ -52,11 +53,12 @@ a:hover {
 /* ── Shared navbar (root layout: /, /status, /blog) ── */
 
 .site-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background: #fff;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -110,6 +112,9 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-top: 56px;
+  }
   .site-nav-inner {
     height: 56px;
     padding-left: 1.25rem;
