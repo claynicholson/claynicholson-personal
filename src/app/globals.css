@@ -15,12 +15,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* clip (not hidden) stops horizontal scroll without making the root a scroll
+     container — overflow:hidden here would break the sticky navbar */
+  overflow-x: clip;
 }
 
 body {
   background-color: #111;
   color: #2c2c2c;
-  overflow-x: hidden;
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -59,8 +61,9 @@ a:hover {
 }
 
 .site-nav-inner {
-  width: 100%;
-  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   height: 64px;
   display: flex;
   align-items: center;
@@ -98,13 +101,25 @@ a:hover {
   color: #1a1a1a;
 }
 
+/* Once the centered nav nears full width, pad the right so Home/Blog clear the
+   edge-pinned status dot. */
+@media (max-width: 1264px) {
+  .site-nav-inner {
+    padding-right: 3rem;
+  }
+}
+
 @media (max-width: 640px) {
   .site-nav-inner {
-    padding: 0 1.25rem;
     height: 56px;
+    padding-left: 1.25rem;
+    padding-right: 2.75rem;
   }
   .site-nav-links {
     gap: 1.1rem;
+  }
+  .status-light {
+    right: 1rem;
   }
 }
 
@@ -557,11 +572,15 @@ a:hover {
 
 /* ── Pinging status light (header) ── */
 
+/* Pinned to the screen's right edge, separate from the centered nav buttons. */
 .status-light {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  margin-left: 0.25rem; /* sit a touch apart at the far right */
 }
 
 .status-dot {

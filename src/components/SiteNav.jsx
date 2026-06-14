@@ -12,9 +12,9 @@ export default function SiteNav() {
         <div className="site-nav-links">
           <a href="/">Home</a>
           <a href="/blog">Blog</a>
-          <StatusLight />
         </div>
       </div>
+      <StatusLight />
     </nav>
   );
 }
