@@ -59,9 +59,8 @@ a:hover {
 }
 
 .site-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  padding: 0 1.5rem;
   height: 64px;
   display: flex;
   align-items: center;
