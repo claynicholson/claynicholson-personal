@@ -3,7 +3,6 @@
 import { useMemo, useRef, useCallback, useEffect } from "react";
 import { galleryMedia, getMediaUrl } from "@/data/media";
 import focalPoints from "@/data/focalPoints.json";
-import StatusLight from "@/components/StatusLight";
 import {
   HeroCard,
   AboutCard,
@@ -199,11 +198,6 @@ export default function Home() {
 
   return (
     <main>
-      <nav className="site-header">
-        <StatusLight />
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-      </nav>
       <div className="gallery-section" style={{ "--gallery-filter": GLOBAL_FILTER }}>
         <div className="gallery-grid" ref={gridRef}>
           {gridItems}

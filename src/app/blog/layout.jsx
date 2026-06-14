@@ -21,17 +21,6 @@ export default function BlogLayout({ children }) {
     <div
       className={`${inter.variable} ${playfair.variable} ${jetbrains.variable} blog-page`}
     >
-      <nav className="blog-nav">
-        <div className="blog-nav-inner">
-          <a href="/blog" className="blog-nav-logo">
-            Clay Nicholson
-          </a>
-          <div className="blog-nav-links">
-            <a href="/blog">Research</a>
-            <a href="/">Terminal</a>
-          </div>
-        </div>
-      </nav>
       <main className="blog-main">{children}</main>
       <footer className="blog-footer">
         <div className="blog-footer-inner">

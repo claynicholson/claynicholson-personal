@@ -47,30 +47,66 @@ a:hover {
   text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 
-/* ── Header nav ── */
+/* ── Shared navbar (root layout: /, /status, /blog) ── */
 
-.site-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0.75rem 1.25rem;
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.85rem;
-  background: transparent;
-  position: absolute;
+.site-nav {
+  position: sticky;
   top: 0;
-  right: 0;
-  z-index: 10;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.site-header a {
-  color: #888;
+.site-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav-logo {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
   text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-nav-logo:hover {
+  color: #cc785c;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.site-nav-links a {
+  font-size: 0.875rem;
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
   transition: color 0.15s ease;
 }
 
-.site-header a:hover {
-  color: #111;
+.site-nav-links a:hover {
+  color: #1a1a1a;
+}
+
+@media (max-width: 640px) {
+  .site-nav-inner {
+    padding: 0 1.25rem;
+    height: 56px;
+  }
+  .site-nav-links {
+    gap: 1.1rem;
+  }
 }
 
 /* ── Content cards ── */

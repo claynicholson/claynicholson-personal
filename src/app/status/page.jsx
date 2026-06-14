@@ -8,10 +8,6 @@ export const metadata = {
 export default function StatusPage() {
   return (
     <main className="status-page">
-      <nav className="site-header">
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-      </nav>
       <StatusBoard />
     </main>
   );

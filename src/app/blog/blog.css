@@ -16,55 +16,6 @@
 
 /* ── Navigation ────────────────────────────────────── */
 
-.blog-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.blog-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.blog-nav-logo {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-}
-
-.blog-nav-logo:hover {
-  color: #cc785c;
-}
-
-.blog-nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.blog-nav-links a {
-  font-size: 0.875rem;
-  color: #666;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.15s;
-}
-
-.blog-nav-links a:hover {
-  color: #1a1a1a;
-}
-
 /* ── Main Content ──────────────────────────────────── */
 
 .blog-main {
@@ -400,9 +351,5 @@
 
   .blog-content h2 {
     font-size: 1.375rem;
-  }
-
-  .blog-nav-inner {
-    padding: 0 1.25rem;
   }
 }

@@ -1,5 +1,6 @@
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+import SiteNav from "@/components/SiteNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body>
+        <SiteNav />
         {children}
       </body>
     </html>
