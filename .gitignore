@@ -42,3 +42,6 @@ ssh-server/node_modules
 
 # tuning scratch
 /.tuning/
+
+# status history store (STATUS_DATA_DIR)
+/.data/
