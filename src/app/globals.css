@@ -561,18 +561,8 @@ a:hover {
 .status-light {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
   text-decoration: none;
-}
-
-.status-light-label {
-  color: #888;
-  font-size: 0.85rem;
-  transition: color 0.15s ease;
-}
-
-.status-light:hover .status-light-label {
-  color: #111;
+  margin-left: 0.25rem; /* sit a touch apart at the far right */
 }
 
 .status-dot {

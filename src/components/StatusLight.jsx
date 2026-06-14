@@ -31,9 +31,8 @@ export default function StatusLight() {
     overall === "down" ? "is-down" : overall === "degraded" ? "is-degraded" : "is-up";
 
   return (
-    <a className="status-light" href="/status" title="Service status">
+    <a className="status-light" href="/status" title="Service status" aria-label="Service status">
       <span className={`status-dot ${cls}`} />
-      <span className="status-light-label">status</span>
     </a>
   );
 }
