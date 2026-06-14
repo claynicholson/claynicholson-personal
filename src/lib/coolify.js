@@ -50,8 +50,11 @@ function parseStatus(raw) {
   const s = String(raw || "").toLowerCase();
   const state = s.split(":")[0].split(" ")[0] || "unknown";
   const up = state.startsWith("running");
-  const unhealthy = s.includes("unhealthy");
-  const degraded = s.includes("degraded") || (up && unhealthy);
+  // Coolify reports "unhealthy" for any container that simply has no health
+  // check configured, so a running container is treated as up. Only a literal
+  // "degraded" status (a compose service with some containers actually down)
+  // is surfaced as degraded.
+  const degraded = up && s.includes("degraded");
   return {
     up,
     degraded,
