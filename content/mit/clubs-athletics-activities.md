@@ -18,13 +18,13 @@ last_reviewed: 2026-08
 - Starting a new club is easy: find members, apply through ASA for recognition + funding eligibility.
 
 ## Athletics
-- **DIII varsity** (~30 teams — one of the largest DIII programs; crew, track, swimming, fencing, etc.; pistol and rifle are nationally strong). Walk-ons are realistic in several sports.
-- **Club sports** (30+): sailing (free lessons on the Charles!), ultimate, rugby, cycling, martial arts.
-- **Intramurals (IM)**: dorm/FSILG/department leagues in soccer, basketball, volleyball, hockey, and unusual ones (IM pool, foosball); all skill levels.
-- Facilities: **Z Center (Zesiger)** — pool, gym, courts (free for students); ice rink, sailing pavilion, outdoor track/fields.
+- **33 varsity sports** (16 men's, 15 women's, 2 coed) — one of the country's largest programs, mostly Division III with a few DI programs (e.g., rowing); pistol and rifle are nationally strong. Walk-ons are realistic in several sports, and two varsity seasons satisfy the PE requirement.
+- **Club sports** (30+, ~900 participants): sailing (free lessons on the Charles!), ultimate, rugby, cycling, and a large martial-arts contingent.
+- **Intramurals (IM)**: ~20 sports, ~3,000 participants — dorm/FSILG/department leagues at all skill levels.
+- Facilities: **Z Center (Zesiger, W35)** — Olympic-size pool plus a separate instructional pool, big fitness floors, squash courts; plus the ice rink, sailing pavilion, and outdoor track/fields. **getfit** (the community fitness challenge, now run by MIT Recreation) happens each spring.
 
 ## Arts and music
-MIT has serious music: orchestras (MITSO), a cappella groups (Logarhythms, Chorallaries...), jazz, Rambax (Senegalese drumming), theater (Musical Theatre Guild, Shakespeare Ensemble, Dramashop), Emerson/Harris music scholarship program for lessons. **21M subjects** give credit for performance. The **List Visual Arts Center** and student galleries cover visual arts; the **Hobby Shop** (W31) is a full wood/metal shop open to all.
+MIT has serious music: orchestras (MITSO), a cappella groups (Logarhythms, Chorallaries...), jazz, Rambax (Senegalese drumming), theater (Musical Theatre Guild, Shakespeare Ensemble, Dramashop), Emerson/Harris music scholarship program for lessons. **21M subjects** give credit for performance. The **List Visual Arts Center** and student galleries cover visual arts; the **Hobby Shop** (now in Building N51 on Mass Ave) is a full wood/metal shop open to all.
 
 ## Makerspaces
-Project Manus / **The Deep** (huge open makerspace), MITERS (student-run electronics/machine shop), dorm makerspaces (New Vassar, EC shop), department shops. Trainings are free; making things is the default hobby.
+Project Manus runs **The Deep** (37-072) and **Metropolis** (6C-006B, off the Infinite Corridor) — with operations consolidating into the 6C basement alongside the Edgerton Student Machine Shop — and the huge new **Met Warehouse makerspace** (Building W41) coming online. Plus MITERS (student-run electronics/machine shop), dorm makerspaces (New Vassar, EC shop), and department shops. Trainings are free; making things is the default hobby.

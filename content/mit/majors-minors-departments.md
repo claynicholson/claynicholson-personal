@@ -16,7 +16,7 @@ At MIT, majors and departments are called **Courses** and are known by number. "
 - **3** — Materials Science & Engineering
 - **4** — Architecture
 - **5** — Chemistry
-- **6** — Electrical Engineering & Computer Science (tracks like 6-2 EE+CS, 6-3 CS, 6-4 AI & Decision Making, 6-5 EE; joint majors 6-7 CS+MolBio, 6-9 Computation & Cognition, 6-14 CS+Econ, 11-6 Urban Sci)
+- **6** — Electrical Engineering & Computer Science. Current majors (6-1 and 6-2 were retired/folded in as of Fall 2024): **6-3** Computer Science & Engineering, **6-4** AI & Decision Making, **6-5** Electrical Engineering with Computing; joint majors **6-7** CS+Molecular Biology, **6-14** CS+Economics+Data Science, plus affiliated **6-9** Computation & Cognition (BCS) and **11-6** Urban Science with CS (DUSP)
 - **7** — Biology
 - **8** — Physics
 - **9** — Brain & Cognitive Sciences

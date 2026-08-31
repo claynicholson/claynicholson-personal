@@ -1,34 +1,42 @@
 ---
 title: Financial Aid, Tuition, and Money
 category: money-careers
-summary: How MIT aid works — need-blind, no-loan packages, the free-tuition thresholds, student jobs, and emergency money.
+summary: How MIT aid works — need-blind, the $200k/$100k free-tuition thresholds, 2026–27 costs, student jobs, and emergency money.
 sources:
-  - https://sfs.mit.edu
+  - https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/
+  - https://sfs.mit.edu/undergraduate-students/apply-for-aid/deadlines-process/
+  - https://doingwell.mit.edu/foodandfinancial
 last_reviewed: 2026-08
 ---
 
-## The headline policies
-- MIT is **need-blind** for all undergrad applicants (including international) and meets **100% of demonstrated need** with aid packages that include **no loans**.
-- As of the 2025–26 policies: families with income **under ~$200k** (typical assets) pay **no tuition**; under **~$100k**, MIT aid covers tuition *and* housing, dining, fees — effectively free attendance. Exact thresholds and details: sfs.mit.edu.
-- There are **no merit scholarships** — all MIT aid is need-based. Outside scholarships reduce your student work expectation first.
+(Figures below checked against sfs.mit.edu and registrar.mit.edu, Aug 2026.)
 
-## The mechanics
-- **SFS (Student Financial Services)** handles aid, billing, and student employment. File CSS Profile + FAFSA (+ tax docs) every year — deadlines matter.
-- Aid packages include a modest **student contribution** typically met via term-time work (UROP counts!) or summer earnings.
-- Bills are per-term through WebSIS/MITPay; payment plans exist.
+## The headline policies
+- MIT is **need-blind for all undergrad applicants, domestic and international** (one of very few US schools), and meets **100% of demonstrated need**.
+- Since 2025–26: families with income **under $200,000** (typical assets) pay **no tuition**; under **$100,000**, parents pay **nothing toward the full cost** — tuition, housing, dining, fees, and allowances covered.
+- About 60% of students receive aid; roughly 40% attend tuition-free.
+- There are **no merit scholarships** — all MIT aid is need-based. Outside scholarships reduce your work expectation first.
+
+## The numbers (2026–2027)
+- **Tuition: $66,720**; total estimated cost of attendance ≈ **$92,800** (housing, food, fees, books, personal expenses included).
+- Typical **student contribution: ~$5,400/year**, met via summer savings plus term-time work (most aided students work 6–8 hrs/week; campus minimum wage is $15/hr, ~$1,700/semester). UROP pays more — see the UROP topic.
+- Aid offers are primarily MIT Scholarship (grant) + the work expectation; loans are available but optional.
+
+## Applying
+- **SFS (Student Financial Services, room 11-120)** handles aid, billing, and student employment. File the **CSS Profile** (+ tax docs via IDOC) — all students — and **FAFSA** (domestic students), every year. Returning-student deadline is **February 15**; file early.
+- Bills are per-term through MITPay; payment plans exist.
 
 ## Student jobs
-- **UROP** (paid research) is the most common campus job.
-- Other campus jobs: TAing/grading (LA/TA positions in big classes pay well), libraries, desk-working at dorms, tour guiding, tech support. Listings via the student employment site and department postings.
-- Term-time work limit guidance exists for visa holders (internationals: on-campus work generally capped at 20 hrs/week during term — see the international-students topic).
+- **UROP** (paid research at $16.25/hr in 2026–27) is the most common campus job.
+- Other campus jobs: TAing/LA-ing and grading (big classes pay well), libraries, dorm desk, tour guiding, tech support — listings via Handshake and department postings.
+- International students: on-campus work capped at 20 hrs/week during term (see the international-students topic).
 
 ## When money is tight
-- **SFS emergency funding** and short-term loans for unexpected situations.
-- **CASE (Committee on Academic Support & Emergency aid)/S³** can connect emergency grants for laptops, travel home, medical costs.
-- **MIT Food Pantry** (W20) and swipe-sharing programs for food security.
-- Class Councils/Student Activities often subsidize event tickets; **MITAC** sells discounted movie/museum/sports tickets to the MIT community.
+- **DoingWell's money hub** (doingwell.mit.edu/foodandfinancial) indexes everything: emergency funds, the **Miller Fund** (unexpected medical costs), grad emergency funds via OGE, and more. S³ can quarterback any of it.
+- Food security: **SwipeShare** (donated dining swipes), **TechMart** (at-cost groceries, opened in Walker Memorial), dorm food pantries, and the Undergraduate Advising Center's Food Resource Guide (advising.mit.edu/food-resource-guide).
+- **MITAC** sells discounted movie/museum/sports tickets to the MIT community.
 
 ## Random money facts students ask about
-- **TechCASH** = stored-value on your ID (dining, laundry, printing, local restaurants).
-- Taxes: scholarships beyond tuition (room/board portions) and UROP pay are taxable income; the ISO and VITA-style volunteer programs run tax-help sessions each spring.
-- Textbooks: rarely required-new — libraries course reserves, older editions, and department lending cover most classes.
+- **TechCASH** = stored-value on your ID (dining, laundry, printing, some local restaurants).
+- Taxes: scholarship amounts beyond tuition (housing/dining portions) and UROP pay are taxable income; internationals get Sprintax through MIT (see international-students).
+- Textbooks: rarely required-new — course reserves, ebooks, and older editions cover most classes.

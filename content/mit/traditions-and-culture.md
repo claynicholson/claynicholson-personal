@@ -15,11 +15,11 @@ MIT's signature tradition: elaborate, harmless, anonymous pranks. Canon includes
 The MIT class ring — officially the "Standard Technology Ring," featuring Tim the Beaver. Each class designs its own; unveiled at sophomore year's **Ring Premiere**, delivered at **Ring Delivery** (a formal gala). Worn beaver-facing-you until graduation, flipped at Commencement so the beaver faces the world.
 
 ## Mystery Hunt
-The world's biggest puzzle hunt, run at MIT every IAP over MLK weekend since 1981. Teams of dozens solve absurd multi-day puzzle trees to find a "coin"; the winning team writes next year's hunt. Open to anyone; freshmen join big teams and get hooked.
+The world's biggest puzzle hunt, run at MIT every IAP over MLK weekend since 1981 — the 2026 hunt (Jan 16–19) drew ~280 teams and 5,000+ solvers. Teams of dozens solve absurd multi-day puzzle trees to find a "coin"; the winning team writes next year's hunt. Open to anyone; freshmen join big teams and get hooked.
 
 ## Annual rhythm
 - **REX** (orientation) — dorm events; East Campus historically builds a courtyard roller coaster or equivalent.
-- **Fall**: Career Fair, HackMIT, family weekend, pumpkin drop (Baker's Halloween piano-adjacent chaos — the **piano drop** is Baker's end-of-drop-date tradition: a piano off the roof, "Drop Date" pun fully intended).
+- **Fall**: Career Fair, **HackMIT** (Sept 19–20 in 2026, ~1,200 hackers), family weekend, and the **piano drop** — Baker's Drop Date tradition: a piano off the roof, pun fully intended.
 - **IAP**: Mystery Hunt, Battlecode/web.lab/pokerbots finals, MIT Trivia via WMBR? (the **WMBR** trivia contests come and go).
 - **Spring**: CPW for prefrosh, Ring events, **Campus Preview** parties, spring concert (big-name artist), **Tech Twinkles**? (holiday lights are December), East Campus Fred Fest-style shows, **MIThenge** (Jan & Nov — sunset aligns with the Infinite Corridor).
 - **Commencement**: Killian Court, inflatable-beaver-grade joy; graduates flip their Brass Rats.
