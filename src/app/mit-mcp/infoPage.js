@@ -25,7 +25,7 @@ export function renderInfoPage() {
 <p>A free MCP server with MIT student info.</p>
 <p><b>Claude:</b> Settings &gt; Connectors &gt; Add custom connector, paste <code>${ENDPOINT}</code>. Or in Claude Code:</p>
 <pre>claude mcp add --transport http mit-info ${ENDPOINT}</pre>
-<p><b>ChatGPT:</b> Settings &gt; Connectors &gt; enable Developer mode, then create a connector with the same URL.</p>
+<p><b>ChatGPT:</b> Settings &gt; Connectors &gt; enable Developer mode, then create a connector with <code>${ENDPOINT}</code>.</p>
 <p class="note">Not an official MIT site. If there is any site which contains useful information that is missing from the MCP, please send it to <a href="mailto:clayn@mit.edu">clayn@mit.edu</a>.</p>
 </body>
 </html>`;
