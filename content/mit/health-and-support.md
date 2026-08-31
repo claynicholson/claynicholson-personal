@@ -1,35 +1,35 @@
 ---
 title: Health, Wellness, and Student Support
 category: support
-summary: MIT Medical, mental health resources, S³, disability services, and who to go to when things get hard.
+summary: MIT Health, mental health & counseling, S³ (5-104), DAS, TSR², VPR, and who to go to when things get hard.
 sources:
   - https://medical.mit.edu
-  - https://studentlife.mit.edu/s3
-  - https://studentlife.mit.edu/das
+  - https://studentlife.mit.edu/wellbeing-support/student-support-services-s3/
   - https://doingwell.mit.edu
 last_reviewed: 2026-08
 ---
 
-## MIT Medical (Building E23)
-On-campus clinic: primary care, urgent care, pharmacy, optometry, dental, specialty care. All students get basic access; the **MIT Student Health Insurance Plan (SHIP)** covers the rest unless you waive it with comparable insurance. Urgent care has walk-in hours; after-hours advice line available.
+(Specifics checked Aug 2026.)
+
+## MIT Health (Building E23, 25 Carleton St)
+On-campus clinic: primary care, urgent care, pharmacy, optometry, dental, specialty care. **Urgent Care: walk in (or reserve online), 8am–8pm weekdays, 10am–4pm weekends**, E23 first floor; 24-hour nurse advice line at 617-253-4481. All students get basic access; the **MIT Student Health Insurance Plan (SHIP)** covers the rest unless you waive it with comparable insurance — and most care at MIT Health has no copays either way.
 
 ## Mental health
-- **Mental Health & Counseling** at MIT Medical: free counseling sessions, psychiatry, same-day triage line. Getting an appointment is normal and common here.
-- **Peer resources**: Peer Ears (dorm-based), Lean On Me (anonymous peer support textline), MedLinks (dorm health advocates with supplies).
-- Crisis: MIT Medical 24/7 line; 988 nationally.
+- **Student Mental Health & Counseling** (E23 third floor): free to all students. Walk-in hours weekday afternoons (2–4pm), same-day phone triage at **617-253-2916**, clinician on call 24/7 via 617-253-4481. Book a first appointment via the online callback form. Getting counseling here is normal and common.
+- **Peer resources**: Peer Ears (dorm-based), Lean On Me (anonymous peer-support textline), MedLinks (dorm health advocates with supplies).
+- Crisis: MIT's 24/7 line above; 988 nationally.
 
-## S³ — Student Support Services (undergrads)
-The office to visit when *anything* disrupts academics: illness, family emergency, overload, missed finals. S³ deans write support letters to professors, help with late drops/incompletes, and guide CAP petitions. No issue is too small; going early is always better. Grad students: **GradSupport** in the OGE plays the same role.
+## S³ — Student Support Services (undergrads) — Room 5-104
+The office to visit when *anything* disrupts academics: illness, family emergency, overload, missed finals. S³ deans write support letters to professors, help with late drops/incompletes, and guide CAP petitions. Book online or catch **virtual drop-ins (weekdays 10–12 and 2–4)**; 617-253-4861, s3-support@mit.edu. No issue is too small; going early is always better. Grad students: **GradSupport** in the OGE plays the same role.
 
-## DAS — Disability and Access Services
-Accommodations for disabilities including ADHD, learning disabilities, chronic illness, and mental health conditions: extended exam time, note-taking, reduced course load, housing accommodations. Register with documentation; accommodations don't appear on transcripts.
+## DAS — Disability and Access Services — also 5-104
+Accommodations for disabilities including ADHD, learning disabilities, chronic illness, and mental health conditions: extended exam time, note-taking, reduced course load, housing accommodations. First-timers book an intake meeting with documentation (das-student@mit.edu, 617-253-1674); returning students request each semester's accommodations through the **MIT Accommodate** portal. Accommodations don't appear on transcripts.
 
 ## Other support offices
-- **OME (Office of Minority Education)** — TSR² tutoring room (free drop-in tutoring for core classes, open to everyone), Interphase EDGE (pre-first-year summer program), mentoring.
-- **Office of the First Year** — advising hub for first-years.
-- **IDHR** — discrimination/harassment response; **Violence Prevention & Response (VPR)** — 24/7 confidential support line.
-- **Ombuds Office** — confidential, neutral conflict help.
-- **Chaplains (ORSEL)** — religious life and spiritual counseling across ~25 traditions.
+- **OME (Office of Minority Education)** — the **TSR² tutoring room (16-159, open daily 8am–10pm)**: free drop-in tutoring, pset nights, and exam reviews, open to everyone; plus Interphase EDGE and mentoring. (TSR² has an expansion space in Building 4 coming online.)
+- **VPR (Violence Prevention & Response)** — confidential support, 24/7 line **617-253-2300**. **IDHR** handles discrimination/harassment reports.
+- **MIT Police**: 617-253-1212 (24/7; they also do walk-home escorts).
+- **Ombuds Office** — confidential, neutral conflict help. **Chaplains (ORSEL)** — ~25 traditions.
 - **DoingWell (doingwell.mit.edu)** — the index of all wellbeing resources.
 
 ## Culture note

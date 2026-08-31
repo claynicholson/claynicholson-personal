@@ -33,7 +33,7 @@ last_reviewed: 2026-08
 - **2.009-style number-speak** — everything is numbers: buildings ("meet at 26-100"), majors, classes, even food trucks get coordinates
 
 ## Reading class numbers
-`6.1010` = Course 6 subject; historically 6.009 etc. — EECS renumbered subjects in 2022 (6.0001→6.100A, 6.006 stayed), so old-timers and OCW use old numbers; both float around. `18.06` = linear algebra (legendary), `8.01/8.02` = physics core, `2.009` = MechE's famous product design capstone (now evolved), `6.100A` = intro Python.
+`6.1010` = Course 6 subject — EECS renumbered everything in 2022 (6.0001→6.100A, 6.006→6.1210, 6.009→6.1010, 6.031→6.1020), so old-timers and OCW use old numbers; both float around. `18.06` = linear algebra (legendary), `8.01/8.02` = physics core, `2.009` = MechE's famous product design capstone (now evolved), `6.100A` = intro Python.
 
 ## Sayings
 - "Getting an education from MIT is like taking a drink from a fire hose." — the founding metaphor

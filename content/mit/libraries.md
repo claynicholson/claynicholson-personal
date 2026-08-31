@@ -18,9 +18,9 @@ last_reviewed: 2026-08
 ## Borrowing and access
 - Borrow with your MIT ID; long loans, easy renewals.
 - **Course reserves**: many textbooks are on reserve or licensed as ebooks — check before buying anything.
-- **Interlibrary loan (ILL) / BorrowDirect**: nearly any book or paper on Earth, free, usually within days.
+- **Interlibrary loan / BorrowDirect (Ivy Plus)**: nearly any book or paper on Earth, free, usually within a few business days.
 - Massive journal/database subscriptions (IEEE, ACM, Elsevier, JSTOR...) — off campus, log in via Touchstone or VPN. MIT is a leader in open access; many MIT theses are free online (dspace.mit.edu).
-- MIT students can also get borrowing privileges at other Boston-area libraries (including Harvard's, via reciprocal arrangements — ask the library).
+- **Harvard borrowing**: MIT students (undergrads included) get access and borrowing at 11 Harvard libraries — apply online for an HCL Special Borrower card and pick up the ID at Widener. Details at libraries.mit.edu/borrow.
 
 ## Study spaces people actually use
 - Hayden (social-quiet mix), Barker reading room (silent, majestic), the Student Center (W20) study floors (24/7 areas), Stata's public areas, department lounges, and empty classrooms at night (building access with ID).

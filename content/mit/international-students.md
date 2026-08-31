@@ -7,7 +7,7 @@ sources:
 last_reviewed: 2026-08
 ---
 
-## ISO — International Students Office
+## ISO — International Students Office (E18-219)
 The office managing immigration matters for MIT's international students (~10% of undergrads, ~40% of grads). They issue I-20s/DS-2019s, run orientation, and advise on everything visa-related. **Rule zero: ask the ISO before acting on any immigration question — not friends, not the internet, not this document.**
 
 ## Common facts (general, verify with ISO)
@@ -15,7 +15,7 @@ The office managing immigration matters for MIT's international students (~10% o
 - **On-campus work** (UROP, TAing): allowed within limits (generally up to 20 hrs/week during term, full-time in vacations).
 - **CPT (Curricular Practical Training)**: authorization for off-campus internships tied to curriculum — requires enrollment steps and ISO paperwork with real lead time. Many MIT internationals use CPT for summer internships.
 - **OPT**: post-graduation (or pre-completion) work authorization — 12 months, +24-month STEM extension for eligible degrees (most MIT degrees are STEM-designated). Apply months ahead.
-- **Taxes**: nonresident filing is its own maze; MIT provides access to tax-prep software for internationals (Sprintax or similar) and the ISO runs tax season guidance. Tax treaties vary by country.
+- **Taxes**: nonresident filing is its own maze; MIT provides **Sprintax** (federal filing covered by MIT; state filing not) plus Sprintax Calculus for treaty/status determination — access via Touchstone, guidance from VPF and the ISO each spring. Tax treaties vary by country.
 
 ## Money and practicalities
 - MIT is **need-blind and full-need for international undergrads too** — one of very few US schools.
