@@ -100,3 +100,19 @@ export function searchDocs(query, { category, maxResults = 5 } = {}) {
     snippet: makeSnippet(doc.content, queryTokens),
   }));
 }
+
+// ── Calendar (content/mit/calendar.json) ──
+
+let calendarCache = null;
+
+export function getCalendarEvents() {
+  if (calendarCache) return calendarCache;
+  const file = path.join(MIT_DIR, "calendar.json");
+  if (!fs.existsSync(file)) return [];
+  calendarCache = JSON.parse(fs.readFileSync(file, "utf8"))
+    .events.slice()
+    .sort((a, b) => a.start.localeCompare(b.start));
+  return calendarCache;
+}
+
+export const CALENDAR_CATEGORIES = ["academic", "orientation", "rush", "deadline", "event", "athletics"];
