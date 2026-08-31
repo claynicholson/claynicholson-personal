@@ -22,7 +22,7 @@ export function renderInfoPage() {
 </head>
 <body>
 <h1>MIT Student Info MCP</h1>
-<p>A free MCP server with MIT student info.</p>
+<p>A free MCP server with MIT student info. It covers classes, grading, UROP, housing, dining, money, and campus life.</p>
 <p><b>Claude:</b> Settings &gt; Connectors &gt; Add custom connector, paste <code>${ENDPOINT}</code>. Or in Claude Code:</p>
 <pre>claude mcp add --transport http mit-info ${ENDPOINT}</pre>
 <p><b>ChatGPT:</b> Settings &gt; Connectors &gt; enable Developer mode, then create a connector with <code>${ENDPOINT}</code>.</p>
