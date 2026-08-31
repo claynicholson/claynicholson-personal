@@ -12,7 +12,9 @@ The "who do I even email" cheat sheet. All contact info here is public; check ea
 
 ## Academics
 - **Registrar** (registrar.mit.edu, room 5-117) — registration, transcripts, calendars, degree audits, classroom issues.
-- **Office of the First Year / UAAP** (firstyear.mit.edu) — first-year advising and programs.
+- **Office of the First Year** (firstyear.mit.edu, room 11-101; Mon–Thu 9–5, Fri 9–3; 617-253-6771) — first-year advising, ASEs, transfer credit.
+- **Committee on Curricula** (curricula@mit.edu) — petitions on GIR/degree-requirement exceptions; needs your advisor's signature.
+- **Math Academic Services** (2-110) — math placement, transfer credit, ASE administration for Course 18 subjects.
 - **CAP (Committee on Academic Performance)** — petitions (late drops, readmission); route through S³.
 - Your **department's undergrad office** ("Course X undergrad office") — major requirements, department-specific everything; the academic administrators there are the most useful humans at MIT.
 

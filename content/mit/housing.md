@@ -23,8 +23,17 @@ The dining vs. cook-for-yourself split meaningfully affects cost and lifestyle.
 2. **REX (Residential Exploration)** during orientation (Aug 29–Sep 2 in 2026): dorms throw events so you can feel out cultures.
 3. **FYRE (First-Year Residence Exchange)**: the adjustment lottery running alongside REX — apply if you want to switch dorms; if you get a new assignment, you move.
 4. In-house room assignment follows, run by each dorm (often very student-controlled: floors/entries pick their people).
-- **All first-years live on campus.** Housing is guaranteed for **eight consecutive semesters** (four years) as long as you file the annual Housing Intent form; most undergrads stay on campus all four years.
-- Returning students: in-dorm retention first, cross-dorm transfer lottery if switching.
+- **All first-years live on campus.** Housing is guaranteed for **eight consecutive semesters** (four years) as long as you file the annual **Housing Intent form** (2026 cycle: opened Feb 10, closed Feb 25; building assignments mid-March, rooms late April; switch individually or in groups up to four).
+- Move-in dates (fall 2026): internationals Aug 22, transfers Aug 24, FPOP Aug 25, first-years Aug 29, returning students Sep 4.
+
+## Living there (policies people actually ask about)
+- **Guests**: overnight guests max three nights in any week, with roommates' advance agreement; hosts escort guests and are responsible for them; guests check in at desk with photo ID.
+- **Gender-inclusive housing**: opt-in, available in most halls — live with whomever you choose regardless of gender.
+- **Accessibility**: housing accommodations go through DAS + a supplemental housing form; submit early.
+- **Storage**: none on-site; MIT partners with a moving/container service at transitions, and PODS need pre-registration with Parking & Transportation.
+- **Summer housing**: for enrolled undergrads doing UROP/work in the area — application late May–early June, singles only, free cancellation until early May.
+- **House teams**: live-in faculty Heads of House, professional Area Directors, GRAs (grad resident advisors), and Resident Peer Mentors.
+- Off-campus help: offcampus@mit.edu runs listings and lease advice.
 
 ## Cost
 Rates are tiered by dorm (2025–26, per term): roughly **$5,800–$7,500** — e.g. Tier 1 doubles ~$6,800/singles ~$7,500 (Baker, EC, Maseeh, New Vassar, Simmons...); Random Hall is the cheapest tier. Current rates: mitguidetoresidences.mit.edu → Billing and Fees.

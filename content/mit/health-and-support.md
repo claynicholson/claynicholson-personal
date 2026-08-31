@@ -12,7 +12,9 @@ last_reviewed: 2026-08
 (Specifics checked Aug 2026.)
 
 ## MIT Health (Building E23, 25 Carleton St)
-On-campus clinic: primary care, urgent care, pharmacy, optometry, dental, specialty care. **Urgent Care: walk in (or reserve online), 8am–8pm weekdays, 10am–4pm weekends**, E23 first floor; 24-hour nurse advice line at 617-253-4481. All students get basic access; the **MIT Student Health Insurance Plan (SHIP)** covers the rest unless you waive it with comparable insurance — and most care at MIT Health has no copays either way.
+On-campus clinic: primary care, urgent care, pharmacy + **MedStop** (discounted OTC meds), optometry and a full Optical Shop, dental (Delta Dental accepted), travel clinic, specialty care. **Urgent Care: walk in (or reserve online), 8am–8pm weekdays, 10am–4pm weekends**, E23 first floor; 24-hour nurse advice line at 617-253-4481. Care at MIT Health is included with tuition for all students **regardless of insurance** — no copays for visits, and in-house labs and X-rays are free.
+
+**SHIP** (the MIT student insurance plan, ~$4,600/year in 2025–26; current rates at mit.myahpcare.com) covers everything beyond MIT Health unless you waive it with comparable US coverage. **Every incoming student must submit the Medical Report Form with immunization records** — missing it puts a hold on registration.
 
 ## Mental health
 - **Student Mental Health & Counseling** (E23 third floor): free to all students. Walk-in hours weekday afternoons (2–4pm), same-day phone triage at **617-253-2916**, clinician on call 24/7 via 617-253-4481. Book a first appointment via the online callback form. Getting counseling here is normal and common.

@@ -40,6 +40,7 @@ One Institute Lab subject (12 units) with substantial hands-on experimental work
 - **Swim requirement** — swim 100 continuous yards (4 pool lengths, any stroke, no time limit, first 3 lengths on your front), or pass a beginning swim class. The test is offered during orientation and each term.
 
 ## Practical notes
-- GIR subjects are offered every year and most every term; the science core is usually best finished in the first year.
+- **ASEs are one attempt per subject** — once you've sat one, you generally can't retake it, so take them seriously.
+- GIR subjects are offered every year and most every term; the science core is usually best finished in the first year. 18.01A/8.01L variants run on shifted schedules (18.01A covers 18.01 in the first half of fall).
 - Your degree audit (in WebSIS) tracks GIR progress automatically.
 - "GIRs" is also used loosely to mean just the science core ("I'm done with my GIRs").

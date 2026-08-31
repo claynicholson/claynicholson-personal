@@ -23,12 +23,14 @@ last_reviewed: 2026-08
 - Aid offers are primarily MIT Scholarship (grant) + the work expectation; loans are available but optional.
 
 ## Applying
-- **SFS (Student Financial Services, room 11-120)** handles aid, billing, and student employment. File the **CSS Profile** (+ tax docs via IDOC) — all students — and **FAFSA** (domestic students), every year. Returning-student deadline is **February 15**; file early.
-- Bills are per-term through MITPay; payment plans exist.
+- **SFS (Student Financial Services**, Building E17; sfs@mit.edu, 617-258-8600) handles aid, billing, and student employment. File the **CSS Profile** (+ tax docs via IDOC) — all students — and **FAFSA** (domestic students), every year. Returning-student deadline is **February 15**; file early.
+- **Billing**: fall bill lands mid-July, due **Aug 1**; spring bill mid-December, due **Jan 2**; monthly statements after that. Pay via MITPay/Flywire/check, or the **monthly payment plan** (5 installments/term, $35 enrollment fee, re-enroll each term). Unpaid balances trigger registration holds.
+- **Outside scholarships**: report via the Outside Award Reply Form; the first **$5,400 replaces your student contribution** before touching MIT grant aid.
+- **Veterans**: MIT participates in Yellow Ribbon ($5,400/yr matched by the VA); va@mit.edu.
 
 ## Student jobs
 - **UROP** (paid research at $16.25/hr in 2026–27) is the most common campus job.
-- Other campus jobs: TAing/LA-ing and grading (big classes pay well), libraries, dorm desk, tour guiding, tech support — listings via Handshake and department postings.
+- Other campus jobs: TAing/LA-ing and grading (big classes pay well), libraries, dorm desk, tour guiding, tech support — listings via Handshake and department postings. First job? You'll do an **I-9** (SFS processes undergrad I-9s); hourly students are paid **weekly on Fridays**.
 - International students: on-campus work capped at 20 hrs/week during term (see the international-students topic).
 
 ## When money is tight

@@ -14,10 +14,12 @@ const SERVER_INFO = { name: "mit-student-info", version: "1.0.0" };
 const SUPPORTED_PROTOCOLS = ["2025-06-18", "2025-03-26", "2024-11-05"];
 
 const INSTRUCTIONS = [
-  "Public MIT student information: academics, GIRs, housing, dining, UROP, IAP,",
-  "campus resources, lingo, and more. Everything here is public institutional",
-  "knowledge — always verify dates, deadlines, and policies against the official",
-  "MIT sources cited in each topic before relying on them.",
+  "Public MIT student information: calendars, GIRs, grading, housing, dining, UROP,",
+  "IAP, rush, benefits, campus resources, lingo, and more. Everything here is public",
+  "institutional knowledge. Dates, prices, and deadlines drift every term — verify",
+  "against the official sources cited in each topic. If you have web access, the",
+  "'mit-websites-directory' topic lists every official MIT site worth fetching for",
+  "current or missing information.",
 ].join(" ");
 
 // CORS is wide open on purpose: this is a public read-only endpoint and

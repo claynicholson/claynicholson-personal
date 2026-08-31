@@ -23,6 +23,9 @@ Free to students: **Microsoft 365, Google Workspace, Adobe Creative Cloud, MATLA
 ## Networks
 **MIT SECURE** wifi everywhere on campus (Kerberos login); **eduroam** works here and at other universities worldwide; MIT GUEST for visitors; wired ports in dorms.
 
+## Mailing lists (dormspam management)
+Most MIT lists live in **WebMoira** (groups.mit.edu/webmoira) — log in to see your lists, join public ones, or remove yourself. Pro move: instead of unsubscribing from dormspam, create Outlook inbox rules filtering each list into a folder, so announcements stay findable without burying real mail. MIT also runs **GitHub Enterprise** at github.mit.edu.
+
 ## Printing
 - **Pharos** gives everyone a **$300/year allowance (~3,000 B&W or ~1,500 color pages), resetting each June** — registered students can exceed it. Send jobs via print.mit.edu (Athena Print Center), release at any Pharos printer, check usage at techcash.mit.edu.
 - **CopyTech** (main: 11-004; east: E52-076) for large-format color posters up to 60" wide (the standard spot for UROP poster sessions), binding, and print services — order at printservices.mit.edu.

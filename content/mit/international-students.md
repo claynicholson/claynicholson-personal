@@ -12,7 +12,7 @@ The office managing immigration matters for MIT's international students (~10% o
 
 ## Common facts (general, verify with ISO)
 - Most students hold **F-1** status (some J-1). Keep your passport, visa stamp, and I-20 valid; get travel signatures before leaving the US.
-- **On-campus work** (UROP, TAing): allowed within limits (generally up to 20 hrs/week during term, full-time in vacations).
+- **On-campus work** (UROP, TAing): allowed up to **20 hrs/week while school is in session** across all jobs combined; more only during official vacations of a week or more (IAP, spring break, summer). UROP specifically: consult the ISO before accepting any position, especially anything off-campus or remote.
 - **CPT (Curricular Practical Training)**: authorization for off-campus internships tied to curriculum — requires enrollment steps and ISO paperwork with real lead time. Many MIT internationals use CPT for summer internships.
 - **OPT**: post-graduation (or pre-completion) work authorization — 12 months, +24-month STEM extension for eligible degrees (most MIT degrees are STEM-designated). Apply months ahead.
 - **Taxes**: nonresident filing is its own maze; MIT provides **Sprintax** (federal filing covered by MIT; state filing not) plus Sprintax Calculus for treaty/status determination — access via Touchstone, guidance from VPF and the ISO each spring. Tax treaties vary by country.

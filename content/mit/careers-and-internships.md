@@ -12,7 +12,8 @@ The career office (rooms 7-103 and E17-294): resume/cover letter reviews, mock i
 
 ## The recruiting calendar
 - **Fall Career Fair**, run by CAPD — **Sept 25, 2026 in the Johnson Athletic Center** (employer interviews the next day); register on Handshake in August; bring printed resumes. The **EECS Career Fair** runs the day before (Sept 24), and companies host info sessions ("free dinner + pitch") all fall.
-- **Tech/software/finance/quant recruiting** starts absurdly early — big-company software and quant internship apps open late summer/early fall for the *following* summer. Sophomore/junior summer internships are the norm; first-years target smaller companies, research, or programs like MISTI.
+- **Tech/software/finance/quant recruiting** starts absurdly early — big-company software and quant internship apps open late summer/early fall for the *following* summer. Sophomore/junior summer internships are the norm; first-years target smaller companies, research, or programs like MISTI. CAPD publishes industry-by-industry timelines at capd.mit.edu/resources/recruiting-calendar. The fair has a First-Year Friendly initiative flagging companies that actually hire first-years.
+- **UPOP** (sophomores, all majors) is the structured on-ramp: yearlong program with a January intensive and employer network — apply early fall.
 - **xFair** (the big student-run fair/tech expo by TechX, typically early spring) and startup-focused fairs round out the year.
 - **Handshake** is MIT's job board; many roles also come via department mailing lists and club pipelines (trading clubs, consulting clubs).
 
