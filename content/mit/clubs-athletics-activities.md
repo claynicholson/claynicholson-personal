@@ -12,7 +12,8 @@ last_reviewed: 2026-08
 ## Student groups (ASA)
 450+ recognized student groups under the **Association of Student Activities (ASA)** — engineering teams, cultural groups, performance, publications, service, and the deeply niche (MIT Mystery Hunt writing teams, Assassins' Guild live-action games, MITSFS sci-fi library — one of the world's largest open-shelf SF collections).
 
-- **Activities Midway** during orientation = the club fair; sign up for everything, filter later.
+- **Activities Midway** during orientation (Johnson Athletic Center) = the club fair; sign up for everything, filter later. The full club directory lives on **Engage** (engage.mit.edu).
+- Funding: the UA Finance Board funds undergrad groups, the GSC funding board covers grad groups, and LEF/ARCADE funds back large events.
 - Big engineering teams: Solar Electric Vehicle Team, Motorsports (FSAE), Rocket Team, Driverless, Robotics teams, MIT AI/ML clubs, HackMIT organizing.
 - Notable institutions: The Tech (newspaper since 1881), WMBR radio, MIT UA (undergrad student government), class councils, TechX (organizes xFair/HackMIT-adjacent events).
 - Starting a new club is easy: find members, apply through ASA for recognition + funding eligibility.
@@ -27,4 +28,4 @@ last_reviewed: 2026-08
 MIT has serious music: orchestras (MITSO), a cappella groups (Logarhythms, Chorallaries...), jazz, Rambax (Senegalese drumming), theater (Musical Theatre Guild, Shakespeare Ensemble, Dramashop), Emerson/Harris music scholarship program for lessons. **21M subjects** give credit for performance. The **List Visual Arts Center** and student galleries cover visual arts; the **Hobby Shop** (now in Building N51 on Mass Ave) is a full wood/metal shop open to all.
 
 ## Makerspaces
-Project Manus runs **The Deep** (37-072) and **Metropolis** (6C-006B, off the Infinite Corridor) — with operations consolidating into the 6C basement alongside the Edgerton Student Machine Shop — and the huge new **Met Warehouse makerspace** (Building W41) coming online. Plus MITERS (student-run electronics/machine shop), dorm makerspaces (New Vassar, EC shop), and department shops. Trainings are free; making things is the default hobby.
+Project Manus runs **The Deep** (37-072) and **Metropolis** (6C-006B, off the Infinite Corridor) — with operations consolidating into the 6C basement alongside the Edgerton Student Machine Shop — and the huge new **Met Warehouse makerspace** (Building W41) coming online. **MITERS** (student-run electronics/machine shop, around since the 1970s) works differently: membership is literally showing up with a project; a keyholder must be present for the shop to be open, and the community teaches you the machines. Plus the **Edgerton Center's 17 supported teams**, dorm makerspaces (New Vassar, EC shop), and department shops. Trainings are free; making things is the default hobby.

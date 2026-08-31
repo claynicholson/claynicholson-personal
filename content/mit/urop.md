@@ -28,6 +28,13 @@ Applications go through the online UROP system by 11:59 pm ET, then your supervi
 - **IAP 2027**: special first-time-first-year direct funding — **Dec 1, 2026**; Wellesley cross-reg — Nov 13, 2026.
 - The pattern: direct-funding deadlines fall ~1–2 weeks into each term (spring 2026's was Feb 3); supervisor/credit deadlines ~5 weeks in. Check urop.mit.edu/deadlines for each term's exact dates.
 
+## Fine print worth knowing
+- You can't get **pay and credit for the same project** in the same term, and a paid UROP must have a single funding source per term.
+- **Hour caps**: 20 hrs/week across all positions in fall/spring; 40 hrs/week in IAP/summer.
+- **International students** are fully eligible but must consult the ISO before accepting any UROP (visa/CPT implications, especially off-campus locations).
+- During IAP and summer everyone files a **Location Form**; working from abroad goes through MIT's remote-appointment review.
+- **Lincoln Laboratory** also hosts UROP positions for MIT undergrads (ll.mit.edu → student opportunities).
+
 ## Finding a UROP
 1. Browse openings on urop.mit.edu, but know most UROPs come from **cold-emailing professors** whose work interests you (short, specific email + why them + your availability; attach resume). Response rates are decent — follow up once.
 2. Ask in classes/advising; departments and labs advertise on mailing lists.
@@ -35,6 +42,6 @@ Applications go through the online UROP system by 11:59 pm ET, then your supervi
 4. Every UROP needs a short **proposal** (project description written with your supervisor) submitted each term.
 
 ## Related programs
-- **SuperUROP**: yearlong advanced research program administered by EECS, open to School of Engineering and SHASS students — two-semester 6.UAR seminar for credit plus a monthly stipend (superurop.mit.edu).
+- **SuperUROP**: yearlong advanced research program for juniors/seniors, administered by EECS and open to School of Engineering and SHASS students — the two-semester 6.UAR seminar for credit, ~120+ hrs/semester of research, with industry/alumni-funded scholar stipends (superurop.mit.edu).
 - **MISTI**: funded international research/internships (see the research-programs topic).
 - Summer UROPs are full-time, paid, and a common early alternative to an industry internship.

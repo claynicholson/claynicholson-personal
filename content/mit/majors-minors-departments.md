@@ -32,15 +32,19 @@ At MIT, majors and departments are called **Courses** and are known by number. "
 - **21** — Humanities (21A Anthropology, 21L Literature, 21M Music/Theater, 21W Writing, 21H History, 21G Global Languages, CMS Comparative Media Studies)
 - **22** — Nuclear Science & Engineering
 - **24** — Linguistics & Philosophy
-- Plus interdisciplinary programs: **CEE/IDS**, **STS** (Science, Technology & Society), **WGS**, etc.
+- Plus interdisciplinary programs: **STS** (Science, Technology & Society), **CMS**, **WGS**, and the newest major, **1-12 Climate System Science & Engineering** (launched 2023, joint CEE/EAPS).
+- Flexible engineering tracks: **2-A** (chosen by ~45% of MechE sophomores), **10-ENG**, **16-ENG**; **6-P** adds an MEng fifth year for EECS majors; **6-A** places MEng students in industry for thesis work.
+
+## Who's in what (2025-26 majors count, Registrar)
+6-3 Computer Science is the largest (~670 majors), then 6-4 AI & Decision Making (~370), MechE 2/2-A (~430 combined). By school: Engineering ~2,470 majors, Science ~690, Sloan ~160. Full table: registrar.mit.edu/stats-reports/majors-count.
 
 ## Declaring and changing majors
-- First-years enter **undeclared** and declare a major at the end of first year (end of spring term). There's zero competitive admission to majors — **any student can declare any major**, including popular ones like 6-3.
-- Changing majors later is a simple form + new advisor. Very common.
+- First-years enter **undeclared** and declare by spring Drop Date of first year (effective that summer). There's zero competitive admission to majors — **any student can declare any major**, including 6-3.
+- Changing majors later is a Change of Major form + new advisor. Very common. Exploration help: Major March Madness events, advising seminars, department open houses.
 
 ## Double majors and minors
-- **Double major**: apply after ~3 terms with decent standing; you complete both departments' full requirements (one degree, two majors listed).
-- **Minors**: 5–7 subjects, offered by most departments (CS minor, math minor, econ minor, energy studies, entrepreneurship, music, etc.). Declare via a minor form with the minor advisor.
+- **Double major**: petition after ≥3 terms with a declared major (stated GPA bar 4.0/5.0, case-by-case below); both departments' full requirements incl. CI-Ms. One degree, two majors listed.
+- **Minors**: 5–7 subjects (≥57 units), **max two**; 17 interdisciplinary minors (Statistics & Data Science, Energy Studies, Entrepreneurship & Innovation, Astronomy, BME, Environment & Sustainability...) plus departmental minors in most departments.
 - HASS concentration (part of the GIRs) is separate from and smaller than a HASS minor.
 
 ## Exploring

@@ -1,7 +1,7 @@
 ---
 title: Academic Calendar and Term Structure
 category: academics
-summary: How the MIT year is structured — fall, IAP, spring, key deadlines like Add/Drop Date — with the 2026–2027 dates.
+summary: The full 2026-2027 calendar with exact dates for every term, deadline, holiday, and finals period, plus IAP and projected 2027-28.
 sources:
   - https://registrar.mit.edu/calendar
   - https://registrar.mit.edu/calendar/class-days
@@ -9,35 +9,43 @@ sources:
 last_reviewed: 2026-08
 ---
 
-MIT runs on a 4-1-4 calendar: fall term, IAP, spring term, plus optional summer.
+MIT runs on a 4-1-4 calendar: fall term, IAP, spring term, plus optional summer. (Dates below checked against the Registrar's published 2026-27 calendar, Aug 2026; a few marked "listed as" came through secondary listings — confirm at registrar.mit.edu/calendar.)
 
-## Academic year 2026–2027 (per the Registrar, checked Aug 2026)
-- **Fall term**: classes Wed **Sep 9 – Thu Dec 10, 2026** (63 class days); Registration Day just before classes.
-- **Fall Add Date**: early October (listed as Fri Oct 9, 2026); **Fall Drop Date**: mid/late November (listed as Wed Nov 18, 2026) — confirm on registrar.mit.edu/calendar.
-- **Fall finals**: Mon Dec 14 – Fri Dec 18, 2026 (two daily blocks, 9–12 and 1:30–4:30).
-- **IAP 2027**: begins Mon Jan 4, 2027 (also the spring pre-registration deadline) and runs through late January.
-- **Spring term**: classes Mon **Feb 1 – Tue May 11, 2027** (65 class days); spring break in late March.
-- **Commencement 2027**: ceremonies May 26–28, 2027, in Killian Court.
+## Fall term 2026
+- **Registration Day**: Tue Sep 8, 2026; registration deadline Fri Sep 11 ($50 late fee after).
+- **Classes**: Wed **Sep 9 – Thu Dec 10** (63 class days).
+- **Add Date** (full-term subjects): listed as Fri Oct 9.
+- **H2 half-term subjects begin** (and 2nd-quarter PE): Mon Oct 26; H2 add date Fri Nov 6.
+- **Drop Date**: Wed **Nov 18** (last day to cancel full-term subjects).
+- Holidays: Indigenous Peoples Day (Oct), Veterans Day (Nov), Thanksgiving (Nov 26–27).
+- **Family Weekend**: Oct 23–24, 2026.
+- **Finals**: Mon **Dec 14 – Fri Dec 18**; daily blocks 9–12 and 1:30–4:30. Conflict exams are arranged by the Registrar for anyone with two finals in the same block.
+- Grade deadlines: subjects without finals Dec 15; with finals Jan 6, 2027.
 
-## The recurring structure
-- **Add Date** (~5 weeks in): last day to add subjects. **Drop Date** (~3/4 through): last day to drop without record or change grading options.
-- **Pre-registration** happens online before each term (including IAP); adjusting during the term is normal.
-- Thanksgiving break in fall; a reading period precedes finals each term.
+## IAP 2027 (Independent Activities Period)
+- **Mon Jan 4 – Fri Jan 29, 2027**; MLK Day holiday Mon Jan 18.
+- **12-unit credit limit for everyone**, strictly enforced (+6 units allowed for 18.02A/8.01L finishers). First-year IAP grading is P/NR.
+- 600+ non-credit activities in ~50 categories (anyone with an MIT sponsor can run one) plus for-credit subjects — listings via iap.mit.edu and the searchable catalog.
+- The famous ones: **Mystery Hunt** (MLK weekend), **Battlecode** (6.9610, $20k+ prizes), **Pokerbots** ($50k+), **web.lab** (6.9620), **MASLAB** robotics, **StartMIT** and **MIT Fuse** (entrepreneurship sprints), ski trips, and **ELO micro-internships** (2–4 week placements; this replaced the old Externship Program).
+- **ASEs during IAP**: offered late January (e.g. math and 6.100A); graded A/B/C/NR and don't count against credit limits.
+- Dorms stay open through IAP; dining consolidates (recently: New Vassar brunch/dinner + weekly IAP meal plans; W20 retail from early Jan).
 
-## IAP — Independent Activities Period (January)
-A four-week January term unique to MIT. Optional for most students (some departments have required IAP subjects). People use it for:
-- Short for-credit classes (e.g., 18.02A completion, special topics)
-- Competitions and non-credit classes: **web.lab**, **Pokerbots** ($50k+ prize pools), **Battlecode** ($20k+), MASLAB robotics
-- **Mystery Hunt** (the giant puzzle competition over MLK weekend — Jan 16–19 in 2026)
-- **IAP micro-internships** — short alumni/employer-hosted placements via CAPD and Handshake (apply in the fall; this replaced the old Externship Program)
-- UROP research (12-unit IAP credit limit applies), ski trips, or just going home
+## Spring term 2027
+- **Classes**: Mon **Feb 1 – Tue May 11** (65 class days).
+- Presidents Day holiday Mon Feb 15 (a Monday-schedule makeup day follows — check the calendar for which day).
+- **Spring break**: listed as Mar 22–26.
+- Spring Add/Drop Dates: on the Registrar calendar (Add ~5 weeks in, Drop ~3/4 through, same pattern as fall).
+- Patriots Day vacation in April; **CPW** for admitted students in April.
+- **Finals**: the week of May 17; grades due ~May 21.
+- **Degree Award Date May 27; Commencement May 26–28, 2027** (OneMIT ceremony, undergraduate ceremony, advanced-degree ceremonies) in Killian Court.
 
-## Summer
-No regular undergrad term; most students do internships, UROPs, or MISTI abroad. A small number of subjects are offered.
+## Summer 2027
+Summer session listed as Jun 7 – Aug 17 (few subjects; most students do internships, UROPs, or MISTI).
 
-## Other calendar landmarks
-- **CPW (Campus Preview Weekend)** — April weekend for admitted prospective first-years.
-- **REX** (late August, before fall) — residence exploration for new students.
+## Projected 2027–2028 (from the Registrar's projected key dates)
+Labor Day Mon Sep 6, 2027; Registration Day Tue Sep 7; fall classes begin Wed Sep 8, 2027.
+
+## Recurring mechanics
+- **Pre-registration**: May for summer/fall, December for IAP/spring; IAP subjects auto-register from pre-reg without adviser sign-off, everything else needs adviser approval.
 - **Registration holds** (medical forms, bills) block registration — clear them early.
-
-Exact dates move every year — always confirm at registrar.mit.edu/calendar.
+- Final exams can't be canceled or moved once the schedule is published; finalexams.mit.edu has the searchable schedule.

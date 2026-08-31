@@ -13,7 +13,11 @@ last_reviewed: 2026-08
 ## Dining halls and meal plans
 House dining halls: **Maseeh (Howard Dining Hall — the largest, serving all meal periods)**, **Baker**, **Next House**, **Simmons**, and **New Vassar** (McCormick's is closed with the dorm's 2026–28 renovation). All-you-care-to-eat swipes. Typical hours: breakfast 8–11, lunch 11–3, dinner 5–9, plus **late night Sun–Thu 10pm–1am**.
 
-Students living in dining-hall dorms must enroll in a meal plan. Six options: **Any 21** (a swipe every meal period, every day) and **Block plans** — 225, 190, 160, 90, 60 meals/semester. 2025–26 prices ran from ~$1,174 (Block 60) to ~$3,824 (Any 21 / Block 225) per semester; door rates were ~$10.85 breakfast / $17 lunch / $19.95 dinner. Cook-for-yourself dorm residents can optionally buy any plan.
+Hours vary by hall — e.g. Maseeh runs all four meal periods daily; Next House does breakfast + dinner; Simmons late night runs 9pm–1am. Current hours per hall: studentlife.mit.edu/dining/dining-locations.
+
+Students living in dining-hall dorms must enroll in a meal plan. Six options: **Any 21** (a swipe every meal period, every day, incl. 8 guest passes) and **Block plans** — 225, 190, 160, 90, 60 meals/semester. 2025–26 prices ran from ~$1,174 (Block 60) to ~$3,824 (Any 21 / Block 225) per semester; door rates were ~$10.85 breakfast / $17 lunch / $19.95 dinner. **Dining Dollars** give a 5% discount at campus venues. Plans can be changed early each term (fall 2026 window: Aug 9 – Sep 11); exemptions are granted only for medical or religious reasons. Cook-for-yourself residents can optionally buy any plan.
+
+**Special diets**: a kosher station (Vaad-supervised kitchen), a fully halal hall plus halal options everywhere, vegan/vegetarian at every hall, full allergen labeling, and a free registered dietitian for meal-plan holders.
 
 ## Retail dining and cafés
 Campus cafés and quick options cluster in the Student Center (W20), Stata, and the Sloan/Kendall side, plus food trucks. **TechCASH** (stored value on your MIT ID) works at campus dining, many nearby restaurants, laundry, and printing.
