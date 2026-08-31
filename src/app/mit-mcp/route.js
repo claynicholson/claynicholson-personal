@@ -205,12 +205,7 @@ export async function OPTIONS() {
 export async function GET(request) {
   const accept = request.headers.get("accept") || "";
   if (accept.includes("text/html")) {
-    // Behind the reverse proxy request.url sees the internal host; prefer the
-    // forwarded values so the page shows the public endpoint URL.
-    const host = request.headers.get("x-forwarded-host") || request.headers.get("host") || "claynicholson.com";
-    const proto = request.headers.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https");
-    const html = renderInfoPage({ origin: `${proto}://${host}`, topics: listTopics() });
-    return new NextResponse(html, { headers: { "Content-Type": "text/html; charset=utf-8", ...CORS_HEADERS } });
+    return new NextResponse(renderInfoPage(), { headers: { "Content-Type": "text/html; charset=utf-8", ...CORS_HEADERS } });
   }
   // Stateless server: no server-initiated SSE stream to offer.
   return new NextResponse(null, { status: 405, headers: { Allow: "POST, OPTIONS", ...CORS_HEADERS } });

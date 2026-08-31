@@ -1,13 +1,8 @@
-// Human-facing page served when /mit-mcp is opened in a browser. Plain
-// system-font look, short copy, one screen.
+// Human-facing page served when /mit-mcp is opened in a browser.
 
-function esc(s) {
-  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
+const ENDPOINT = "https://claynicholson.com/mit-mcp";
 
-export function renderInfoPage({ origin }) {
-  const endpoint = `${origin}/mit-mcp`;
-
+export function renderInfoPage() {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -20,8 +15,7 @@ export function renderInfoPage({ origin }) {
   .top { margin: 1rem 0 2.5rem; }
   .top a { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; text-decoration: none; }
   .top a:hover { color: #555; }
-  code, pre { background: #f3f3f3; border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.9em; }
-  pre { padding: 0.75rem 1rem; overflow-x: auto; }
+  pre { background: #f3f3f3; border-radius: 4px; padding: 0.75rem 1rem; font-size: 0.9em; overflow-x: auto; }
   h1 { font-size: 1.6rem; }
   .note { color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; margin-top: 2rem; padding-top: 1rem; }
 </style>
@@ -29,11 +23,9 @@ export function renderInfoPage({ origin }) {
 <body>
 <div class="top"><a href="/">Clay Nicholson</a></div>
 <h1>MIT Student Info MCP</h1>
-<p>A free <a href="https://modelcontextprotocol.io">MCP</a> server with MIT student info: GIRs, grading, majors, UROP, housing, dining, IAP, financial aid, campus lingo. All public info, nothing behind Touchstone.</p>
-<p>Add it to Claude, Cursor, or any MCP client:</p>
-<pre>claude mcp add --transport http mit-info ${esc(endpoint)}</pre>
-<p>Tools: <code>search_mit_info</code>, <code>list_mit_topics</code>, <code>read_mit_topic</code>.</p>
-<p class="note">Made by <a href="/">a student</a>, not MIT. Check dates and deadlines on the official sites.</p>
+<p>A free MCP server with MIT student info. Add it to Claude, Cursor, or any MCP client:</p>
+<pre>claude mcp add --transport http mit-info ${ENDPOINT}</pre>
+<p class="note">Not an official MIT site. If there is any site which contains useful information that is missing from the MCP, please send it to <a href="mailto:clayn@mit.edu">clayn@mit.edu</a>.</p>
 </body>
 </html>`;
 }
