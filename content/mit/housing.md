@@ -33,6 +33,8 @@ The dining vs. cook-for-yourself split meaningfully affects cost and lifestyle.
 - **Storage**: none on-site; MIT partners with a moving/container service at transitions, and PODS need pre-registration with Parking & Transportation.
 - **Summer housing**: for enrolled undergrads doing UROP/work in the area — application late May–early June, singles only, free cancellation until early May.
 - **House teams**: live-in faculty Heads of House, professional Area Directors, GRAs (grad resident advisors), and Resident Peer Mentors.
+- **Laundry**: every dorm uses the CSC Go app to pay and watch machine status (first load free for new app users).
+- **Mail**: address as Your Name / Hall Name / hall street address + room number / Cambridge, MA 02139; the front desk holds packages and notifies you (bring your ID). Don't ship before move-in.
 - Off-campus help: offcampus@mit.edu runs listings and lease advice.
 
 ## Cost

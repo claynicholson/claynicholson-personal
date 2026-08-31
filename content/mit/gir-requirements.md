@@ -36,7 +36,7 @@ Two subjects from the Restricted Electives in Science and Technology list — in
 One Institute Lab subject (12 units) with substantial hands-on experimental work. Many majors build this in.
 
 ## Physical Education & Swim
-- **8 PE points**, expected complete by the end of second year — typically four quarter-long PE classes at 2 points each (a huge menu: sailing, archery, pistol, fencing, weight training...), though two varsity seasons or ROTC also count. PE registration is a separate lottery each quarter and fills fast.
+- **8 PE points**, expected complete by the end of second year — typically four quarter-long PE classes at 2 points each (a huge menu: sailing, archery, pistol, fencing, weight training...), though two varsity seasons or ROTC also count. PE registration is separate, **first come first served** at 8am on posted dates each quarter, and popular classes fill in minutes (see the athletics topic for 2026–27 dates).
 - **Swim requirement** — swim 100 continuous yards (4 pool lengths, any stroke, no time limit, first 3 lengths on your front), or pass a beginning swim class. The test is offered during orientation and each term.
 
 ## Practical notes
