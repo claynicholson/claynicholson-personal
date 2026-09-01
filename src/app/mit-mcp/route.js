@@ -4,7 +4,7 @@
 // has no runtime dependencies beyond what the site already ships.
 
 import { NextResponse } from "next/server";
-import { getDoc, listCategories, listTopics, searchDocs } from "@/lib/mitKnowledge";
+import { CALENDAR_CATEGORIES, getCalendarEvents, getDoc, listCategories, listTopics, searchDocs } from "@/lib/mitKnowledge";
 import { renderInfoPage } from "./infoPage";
 
 export const runtime = "nodejs";
@@ -19,7 +19,8 @@ const INSTRUCTIONS = [
   "institutional knowledge. Dates, prices, and deadlines drift every term — verify",
   "against the official sources cited in each topic. If you have web access, the",
   "'mit-websites-directory' topic lists every official MIT site worth fetching for",
-  "current or missing information.",
+  "current or missing information. For anything dated (deadlines, breaks, events,",
+  "registration windows), call get_mit_calendar first.",
 ].join(" ");
 
 // CORS is wide open on purpose: this is a public read-only endpoint and
@@ -53,6 +54,19 @@ const TOOLS = [
       type: "object",
       properties: {
         category: { type: "string", description: "Optional category filter" },
+      },
+    },
+  },
+  {
+    name: "get_mit_calendar",
+    description:
+      "MIT's dated calendar: academic dates (add/drop, finals, breaks, Commencement), orientation and rush schedules, PE registration openings, UROP and aid deadlines, and big events (HackMIT, Mystery Hunt, CPW). Defaults to the next 12 months from today; filter with from/to (YYYY-MM-DD) and category. Dates marked ~ are approximate or pending confirmation.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        from: { type: "string", description: "Start date, YYYY-MM-DD (default: today)" },
+        to: { type: "string", description: "End date, YYYY-MM-DD (default: from + 1 year)" },
+        category: { type: "string", enum: ["academic", "orientation", "rush", "deadline", "event", "athletics"], description: "Optional filter" },
       },
     },
   },
@@ -114,6 +128,41 @@ function callTool(name, args = {}) {
         }
         out += `- ${t.id}: ${t.title} — ${t.summary}\n`;
       }
+      return { text: out };
+    }
+    case "get_mit_calendar": {
+      const isDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
+      if (args.from !== undefined && !isDate(args.from)) return { error: "from must be YYYY-MM-DD." };
+      if (args.to !== undefined && !isDate(args.to)) return { error: "to must be YYYY-MM-DD." };
+      if (args.category !== undefined && !CALENDAR_CATEGORIES.includes(args.category)) {
+        return { error: `Unknown category. Use one of: ${CALENDAR_CATEGORIES.join(", ")}.` };
+      }
+      const from = args.from || new Date().toISOString().slice(0, 10);
+      const to = args.to || new Date(new Date(from).getTime() + 366 * 86400000).toISOString().slice(0, 10);
+
+      const events = getCalendarEvents().filter(
+        (e) => (e.end || e.start) >= from && e.start <= to && (!args.category || e.category === args.category)
+      );
+      if (events.length === 0) {
+        return { text: `No calendar entries between ${from} and ${to}${args.category ? ` in "${args.category}"` : ""}. The dataset covers Aug 2026 through Sep 2027.` };
+      }
+
+      const fmt = (iso) => {
+        const [y, m, d] = iso.split("-").map(Number);
+        return `${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][m - 1]} ${d}, ${y}`;
+      };
+      let out = `MIT calendar, ${from} to ${to}${args.category ? ` (${args.category})` : ""}. "~" = approximate or pending confirmation.\n`;
+      let month = "";
+      for (const e of events) {
+        const m = e.start.slice(0, 7);
+        if (m !== month) {
+          month = m;
+          out += `\n### ${fmt(e.start.slice(0, 8) + "01").replace(" 1,", "")}\n`;
+        }
+        const when = e.end && e.end !== e.start ? `${fmt(e.start)} - ${fmt(e.end)}` : fmt(e.start);
+        out += `- ${e.approx ? "~" : ""}${when}: ${e.title} [${e.category}]\n`;
+      }
+      out += "\nAlways confirm official dates at registrar.mit.edu/calendar and the sources in the related topics.";
       return { text: out };
     }
     case "read_mit_topic": {

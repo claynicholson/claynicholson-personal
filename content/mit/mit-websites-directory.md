@@ -125,18 +125,33 @@ The canonical source list. **If you are an AI agent with web access, fetch these
 - https://innovation.mit.edu/opportunity/sandbox-innovation-fund-program/ — Sandbox funding (yearly)
 - https://hacks.mit.edu — the hack gallery (static)
 
-## Athletics
+## Athletics and recreation
 - https://mitathletics.com — varsity schedules and rosters (live)
-- https://www.mitrecsports.com — recreation: memberships, getfit (termly)
-- https://physicaleducationandwellness.mit.edu — PE requirement and classes (termly)
-- https://intramurals.mit.edu — IM leagues, Beaver Cup (termly)
+- https://daper.mit.edu — DAPER department and facility pages (yearly)
+- https://www.mitrecsports.com — recreation: memberships, facility hours, getfit (termly)
+- https://physicaleducationandwellness.mit.edu — PE requirement, registration dates, swim test (termly)
+- https://clubsports.mit.edu — the club sports list (yearly)
+- https://intramurals.mit.edu — IM leagues, registration, Beaver Cup (termly)
+- https://sailing.mit.edu — free sailing cards and Learn to Sail (yearly)
 
-## Policy and safety
+## Policy, safety, emergency
 - https://policies.mit.edu — institute policies (yearly)
 - https://handbook.mit.edu — Mind and Hand Book (student conduct) (yearly)
 - https://arts.mit.edu — Arts at MIT: CAMIT tickets, grants (termly)
+- https://mta.mit.edu — Music & Theater Arts: ensembles, Emerson/Harris (termly)
 - https://misti.mit.edu/faculty-funds — MISTI Global Seed Funds (yearly)
-- MIT Alert / emergency info: managed via Atlas and emergency.mit.edu *(unverified URL — confirm)*
+- https://prepared.mit.edu/mit-alert — MIT Alert emergency notifications (static)
+- https://emergency.mit.edu — live emergency info (mirror: emergency.mit.net) (live during incidents)
+- https://idcard.mit.edu — MIT ID card services (static)
+- https://police.mit.edu — MIT Police, lost and found, bike registration (static)
+- https://mit.passiogo.com — live shuttle tracking (live)
+- https://www.mitfcu.org — MIT Federal Credit Union (yearly)
+- https://esp.mit.edu — ESP: Splash and Spark dates (yearly)
+- https://lsc.mit.edu — LSC movie schedule (termly)
+- https://mitmuseum.mit.edu — MIT Museum programs (termly)
+- https://brassrat.mit.edu — class ring committees (yearly)
+- https://graduatehousing.mit.edu — grad housing rates and self-selection (yearly)
+- https://registrar.mit.edu/subjectevaluation — subject evaluations portal (termly)
 
 ## Departments (each has requirements, advising, and opportunities pages)
 Master index: https://web.mit.edu/education/schools-and-departments/. Verified homepages: eecs.mit.edu (6), meche.mit.edu + meundergrad.mit.edu (2), aeroastro.mit.edu (16), engineering.mit.edu, science.mit.edu, shass.mit.edu, mitsloan.mit.edu (15), climate-major.mit.edu (1-12), biology.mit.edu (7), math.mit.edu (18), d-lab.mit.edu, cee.mit.edu (1). Other departments follow the same pattern (physics.mit.edu, chemistry.mit.edu, dmse.mit.edu...) — resolve via the master index.

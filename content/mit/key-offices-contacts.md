@@ -34,9 +34,12 @@ The "who do I even email" cheat sheet. All contact info here is public; check ea
 - **CAPD** (capd.mit.edu, 7-103 and E17-294) — careers, pre-health/pre-law.
 
 ## Operations
-- **IS&T Service Desk** (ist.mit.edu; Atlas Service Center, E17-106; 617-253-1101) — accounts, wifi, software.
+- **Atlas Service Center** (E17-106; atlascenter@mit.edu, 617-253-3000) — the one-stop shop: MIT ID cards, T-passes, I-9s, notary, fingerprinting, passport photos, walk-in IT support.
+- **IS&T Service Desk** (ist.mit.edu; at the Atlas Center; 617-253-1101) — accounts, wifi, software.
 - **Facilities** (via Atlas app/online) — report broken anything (dorm work orders).
-- **MIT Police** — 617-253-1212, 24/7 (they also do free walk-home escorts).
+- **MIT Police** (station W91, 565 Memorial Dr) — 617-253-1212, 24/7; walk-home escorts, **Lost and Found** (617-253-2996), bike registration.
+- **Lost your ID?** Report at mycard.mit.edu, then print a free replacement at a 24/7 self-service kiosk (up to 3/year) or visit the Atlas Center.
+- **MIT Alert** — you're auto-enrolled for emergency notifications via your mit.edu email and Duo phone number (prepared.mit.edu/mit-alert); live info at emergency.mit.net; snow line 617-253-SNOW.
 - **Parking & Transportation** — T passes, shuttles, permits.
 - **Card Services / MIT ID** — lost IDs, TechCASH.
 

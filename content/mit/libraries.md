@@ -24,6 +24,9 @@ last_reviewed: 2026-08
 
 ## Study spaces people actually use
 - Hayden (social-quiet mix), Barker reading room (silent, majestic), the Student Center (W20) study floors (24/7 areas), Stata's public areas, department lounges, and empty classrooms at night (building access with ID).
+- **24/7 library space**: Dewey's first floor is open around the clock with an MIT ID, and Hayden's study rooms stay available when the library is closed.
+- **Group study rooms**: book via mycard.mit.edu → Room Reservation — up to 3 hours at a time, 30 days ahead.
+- **Equipment lending**: chargers (Hayden/Rotch), headphones, audio recorders (Lewis Music), monitors and cables.
 - During finals, libraries extend hours and dorms/desks publish quiet-hours.
 - Booking group study rooms: via the libraries' room-reservation system.
 
