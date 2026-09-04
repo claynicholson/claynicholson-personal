@@ -9,6 +9,7 @@ export function renderInfoPage() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MIT Student Info MCP</title>
+<link rel="icon" href="/mit-mcp-icon.png" type="image/png">
 <meta name="description" content="A free MCP server with MIT student info.">
 <style>
   body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem 3rem; line-height: 1.6; color: #1a1a1a; }

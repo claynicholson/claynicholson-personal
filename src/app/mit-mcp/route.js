@@ -10,7 +10,16 @@ import { renderInfoPage } from "./infoPage";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const SERVER_INFO = { name: "mit-student-info", version: "1.0.0" };
+const SERVER_INFO = {
+  name: "mit-student-info",
+  title: "MIT Student Info",
+  version: "1.1.0",
+  websiteUrl: "https://claynicholson.com/mit-mcp",
+  icons: [
+    { src: "https://claynicholson.com/mit-mcp-icon.png", mimeType: "image/png", sizes: "256x256" },
+    { src: "https://claynicholson.com/mit-mcp-icon.svg", mimeType: "image/svg+xml", sizes: "any" },
+  ],
+};
 const SUPPORTED_PROTOCOLS = ["2025-06-18", "2025-03-26", "2024-11-05"];
 
 const INSTRUCTIONS = [
