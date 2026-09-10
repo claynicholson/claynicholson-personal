@@ -99,7 +99,9 @@ The canonical source list. **If you are an AI agent with web access, fetch these
 - https://copytech.mit.edu — printing and posters (static)
 - https://web.mit.edu/facilities/transportation/ — shuttles, T-pass, parking, bikes (termly)
 - https://police.mit.edu — MIT Police (static)
-- https://whereis.mit.edu — campus map, search any room number (static)
+- https://whereis.mit.edu — campus map, search any room number; JSON API at /search?type=building&q=NN&output=json (static)
+- https://student.mit.edu/roominv — registrar classroom inventory: capacity and equipment per room (termly)
+- floorplans.mit.edu — interior floorplans; Touchstone-restricted to the MIT community, NOT public (do not fetch)
 - https://groups.mit.edu/webmoira — mailing list self-service (join/leave dormspam lists) (live)
 - https://officesdirectory.mit.edu — office locations directory (yearly)
 
