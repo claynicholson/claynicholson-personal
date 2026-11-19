@@ -91,10 +91,13 @@ export function AboutCard() {
     <div className="content-card">
       <h2 className="content-card-title">About</h2>
       <p>
-        Full-time gap year engineer at <Link href="https://hackclub.com">Hack Club</Link>,
-        creating open-source programs for teenagers to get into building around the world.
-        Incoming freshman at MIT pursuing EECS (Course 6-5). I work across FPGA design,
-        open-source hardware platforms, robotics, and medical imaging research.
+        I&apos;m a first-year student at MIT (Class of 2030) studying EECS (Course 6-5), and a
+        software engineer at <Link href="https://hackclub.com">Hack Club</Link>, creating
+        open-source programs for teenagers to get into building around the world. I founded
+        Hack Club <Link href="https://blueprint.hackclub.com/">Blueprint</Link> and co-founded{" "}
+        <Link href="https://greenmountainrobotics.org/">Green Mountain Robotics</Link>. I&apos;m
+        from Williston, Vermont. I work across FPGA design, open-source hardware platforms,
+        robotics, and medical imaging research.
       </p>
     </div>
   );
@@ -107,7 +110,7 @@ export function PastCard() {
     <div className="content-card">
       <h2 className="content-card-title">Past</h2>
       <p>
-        Founded <Link href="https://greenmountainrobotics.org/">Green Mountain Robotics</Link> across
+        Co-founded <Link href="https://greenmountainrobotics.org/">Green Mountain Robotics</Link> across
         rural Vermont high schools. Won 3rd Place Grand Award at ISEF 2025 for pancreatic tumor
         segmentation research,first Grand Award winner in Vermont history. Led Robohawks to 4
         consecutive state championships. Founded CVU Computer Science Club, teaching 25+ students weekly.
@@ -124,7 +127,7 @@ export function PresentCard() {
         ISEF 2026 Finalist with ATLAS, an FPGA-based adaptive network scheduler.
         Running <Link href="https://outpost.hackclub.com/">Outpost</Link>, a
         150-person hardware hackathon. Building <Link href="https://asicify.com/">ASICify</Link> and{" "}
-        <Link href="https://coppereda.com/">Copper</Link>. Prepping for the move to Cambridge.
+        <Link href="https://coppereda.com/">Copper</Link>. First year at MIT in Cambridge.
       </p>
     </div>
   );
@@ -135,8 +138,8 @@ export function FutureCard() {
     <div className="content-card">
       <h2 className="content-card-title">Future</h2>
       <p>
-        Starting at <Link href="https://mit.edu">MIT</Link> fall 2026, pursuing
-        EECS (Course 6-5). Exploring open-source silicon, ASIC design tooling,
+        Studying EECS (Course 6-5) at <Link href="https://mit.edu">MIT</Link>,
+        Class of 2030. Exploring open-source silicon, ASIC design tooling,
         and the intersection of hardware and AI.
       </p>
     </div>
@@ -359,7 +362,7 @@ export function EducationCard() {
       <h2 className="content-card-title">Education</h2>
 
       <h3 className="content-card-sub">MIT <span>Class of 2030, Early Action</span></h3>
-      <p>B.S. EECS (Course 6-5). Starting fall 2026.</p>
+      <p>B.S. EECS (Course 6-5). Current first-year student.</p>
 
       <h3 className="content-card-sub">University of Vermont <span>Dual Enrollment, 4.0</span></h3>
       <p>

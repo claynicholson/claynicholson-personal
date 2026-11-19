@@ -11,7 +11,7 @@ module.exports = {
     H("Contact"),
     SPACER,
     ROW("GitHub  ", LINK(links.github, "github.com/claynicholson")),
-    ROW("LinkedIn", LINK(links.linkedin, "linkedin.com/in/clay-nicholson")),
+    ROW("LinkedIn", LINK(links.linkedin, "linkedin.com/in/claynicholson")),
     ROW("Email   ", LINK(links.email, about.meta.email)),
   ],
 };

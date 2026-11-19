@@ -5,7 +5,7 @@ const { H, P, SPACER, ROW, LINK } = require("../blocks");
 
 const links = {
   github: "https://github.com/claynicholson",
-  linkedin: "https://www.linkedin.com/in/clay-nicholson/",
+  linkedin: "https://www.linkedin.com/in/claynicholson/",
   email: "mailto:clayn@mit.edu",
 };
 
@@ -17,7 +17,7 @@ module.exports = {
   meta: {
     name: "Clay Nicholson",
     school: "MIT",
-    year: "'29",
+    year: "'30",
     course: "6-5 (Electrical Engineering with Computing)",
     location: "Burlington(ish) Vermont",
     email: "clayn@mit.edu",
@@ -26,12 +26,12 @@ module.exports = {
   blocks: [
     H("About Me"),
     P(
-      "Hello, my name is Clay. I am involved in a bunch of disparate things, and I work at Hack Club. I am a rising freshman at MIT, hoping to pursue course 6-5 (Electrical Engineering with Computing)."
+      "Hello, my name is Clay. I am involved in a bunch of disparate things, and I am a software engineer at Hack Club. I am a first-year student at MIT (Class of 2030), studying course 6-5 (Electrical Engineering with Computing)."
     ),
     SPACER,
     P("Links:"),
     ROW("GitHub:  ", LINK(links.github, "github.com/claynicholson")),
-    ROW("LinkedIn:", LINK(links.linkedin, "linkedin.com/in/clay-nicholson")),
+    ROW("LinkedIn:", LINK(links.linkedin, "linkedin.com/in/claynicholson")),
     ROW("Email:   ", LINK(links.email, "clay@hackclub.com")),
   ],
 };
