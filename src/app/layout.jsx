@@ -18,7 +18,7 @@ export const metadata = {
   metadataBase: new URL("https://claynicholson.com"),
   title: "Clay Nicholson",
   description:
-    "MIT student (EECS, Course 6-5) and software engineer at Hack Club. Founder of Hack Club Blueprint and co-founder of Green Mountain Robotics.",
+    "MIT student (EECS, Course 6-5), researcher at the MIT Quantum Coherence Lab, and Venture Partner at Contrary. Founder of Hack Club Blueprint and co-founder of Green Mountain Robotics.",
 };
 
 // Identity links (rel="me"). Next's metadata API has no field for these.

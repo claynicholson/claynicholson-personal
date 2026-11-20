@@ -5,7 +5,7 @@ import HomeClient from "./HomeClient";
 
 const SITE_URL = "https://claynicholson.com/";
 const DESCRIPTION =
-  "MIT student (EECS, Course 6-5) and software engineer at Hack Club. Founder of Hack Club Blueprint and co-founder of Green Mountain Robotics.";
+  "MIT student (EECS, Course 6-5), researcher at the MIT Quantum Coherence Lab, and Venture Partner at Contrary. Founder of Hack Club Blueprint and co-founder of Green Mountain Robotics.";
 
 export const metadata = {
   title: "Clay Nicholson",
@@ -38,12 +38,17 @@ const jsonLd = {
       url: SITE_URL,
       mainEntityOfPage: { "@id": "https://claynicholson.com/#website" },
       description: DESCRIPTION,
-      jobTitle: "Software Engineer",
+      jobTitle: "Venture Partner",
       worksFor: {
         "@type": "Organization",
-        name: "Hack Club",
-        url: "https://hackclub.com/",
-        sameAs: "https://www.wikidata.org/wiki/Q98127305",
+        name: "Contrary",
+        url: "https://contrary.com/",
+        sameAs: "https://www.wikidata.org/wiki/Q111992741",
+      },
+      affiliation: {
+        "@type": "CollegeOrUniversity",
+        name: "Massachusetts Institute of Technology",
+        sameAs: "https://www.wikidata.org/wiki/Q49108",
       },
       alumniOf: [
         {

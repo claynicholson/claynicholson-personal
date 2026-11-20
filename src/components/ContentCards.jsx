@@ -91,10 +91,12 @@ export function AboutCard() {
     <div className="content-card">
       <h2 className="content-card-title">About</h2>
       <p>
-        I&apos;m a first-year student at MIT (Class of 2030) studying EECS (Course 6-5), and a
+        I&apos;m a first-year student at MIT (Class of 2030) studying EECS (Course 6-5), a
+        researcher at the MIT Quantum Coherence Lab, and a Venture Partner at{" "}
+        <Link href="https://contrary.com/">Contrary</Link>. From 2024 to September 2026 I was a
         software engineer at <Link href="https://hackclub.com">Hack Club</Link>, creating
-        open-source programs for teenagers to get into building around the world. I founded
-        Hack Club <Link href="https://blueprint.hackclub.com/">Blueprint</Link> and co-founded{" "}
+        open-source programs for teenagers to get into building around the world, where I founded
+        Hack Club <Link href="https://blueprint.hackclub.com/">Blueprint</Link>. I also co-founded{" "}
         <Link href="https://greenmountainrobotics.org/">Green Mountain Robotics</Link>. I&apos;m
         from Williston, Vermont. I work across FPGA design, open-source hardware platforms,
         robotics, and medical imaging research.
@@ -153,9 +155,13 @@ export function ExperienceCard() {
     <div className="content-card">
       <h2 className="content-card-title">Experience</h2>
 
-      <h3 className="content-card-sub">Hack Club <span>Software Engineer, Summer 2023 - Present</span></h3>
+      <h3 className="content-card-sub">Contrary <span>Venture Partner, Present</span></h3>
+
+      <h3 className="content-card-sub">MIT Quantum Coherence Lab <span>Researcher, Present</span></h3>
+
+      <h3 className="content-card-sub">Hack Club <span>Software Engineer, 2024 - September 2026</span></h3>
       <p>
-        Built open-source platforms for national hardware programs. Ran hackathons in
+        Founded Blueprint. Built open-source platforms for national hardware programs. Ran hackathons in
         San Jose, Austin, Vienna, Singapore, and Shenzhen. Programs include Blueprint (25K students),
         Stasis (10K students), and Outpost (100K students).
       </p>
